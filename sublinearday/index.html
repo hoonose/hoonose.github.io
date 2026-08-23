@@ -1,0 +1,279 @@
+<html><head>
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+
+<title>Sublinear Algorithms Day</title>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35372294-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<link href="bootstrap.css" rel="stylesheet">
+
+<style type="text/css">
+  .title {font-weight: bold; }
+  .abs {
+    background-color: #eee;
+    padding: 5px;
+    display: none;
+  }
+</style>
+
+
+<script type="text/javascript">
+  function showAbstract(e){
+  f = e;
+  var div;
+  for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+
+  if (div.style.display=="block"){
+  div.style.display="";
+  } else {
+  div.style.display="block";
+  }
+  return true;
+  }
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+</head>
+
+<body style="text-align:left;max-width:850pt;margin:0 auto;" id="big-data-home">
+<h1><img src="sublinear.jpeg" style="width:50pt"> <font color="brown">April 10: Sublinear Day</font>
+</h1>
+
+
+
+
+<a id="info"><h1>Information</h1></a>
+<p>
+The second Sublinear Algorithms Day will take place at <a href="http://www.csail.mit.edu/">MIT</a> on Friday, April 10, 2015.
+</p>
+<p>
+This event will bring together researchers from academic institutions in the northeast for a day of interaction and discussion. 
+It will feature talks by experts in the areas of sublinear and streaming algorithms, as well as a poster session for up-and-coming researchers to showcase their work.
+</p>
+<p>
+Wondering what sublinear algorithms are? See this <a href="http://people.csail.mit.edu/ronitt/sublinear.html">short description</a> by <a href="http://people.csail.mit.edu/ronitt/">Ronitt Rubinfeld</a>.
+</p>
+
+<p>
+<ul style="list-style:none;">
+<li> <b>When?</b> <br>Friday, April 10, 2015.
+<li> <b>Where?</b> <br> <a href="http://www.csail.mit.edu/">Ray and Maria Stata Center</a>, 32 Vassar Street, Cambridge MA. See <a href="https://www.google.com/maps/place/Ray+and+Maria+Stata+Center,+Massachusetts+Institute+of+Technology,+Cambridge,+MA+02142/">Google Maps</a> for directions.
+<br> All talks will be in the Patil/Kiva Seminar Room (32-G449), and the poster session will be in the Stata Center lobby.
+<li> <b>What?</b> <br> See the <a href="#schedule">schedule</a> and the <a href="#speakers">list of speakers</a>
+<li> <b>Do I need to register?</b> <br> Please fill out <a href="https://docs.google.com/forms/d/1vqUIHW2Par3m2TBp4PVlKYHGwGHKvFA0Wc5EGdBh5IA/viewform">this form</a> by Tuesday, April 7. It's not required, but it would help with organization.
+<li> <b>What's next?</b> <br>Try some open problems: <a rel="nofollow" target="_blank" href="http://sublinear.info/index.php?title=Main_Page">sublinear.info</a>. 
+</ul>				     
+</p>
+
+<a id="posters"> <h1> Poster Session</h1></a>
+For the first time this year, we will have a poster session! We strongly encourage young researchers to present work related to sublinear algorithms.
+<br><br>
+<font color="red">The list of accepted posters is available <a href="posters.txt">here</a>! Even thought the deadline has passed, we still have space for a few more posters! Please follow the directions below if you wish
+to submit!</font>
+<br><br>
+If you wish to present a poster, please send an email to <a href="mailto:g@csail.mit.edu">g@csail.mit.edu</a> with the subject "Sublinear Day Poster Submission: &lt;your_name&gt;" by Friday, March 20, 2015.
+Please include a title, list of authors, and abstract for your poster, and if available, a link to the corresponding paper. Notification of acceptance will be sent by Friday, March 27, 2015.
+
+
+<a id="schedule"> <h1> Schedule</h1></a>
+All talks will be in the Stata Center's Patil/Kiva Seminar Room (32-G449), and the poster session will be in the Stata Center lobby.
+<ul>
+
+  <li>
+  09:00 AM &ndash; 09:25 AM
+  <p> <b>Coffee Break</b>
+  </li>
+
+  <li>
+  09:25 AM &ndash; 09:30 AM
+  <p> <b>Opening Remarks</b>
+  </li>
+
+  <li>
+  09:30 AM &ndash; 10:15 AM
+  <br>
+  <a class="name" style="text-decoration: none"><b>Robert Krauthgamer</b></a>
+  <a rel="nofollow" target="_blank" href="javascript:void(0)" onclick="showAbstract(this)" class="title" style="text-decoration: none">
+    <br>
+    The Sketching Complexity of Graph Cuts
+  </a>
+  <div class="abs">
+    We study the problem of sketching an input graph \(G\) on \(n\) vertices, so that given (only) the sketch, one can estimate the weight of any cut in the graph within a small approximation factor \(1+\epsilon\). The classic cut-sparsifier construction of Benczur and Karger (STOC 1996) implies a sketch of size \(\tilde O(n/\epsilon^2)\) [this notation hides logarithmic factors].
+    <br>
+    <br>
+
+    We show that the dependence on \(\epsilon\) can be brought down to linear, at the price of achieving a slightly relaxed guarantee. Specifically, we design a randomized scheme that produces from \(G\) a sketch of size \(\tilde O(n/\epsilon)\) bits, from which the weight of any cut \((S,\bar S)\) can be reported, with high probability, within factor \(1+\epsilon\). We also demonstrate some applications where this "for each" guarantee is indeed useful.
+
+    <br>
+    <br>
+    We further prove that that our relaxation is necessary. Specifically, a sketch that can \((1+\epsilon)\)-approximate the weight of all cuts in the graph simultaneously (a so-called "for all" guarantee instead of "for each"), must be of size \(\Omega(n/\epsilon^2)\) bits.
+
+    <br>
+    <br>
+    Joint work with Alexandr Andoni and David Woodruff.
+  </div>
+  </li>
+
+  <li>
+  10:25 AM &ndash; 11:10 AM
+  <br>
+  <a class="name" style="text-decoration: none"><b>Jelani Nelson</b></a>
+  <a rel="nofollow" target="_blank" href="javascript:void(0)" onclick="showAbstract(this)" class="title" style="text-decoration: none">
+    <br>
+    Time Lower Bounds for Nonadaptive Turnstile Streaming Algorithms
+  </a>
+  <div class="abs">
+    We say a turnstile streaming algorithm is "non-adaptive" if the memory
+    cells it probes when receiving an update to coordinate \(x_i\) only depend
+    on \(i\) as well as random coins flipped before seeing the stream (e.g. to
+    determine hash functions). All known turnstile streaming algorithms
+    for non-promise problems are non-adaptive -- in fact, they are linear
+    sketches.
+    <br>
+    <br>
+
+    We give the first ever space/update time tradeoff lower bounds that
+    hold against non-adaptive turnstile streaming algorithms. Our lower
+    bounds hold against classically studied problems such as heavy
+    hitters, point query, moment estimation, and entropy estimation. In
+    the case of deterministic L1 point query, known algorithms show that
+    our lower bounds are tight for constant error parameter epsilon.
+    <br>
+    <br>
+
+    Joint work with Kasper Green Larsen and Nguyễn Lê Huy. Full version
+    at <a href="http://arxiv.org/abs/1407.2151">http://arxiv.org/abs/1407.2151</a>.
+  </div>
+  </li>
+
+  <li>
+  11:20 AM &ndash; 12:05 PM
+  <br>
+  <a class="name" style="text-decoration: none"><b>Shubhangi Saraf</b></a>
+  <a rel="nofollow" target="_blank" href="javascript:void(0)" onclick="showAbstract(this)" class="title" style="text-decoration: none">
+    <br>
+    A Survey of Some Recent Results for LDCs and LCCs
+  </a>
+  <div class="abs">
+    Locally decodable codes (and the closely related locally correctable codes) are error-correcting codes that admit efficient decoding algorithms: They give a method to encode k bit messages into n bit codewords such that even after a constant fraction of the bits of the codeword get
+    corrupted, any bit of the original message (or original codeword for LCCs) can be recovered by only looking at only a sub linear or even just constant number of bits of the corrupted codeword. The tradeoff between the rate of a code and the locality/efficiency of its decoding algorithms has been  studied extensively in the past decade, with numerous applications to complexity theory and pseudorandomness. 
+
+    In this talk I will survey some recent and not-so-recent results (both constructions and lower bounds) for locally decodable and locally correctable codes. I will also highlight some of the most interesting challenges that remain. 
+  </div>
+  </li>
+
+  <li>
+  12:15 PM &ndash; 2:00 PM
+  <p> <b>Lunch</b> (on your own)
+  <p>
+  </li>
+
+  <li>
+  2:00 PM &ndash; 2:45 PM
+  <br>
+  <a class="name" style="text-decoration: none"><b>Paul Valiant</b></a>
+  <a rel="nofollow" target="_blank" href="javascript:void(0)" onclick="showAbstract(this)" class="title" style="text-decoration: none">
+    <br>
+    Instance-Optimal Testing and Learning
+  </a>
+  <div class="abs">
+    We consider two fundamental statistical tasks given samples from an unknown distribution: hypothesis testing against a fixed distribution, and learning the unknown distribution - where the goal on both cases is to use as few samples as possible. For both problems, we introduce the notion of an "instance-optimal" algorithm, which performs as well as the best conceivable algorithm tailored to the distribution in question. In the first setting of hypothesis testing, this means essentially designing a hypothesis tester that makes optimal use of its hypothesis; the second setting, more mysteriously, demands an algorithm that must depend optimally on the very distribution it seeks to learn. We introduce instance-optimal algorithms for both settings, which take very different forms: our hypothesis tester can be viewed as a nuanced adaptation of Pearson's chi-squared test, though with an analysis which takes us through a novel "automated inequality prover"; our distribution learner leverages the "unseen" histogram estimator that had previously been introduced to estimate entropy and related properties of distributions. In general, this instance-optimal perspective has revealed surprising new structure to classic problems, and promises a theoretically principled approach to designing algorithms that compete with the most finely-tuned practical heuristics. The two examples we present seem just the tip of the iceberg for this instance-optimal style of analysis.
+  </div>
+  </li>
+
+  <li>
+  2:55 PM &ndash; 3:40 PM
+  <br>
+  <a class="name" style="text-decoration: none"><b>Costis Daskalakis</b></a>
+  <a rel="nofollow" target="_blank" href="javascript:void(0)" onclick="showAbstract(this)" class="title" style="text-decoration: none">
+    <br>
+    Learning and Testing Poisson Binomial Distributions
+  </a>
+  <div class="abs">
+    It is well-known that ~1/\(\varepsilon^2\) coin tosses are necessary and sufficient to estimate the bias of a coin. But how many samples are needed to learn the distribution of the sum of \(n\) independent Bernoullis? I will show that the answer is still \(O(1/\varepsilon^2)\) independent of \(n\).  I will argue that the celebrated Berry-Esseen theorem and its variants fall short from characterizing the general structure of PBDs, and offer stronger finitary central limit theorems, which tightly characterize their structure and have the afore-mentioned implications to learning. I will then use these structural results to obtain optimal testers for distinguishing whether an unknown distribution is a PBD or far from all PBDs.
+  </div>
+  </li>
+
+  <li>
+  3:50 PM &ndash; 5:30 PM
+  <p> <b>Poster Session</b> (with coffee and snacks)
+  <br> <a href="posters.txt">List of accepted posters</a>
+  <p>
+  </li>
+
+</ul>
+<a id="speakers"><h1>Speakers</h1></a>
+<div>
+<ul class="list-thumbnail">
+<li>
+<img alt="" src="costis.jpg">
+<h4><a href="http://people.csail.mit.edu/costis/">Costis Daskalakis</a></h4> 
+<p align="left">
+Costis Daskalakis received his PhD at UC Berkeley under the supervision of Christos Papadimitriou, and is currently an Associate Professor at MIT.
+His research focuses on algorithmic game theory, computational biology, and applied probability.
+</p>
+</li>
+
+<li>
+<img alt="" src="robert.jpg">
+<h4><a href="http://www.wisdom.weizmann.ac.il/~robi/">Robert Krauthgamer</a></h4> 
+<p align="left">
+Robert Krauthgamer received his PhD at the Weizmann Institute of Science under the supervision of Uriel Feige, where he is now a Professor.
+His research focuses on analysis of algorithms, including algorithms for data analysis and massive datasets.
+</p>
+</li>
+
+<li>
+<img alt="" src="jelani.jpg">
+<h4><a href="http://people.seas.harvard.edu/~minilek/">Jelani Nelson</a></h4> 
+<p align="left">
+Jelani Nelson received his PhD at MIT under the supervision of Erik Demaine and Piotr Indyk, and is currently an Assistant Professor at Harvard University.
+His research focuses on the development of efficient algorithms for massive datasets, particularly streaming algorithms.
+</p>
+</li>
+
+<li>
+<img alt="" src="shubhangi.jpg">
+<h4><a href="http://www.math.rutgers.edu/~ss1984/">Shubhangi Saraf</a></h4> 
+<p align="left">
+Shubhangi Saraf received her PhD at MIT under the supervision of Madhu Sudan, and is currently an Assistant Professor at Rutgers University.
+Her research focuses on complexity theory and property testing.
+</p>
+</li>
+
+
+<li>
+<img alt="" src="paul.jpg">
+<h4><a href="http://cs.brown.edu/~pvaliant/">Paul Valiant</a></h4> 
+<p align="left">
+Paul Valiant received his PhD at MIT under the supervision of Silvio Micali, and is currently an Assistant Professor at Brown University.
+His research focuses on the theory behind big data, scientific computing, and evolution.
+</p>
+</li>
+
+
+</ul>
+</div>
+
+<a id="orgs"><h1>Organizers and Support</h1></a>
+This event is organized by <a href="http://www.gautamkamath.com">Gautam Kamath</a>, with guidance and support from <a href="http://grigory.us/">Grigory Yaroslavtsev</a>, <a href="http://people.csail.mit.edu/indyk/">Piotr Indyk</a>, and <a href="http://people.csail.mit.edu/costis/">Costis Daskalakis</a>. Thanks to <a href="http://www.ilyaraz.org/">Ilya Razenshteyn</a> for suggestions related to the poster session and website design, and <a href="http://www.cs.columbia.edu/~ccanonne/">Clément Canonne</a> for help carrying a preposterous amount of coffee.
+
+</body></html>
+
+
+

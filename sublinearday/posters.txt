@@ -1,0 +1,49 @@
+(Listed in order of submission)
+
+Sketching and Embedding are Equivalent for Norms
+Ilya Razenshteyn (MIT), with Alex Andoni (Simons Institute), and Robert Krauthgamer (Weizmann)
+
+A Unified Approach for Clustering Problems on Sliding Windows
+Harry Lang (Johns Hopkins), with Vladimir Braverman (Johns Hopkins), Keith Levin (Johns Hopkins), and Morteza Monemizadeh (University of Frankfurt)
+
+Parameterized Streaming: Maximal Matching and Beyond
+Hossein Esfandiari (UMD), with Graham Cormode (University of Warwick), Rajesh Chitnis (Weizmann), MohammadTaghi Hajiaghayi (UMD), and Morteza Monemizadeh (University of Frankfurt)
+
+Testing Shape Restrictions
+Clement Canonne (Columbia), with Ilias Diakonikolas (University of Edinburgh), Themis Gouleakis (MIT), and Ronitt Rubinfeld (MIT)
+
+Nearly Linear-Time Algorithms for Structured Sparsity
+Ludwig Schmidt (MIT), with Chinmay Hegde (MIT), and Piotr Indyk (MIT)
+
+Nearly Optimal Density Estimation in Nearly Linear Time
+Jerry Li (MIT), with Jayadev Acharya (MIT), Ilias Diakonikolas (University of Edinburgh), and Ludwig Schmidt (MIT)
+
+Lp-testing
+Grigory Yaroslavtsev (UPenn), with Piotr Berman (Penn State), and Sofya Raskhodnikova (Penn State)
+
+Spectral Sparsification via Linear Sketching
+Christopher Musco (MIT), with Michael Kapralov (IBM TJ Watson), Yin Tat Lee (MIT), Cameron Musco (MIT), and Aaron Sidford (MIT)
+
+Sampling Correctors
+Themis Gouleakis (MIT), with Clement Canonne (Columbia), and Ronitt Rubinfeld (MIT)
+
+Dense Subgraph Discovery in Large Graphs
+Babis Tsourakakis (Harvard), with Sayan Bhattacharya (Institute of Mathematical Sciences), Monika Henzinger (University of Vienna), and Danupon Nanongkai (KTH)
+
+Better Bounds for the Streaming Set Cover Problem
+Ali Vakilian (MIT), with Piotr Indyk (MIT), and Sepideh Mahabadi (MIT)
+
+Streaming Space Complexity of Nearly All Functions of One Variable on Frequency Vectors
+Lin Yang (Johns Hopkins), with Vladimir Braverman (Johns Hopkins), Stephen R. Chestnut (Johns Hopkins)
+
+Constant-Time Testing and Learning of Image Properties
+Meiram Murzabulatov (Penn State), with Piotr Berman (Penn State), and Sofya Raskhodnikova (Penn State)
+
+Erasure-Resilient Property Testing
+Nithin Varma (Penn State), with Kashyap Dixit (Penn State), Sofya Raskhodnikova (Penn State), Abhradeep Thakurta (Yahoo)
+
+The complexity of estimating Renyi entropy
+Jayadev Acharya (MIT), with Alon Orlitsky (UCSD), Ananda Theertha Suresh (UCSD), Himanshu Tyagi (IISc)
+
+Run Generation Revisited: What Goes Up May or May Not Come Down
+Shikha Singh (Stony Brook), with Michael Bender (Stony Brook), Samuel McCauley (Stony Brook), Andrew McGregor (UMass Amherst), and Hoa Vu (UMass Amherst)

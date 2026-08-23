@@ -1,0 +1,408 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>CS 480/680 - Introduction to Machine Learning - Spring 2021</title>
+<style type="text/css">
+  .selected {
+    width:100%;
+    display: block;
+  }
+  .regular {
+    width:100%;
+    display: none;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  td {
+    text-align: center;
+  }
+</style>
+  </head>
+
+<body bgcolor="white" text="black" link="blue" vlink="blue" alink="blue">
+
+  <h1>CS 480/680 - Introduction to Machine Learning - Spring 2021</h1>
+
+  <h2>Logistics</h2>
+  <ul>
+    <li>Instructor: <a href="http://www.gautamkamath.com/">Gautam Kamath</a></li>
+    <li>Piazza: Link <a href="http://www.piazza.com/uwaterloo.ca/spring2021/cs480680">here</a>.</li>
+    <li>Lecture: Recorded videos should be released twice a week, on <a href="https://www.youtube.com/playlist?list=PLmd_zeMNzSvSzRRc4Q29qEcpxbhdwjMOx">Youtube</a>.</li>
+    <li>Office Hours: Noon Waterloo time on Tuesdays and Thursdays, or by email appointment.</li>
+    <li>TAs:
+      <ul>
+        <li>Fernando, Lasantha (m34ferna@uwaterloo.ca)</li>
+        <li>Huang, Yuxiang (y675huan@uwaterloo.ca)</li>
+        <li>Setayesh Ghajar, Kamyar (kghajar@uwaterloo.ca)</li>
+      </ul>
+    </li>
+    <li>Syllabus: <a href="CS480-sp2021-files/syllabus.pdf">here</a>.</li>
+  </ul>
+  This course has a Piazza (for discussion) and a Microsoft Teams (for office hours). Please contact the instructor if you are not in both of these.
+
+  <h2>Weekly Schedule</h2>
+  There will be two lectures posted each week, on Tuesday and Thursday. <br>
+  There will also be one assignment posted (roughly) every other week, for a total of five.<br>
+  There will be one final project at the end of the course.
+  All deliverables are due at 11:59 PM Waterloo time on the stated date.
+
+  <h2>Lectures</h2>
+  <table style="width:100%">
+    <tr>
+      <th>Lecture Number</th>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Slides</th>
+      <th>Readings</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>5/10/2021</td>
+      <td>Logistics and Intro</td>
+      <td><a href="CS480-sp2021-files/lecture00.pdf">PDF</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>5/11/2021</td>
+      <td>Perceptron</td>
+      <td><a href="CS480-sp2021-files/lecture01.pdf">PDF</a></td>
+      <td><a href="CS480-sp2021-files/lec1-notes.pdf">Lecture 1 of Yaoliang's notes</a><br>
+          UML Section 9.1<br>
+          ESL Section 4.5</td>
+    </tr>
+  <tr>
+      <td>2</td>
+      <td>5/13/2021</td>
+      <td>Linear Regression</td>
+      <td><a href="CS480-sp2021-files/lecture02.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note02.pdf">Lecture 2 of Yaoliang's notes</a><br>
+          UML Section 9.2, 11.2<br>
+          ESL Section 3.2, 3.4, 7.10</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>5/18/2021</td>
+      <td>k-Nearest Neighbour Classification</td>
+      <td><a href="CS480-sp2021-files/lecture03.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note05.pdf">Lecture 5 of Yaoliang's notes</a><br>
+          UML Section 19<br>
+          ESL Section 2.3.2, 13.3<br>
+          ISL Section 2.2
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5/20/2021</td>
+      <td>Logistic Regression</td>
+      <td><a href="CS480-sp2021-files/lecture04.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note06.pdf">Lecture 6 of Yaoliang's notes</a><br>
+          UML Section 9.3<br>
+          ESL Section 4.4<br>
+          ISL Section 4.3
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5/25/2021</td>
+      <td>Hard-Margin SVM</td>
+      <td><a href="CS480-sp2021-files/lecture05.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note07.pdf">Lecture 7 of Yaoliang's notes</a><br>
+          UML Section 15<br>
+          ESL Section 12.1-12.3<br>
+          ISL Section 9.1-9.2
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>5/27/2021</td>
+      <td>Soft-Margin SVM</td>
+      <td><a href="CS480-sp2021-files/lecture06.pdf">PDF</a></td>
+      <td>UML Section 15<br>
+          ESL Section 12.1-12.3<br>
+          ISL Section 9.1-9.2
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>6/01/2021</td>
+      <td>Kernels</td>
+      <td><a href="CS480-sp2021-files/lecture07.pdf">PDF</a></td>
+      <td>UML Section 16<br>
+          ESL Section 12.3<br>
+          ISL Section 9.3
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>6/03/2021</td>
+      <td>Decision Trees</td>
+      <td><a href="CS480-sp2021-files/lecture08.pdf">PDF</a><br>
+      <a href="CS480-sp2021-files/lecture08-extra.pdf">PDF</a></td>
+      <td>UML Section 18<br>
+          ESL Section 9.2<br>
+          ISL Section 8.1
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>6/08/2021</td>
+      <td>Bagging and Boosting</td>
+      <td><a href="CS480-sp2021-files/lecture09.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note11-bag.pdf">Lecture 11 of Yaoliang's notes</a><br>
+          UML Section 10<br>
+          ESL Section 8.2, 8.7, 10<br>
+          ISL Section 8.2
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>6/10/2021</td>
+      <td>Multilayer Perceptrons</td>
+      <td><a href="CS480-sp2021-files/lecture10.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note12-mlp.pdf">Lecture 12 of Yaoliang's notes</a><br>
+          DL Section 6<br>
+          D2L Section 4<br>
+          UML Section 20
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>6/15/2021</td>
+      <td>Deep Networks</td>
+      <td><a href="CS480-sp2021-files/lecture11.pdf">PDF</a></td>
+      <td>DL Section 7, 8<br>
+          D2L Section 5, 11<br>
+          <a href="https://ruder.io/optimizing-gradient-descent/">An overview of gradient descent optimization algorithms</a>, by Sebastian Ruder
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>6/17/2021</td>
+      <td>Convolutional Neural Networks</td>
+      <td><a href="CS480-sp2021-files/lecture12.pdf">PDF</a></td>
+      <td>DL Section 9<br>
+          D2L Section 6, 7
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>6/22/2021</td>
+      <td>Recurrent Neural Networks</td>
+      <td><a href="CS480-sp2021-files/lecture13.pdf">PDF</a></td>
+      <td>DL Section 10<br>
+          D2L Section 8, 9
+      </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>6/24/2021</td>
+      <td>K-Means Clustering and Mixture Models</td>
+      <td><a href="CS480-sp2021-files/lecture14.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note16-em.pdf">Lecture 16 of Yaoliang's notes</a><br>
+      UML Section 22.2, 24.4<br>
+      ESL Section 6.8, 8.5, 14.3<br>
+      ISL Section 10.3
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>6/29/2021</td>
+      <td>Autoencoders and Variational Autoencoders</td>
+      <td><a href="CS480-sp2021-files/lecture15.pdf">PDF</a></td>
+      <td>
+        DL Section 14, 20<br>
+        <a href="https://blog.keras.io/building-autoencoders-in-keras.html">Building Autoencoders in Keras</a>, by Francois Chollet<br>
+        <a href="https://arxiv.org/abs/1906.02691">An Introduction to Variational Autoencoders</a>, by Diederik Kingma and Max Welling
+      </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>7/8/2021</td>
+      <td>Generative Adversarial Networks</td>
+      <td><a href="CS480-sp2021-files/lecture16.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note19-gan.pdf">Lecture 19 of Yaoliang's notes</a><br>
+        DL Section 20<br>
+        D2L Section 17
+      </td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>7/13/2021</td>
+      <td>Robustness</td>
+      <td><a href="CS480-sp2021-files/lecture17.pdf">PDF</a></td>
+      <td><a href="https://adversarial-ml-tutorial.org/">Adversarial Robustness - Theory and Practice</a> by Zico Kolter and Aleksander Madry
+      </td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>7/15/2021</td>
+      <td>Privacy</td>
+      <td><a href="CS480-sp2021-files/lecture18.pdf">PDF</a></td>
+      <td><a href="CS480-sp2021-files/lec18-notes.pdf">Notes</a>
+      </td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>7/20/2021</td>
+      <td>Attention</td>
+      <td><a href="CS480-sp2021-files/lecture19.pdf">PDF</a></td>
+      <td><a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480-2020/note22-att.pdf">Lecture 22 of Yaoliang's notes</a><br>
+        <a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html">The Annotated Transformer</a>, by Sasha Rush<br>
+        D2L Section 10<br>
+        <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a><br>
+        <a href="https://openai.com/blog/language-unsupervised/">Improving Language Understanding with Unsupervised Learning</a><br>
+        <a href="https://arxiv.org/abs/1810.04805">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a><br>
+        <a href="https://openai.com/blog/better-language-models/">Better Language Models and Their Implications</a><br>
+        <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a>
+      </td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>7/22/2021</td>
+      <td>Ethics</td>
+      <td><a href="CS480-sp2021-files/lecture20.pdf">PDF</a></td>
+      <td><a href="https://www.pnas.org/content/110/15/5802">Private traits and attributes are predictable from digital records of human behavior</a><br>
+        <a href="https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm">Sharing learnings about our image cropping algorithm</a><br>
+        <a href="http://gendershades.org/">Gender Shades</a><br>
+        <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">Machine Bias: There’s software used across the country to predict future criminals. And it’s biased against blacks.</a>
+      </td>
+    </tr>
+
+
+  </table>
+
+  <h2>Assignments</h2>
+  There will be five assignments, roughly every other week.
+  All future dates are tentative, and may be shifted by a few days.
+  <ul>
+    <li>Assignment 1. Posted on May 20, due June 3. TA: Kamyar.</li>
+    <li>Assignment 2. Posted on June 3, due June 17. TA: Kamyar.</li>
+    <li>Assignment 3. Posted on June 16, due June 30. TA: Lasantha.</li>
+    <li>Assignment 4. Posted on July 9, due July 23. TA: Lasantha.</li>
+    <li>Assignment 5. Posted on July 23, due August 6. TA: Yuxiang.</li>
+  </ul>
+
+  <h3>Late Policy</h3>
+  Two 48 hour extensions per student are provided.
+  They may be each be used on one of the five homework assignments (at most one may be used per homework assignment).
+  Email the instructor and the TA for the assignment at least 24 hours before the deadline to let us know that you're using it, and why.
+  There are no extensions for the final project or any other deadline.
+  Beyond this, we do not accept any late homework submissions, unless you have a legitimate reason with formal proof (e.g. hospitalization, family urgency, etc.).
+  Traveling, busy with other stuff, or simply forgetting to submit, are not considered legitimate.
+
+
+  <h2>Project</h2>
+  The project for this course will differ depending on whether you are in CS 480 or 680.
+  <h3>CS 480 students</h3>
+  There is a Kaggle competition, more details forthcoming.
+  The deadline is August 16.
+  <h3>CS 680 students</h3>
+  You need to conduct a research project, which could be an attempt to beat the state-of-the-art performance on an interesting dataset, or an unexpected application of machine learning algorithms to a different field, or designing a novel algorithm to address a need in machine learning, or theoretically analyzing the performance of a machine learning algorithm (new or old). 
+  A literature survey on a new hot topic in ML is also possible.
+  You may work in pairs for this project.<br><br>
+
+You project should
+<ul>
+  <li>relate to machine learning (obviously)</li>
+  <li>allow you to learn something new and interesting</li>
+  <li>be significant and publishable in a top machine learning conference</li>
+</ul>
+
+The project proposal will be due on June 14, and worth 5% of the final grade.
+Please concisely describe what your project is about, some related works (no need to be thorough yet), what is your execution plan, what do you expect to learn/contribute, and how are you going to evaluate your results. 
+We expect the proposal to be 2 to 4 pages (excluding references). 
+We will assign a TA or instructor for your project. You are strongly suggested to remain contact with this TA or instructor throughout the term in order to make sufficient progress. <br><br> 
+
+An (ungraded) update (to instructor and your assigned TA) is due on July 12.
+This should describe what you've done so far, and what is left to be done.
+You are expected to have measurable "work done" by this point.<br><br>
+
+The project report will be due on August 10, and worth 15% of the final grade.
+Please summarize all your findings (empirical, algorithmic, theoretical) in a scientific report. 
+We expect there is an introduction section, a background section, a main result section, and a conclusion section. 
+Depending on your project, you may include an experimental section and/or discussion section. 
+Please always give proper citations to prior work or results. 
+Be precise and concise. We expect the report to be at most 8 pages (excluding references). <br><br>
+
+Your project report will be evaluated on its clarity, significance, rigor, presentation, and completeness.
+  
+  
+  <h2>Books and References</h2>
+  Readings for each lecture will be linked. 
+  Additionally, the following are excellent resources.
+  <ul>
+    <li><a href="https://d2l.ai/">Dive into Deep Learning</a> (D2L), by Aston Zhang, Zack C. Lipton, Mu Li and Alex J. Smola.</li>
+    <li><a href="https://www.deeplearningbook.org/">Deep Learning</a> (DL), by Ian Goodfellow, Yoshua Bengio and Aaron Courville.</li>
+    <li><a href="http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning: From Theory to Algorithms</a> (UML), by Shai Shalev-Shwartz and Shai Ben-David..</li>
+    <li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">Elements of Statistical Learning </a> (ESL), by Trevor Hastie, Robert Tibshirani and Jerome Friedman.</li>
+    <li><a href="https://www.statlearning.com/">An Introduction to Statistical Learning</a> (ISL), by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.</li>
+    <li><a href="https://mml-book.github.io/">Mathematics for Machine Learning</a> (MML), by Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong.</li>
+  </ul>
+
+  If NumPy is new to you, you might consult these resources.
+  <ul>
+    <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>, by Jake VanderPlas.</li>
+    <li><a href="https://www.youtube.com/watch?v=ZB7BZMhfPgk">Introduction to Numerical Computing with NumPy</a>, by Alex Chabot-Leclerc.</li>
+  </ul>
+  
+  <h2>Grading</h2>
+  Grades for this course will be determined with the following breakdown:
+  <ul>
+    <li>Assignments: 80%. There are five total assignments, your lowest score will be dropped.</li>
+    <li>Project: 20%. Either a Kaggle competition (CS 480) or a research project (CS 680). </li>
+  </ul>
+
+  <h2>Resources</h2>
+  Here are some top conferences and journals in machine learning. They may be good places to look for project ideas.
+  I believe all of them should be open access. More generally, you should <i>never</i> have to pay to access an academic article, especially when you are affiliated with a university.
+  Contact me if you run into any issues accessing any academic article and I'll write up some directions.
+  <ul>
+    <li><a href="https://dblp.org/db/conf/nips/index.html">NeurIPS</a></li>
+    <li><a href="https://dblp.org/db/conf/icml/index.html">ICML</a></li>
+    <li><a href="https://dblp.org/db/conf/iclr/index.html">ICLR</a></li>
+    <li><a href="https://dblp.org/db/conf/colt/index.html">COLT</a></li>
+    <li><a href="https://dblp.org/db/conf/aistats/index.html">AISTATS</a></li>
+    <li><a href="https://www.jmlr.org/papers/">JMLR</a></li>
+  </ul>
+
+  <h2>Policies</h2>
+  Academic Integrity: In order to maintain a culture of academic integrity, members of the University of Waterloo community are expected to promote honesty, trust, fairness, respect and responsibility. Check the university website for more information.<br><br>
+
+  Grievance: A student who believes that a decision affecting some aspect of his/her university life has been unfair or unreasonable may have grounds for initiating a grievance. Read Policy 70, Student Petitions and Grievances, Section 4. When in doubt please be certain to contact the department's administrative assistant who will provide further assistance.<br><br>
+
+  Discipline: A student is expected to know what constitutes academic integrity to avoid committing an academic offence, and to take responsibility for his/her actions. A student who is unsure whether an action constitutes an offence, or who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about "rules" for group work/collaboration should seek guidance from the course instructor, academic advisor, or the undergraduate Associate Dean. For information on categories of offences and types of penalties, students should refer to Policy 71, Student Discipline. For typical penalties check Guidelines for the Assessment of Penalties.<br><br>
+
+  Appeals: A decision made or penalty imposed under Policy 70 (Student Petitions and Grievances) (other than a petition) or Policy 71 (Student Discipline) may be appealed if there is a ground. A student who believes he/she has a ground for an appeal should refer to Policy 72 (Student Appeals).<br><br>
+
+  Note for Students with Disabilities: The Office for Persons with Disabilities (OPD), located in Needles Hall, Room 1132, collaborates with all academic departments to arrange appropriate accommodations for students with disabilities without compromising the academic integrity of the curriculum. If you require academic accommodations to lessen the impact of your disability, please register with the OPD at the beginning of each academic term.<br><br>
+
+  Mental Health: If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support.<br><br>
+
+On-campus Resources:
+<ul>
+  <li>Campus Wellness https://uwaterloo.ca/campus-wellness</li>
+  <li>Counselling Services: counselling.services@uwaterloo.ca 519-888-4567 ext 32655 Needles Hall North 2nd floor, (NH 2401)</li>
+  <li>MATES: one-to-one peer support program offered by Federation of Students (FEDS) and Counselling Services: mates@uwaterloo.ca</li>
+  <li>Health Services service: located across the creek from Student Life Centre, 519-888-4096</li>
+</ul>
+
+Off-campus Resources:
+<ul>
+  <li>Good2Talk (24/7): Free confidential help line for post-secondary students. Phone: 1-866-925-5454</li>
+  <li>Here 24/7: Mental Health and Crisis Service Team. Phone: 1-844-437-3247</li>
+  <li>OK2BME: set of support services for lesbian, gay, bisexual, transgender or questioning teens in Waterloo. Phone: 519-884-0000 extension 213</li>
+</ul>
+
+Diversity: It is our intent that students from all diverse backgrounds and perspectives be well served by this course, and that students' learning needs be addressed both in and out of class. We recognize the immense value of the diversity in identities, perspectives, and contributions that students bring, and the benefit it has on our educational environment. Your suggestions are encouraged and appreciated. Please let us know ways to improve the effectiveness of the course for you personally or for other students or student groups. In particular:
+<ul>
+  <li>We will gladly honour your request to address you by an alternate/preferred name or gender pronoun. Please advise us of this preference early in the semester so we may make appropriate changes to our records.</li>
+  <li>We will honour your religious holidays and celebrations. Please inform of us these at the start of the course.</li>
+  <li>We will follow AccessAbility Services guidelines and protocols on how to best support students with different learning needs.</li>
+</ul>
+
+
+  <h2>Acknowledgments</h2>
+  This course relies instrumentally upon content created by Yaoliang Yu.
+
+</body>
+</html>

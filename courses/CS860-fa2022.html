@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>CS 860 - Algorithms for Private Data Analysis- Fall 2022</title>
+<style type="text/css">
+  .selected {
+    width:100%;
+    display: block;
+  }
+  .regular {
+    width:100%;
+    display: none;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  td {
+    text-align: center;
+  }
+</style>
+  </head>
+
+<body bgcolor="white" text="black" link="blue" vlink="blue" alink="blue">
+
+  <h1>CS 860 - Algorithms for Private Data Analysis - Fall 2022</h1>
+  <h2>Course Description</h2>
+  This course is on algorithms for differentially private analysis of data. 
+  As necessitated by the nature of differential privacy, this course will be theoretically and mathematically based.
+  References to practice will be provided as relevant, especially towards the end of the course.
+
+  Prerequisites include an undergraduate understanding of algorithms, comfort with probability, and mathematical maturity.
+
+  <h2>Logistics</h2>
+  <ul>
+    <li>Lecture: Tuesdays and Thursday 10:00 AM - 11:20 AM in DC 2585</li>
+    <li>Instructor: <a href="http://www.gautamkamath.com/">Gautam Kamath</a></li>
+    <li>Office Hours: Thursday 11:20 AM to 12:30 PM, or by appointment</li>
+    <li>Piazza: Link <a href="https://piazza.com/class/l7sjeck4uv856v">here</a></li>
+  </ul>
+
+  This course will consist of two parts. 
+  The first third of the course will be a series of lectures covering the basics of differential privacy.
+  The remainder of the course will consist of paper reading and discussions. <br><br>
+
+  Lecture videos for a previous offering of this course are available <a href="https://www.youtube.com/playlist?list=PLmd_zeMNzSvRRNpoEWkVo6QY_6rR3SHjp">here</a>. 
+  Our lecture part of the course will cover roughly the first seven lectures from that offering.
+  You are still expected to attend class meetings, both during the lecture portion and especially during the discussion portion. 
+
+
+  <h2>Lectures</h2>
+  All videos and notes are from the prior course offering, but should still be relevant. <br><br>
+  <table style="width:100%">
+    <tr>
+      <th>Lecture Number</th>
+      <th>Topic</th>
+      <th>Release Date</th>
+      <th>Video Link</th>
+      <th>Lecture Notes</th>
+      <th>Written Notes</th>
+      <th>References and Readings</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Some Attempts at Data Privacy</td>
+      <td>9/8/2022</td>
+      <td><a href="https://www.youtube.com/watch?v=FJMjNOcIqkc">Part 1</a><br>
+      <a href="https://www.youtube.com/watch?v=EzYXbU-ZE3s">Part 2</a>
+      </td>
+      <td><a href="CS860-fa2022-files/lec1.pdf">PDF</a></td>
+      <td><a href="CS860-fa2022-files/lec1-written.pdf">PDF</a></td>
+      <td>
+        Required:
+        <ul>
+          <li>Nikolov, <a href="http://www.cs.toronto.edu/~anikolov/CSC2412F20/notes/prob.pdf">Some Useful Probability Facts</a>, 2020.</li>
+        </ul>
+        Recommended:
+        <ul>
+          <li>Pandurangan, <a href="https://tech.vijayp.ca/of-taxis-and-rainbows-f6bc289679a1">On Taxis and Rainbows</a>, 2014.</li>
+          <li>Narayanan and Shmatikov, <a href="https://www.cs.cornell.edu/~shmat/shmat_oak08netflix.pdf">Robust De-anonymization of Large Sparse Datasets</a>, 2008.</li>
+          <li>Carlini, Liu, Erlingsson, Kos, and Song, <a href="https://arxiv.org/abs/1802.08232">The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks</a>, 2019.</li>
+          <li>Wallace, Tram&egrave;r, Jagielski, and Herbert-Voss, <a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/">Does GPT-2 Know Your Phone Number?</a>, 2020.</li>
+          <li>Carlini et al., <a href="https://arxiv.org/abs/2012.07805">Extracting Training Data from Large Language Models</a>, 2021.</li>
+        </ul>
+        Optional:
+        <ul>
+          <li>Whong, <a href="https://Cwhong.com/open-data/foil_nyc_taxi/">FOILing NYC's Taxi Trip Data</a>, 2014.</li>
+          <li>Homer et al., <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1000167">Resolving Individuals Contributing Trace Amounts of DNA to Highly Complex Mixtures Using High-Density SNP Genotyping Microarrays</a>, 2008.</li>
+          <li>Samarati and Sweeney, <a href="https://dataprivacylab.org/dataprivacy/projects/kanonymity/paper4.pdf">Generalizing Data to Provide Anonymity when Disclosing Information</a>, 1998.</li>
+          <li>Ganta, Kasiviswanathan, and Smith, <a href="https://arxiv.org/abs/0803.0032">Composition Attacks and Auxiliary Information in Data Privacy</a>, 2008.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Reconstruction Attacks</td>
+      <td>9/13/2022</td>
+      <td><a href="https://www.youtube.com/watch?v=usOYloLB2SU">Part 1</a> <br>
+        <a href="https://www.youtube.com/watch?v=8MkU3czKvpY">Part 2</a> <br>
+      <a href="https://www.youtube.com/watch?v=o3qZ0GFlYi0">Part 3</a>
+      </td>
+      <td><a href="CS860-fa2022-files/lec2.pdf">PDF</a></td>
+      <td><a href="CS860-fa2022-files/lec2-written.pdf">PDF</a></td>
+      <td>
+        Highly Recommended:
+        <ul>
+          <li>Section 8.1 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+          <li>Garfinkel, Abowd, Martindale, <a href="https://digitalcommons.ilr.cornell.edu/ldi/50/">Understanding Database Reconstruction Attacks on Public Data</a>, 2019.</li>
+          <li>Dinur and Nissim, <a href="https://crypto.stanford.edu/seclab/sem-03-04/psd.pdf">Revealing Information while Preserving Privacy</a>, 2003.</li>
+          <li>Cohen and Nissim, <a href="https://journalprivacyconfidentiality.org/index.php/jpc/article/view/711">Linear Program Reconstruction in Practice</a>, 2020.</li>
+        </ul>
+        Recommended:
+        <ul>
+          <li>Abowd, <a href="https://twitter.com/john_abowd/status/1114942180278272000">Tweetorial: Reconstruction-abetted re-identification attacks and other traditional vulnerabilities</a>, 2019.</li>
+          <li>Francis, <a href="https://aircloak.com/diffix-cedar-bounty-prize-awarded-to-upenn-students/">Diffix Cedar bounty prize awarded to UPenn students</a>, 2020.</li>
+        </ul>
+        Optional:
+        <ul>
+          <li>Dwork, McSherry, and Talwar, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/lp-decoding.pdf">The Price of Privacy and the Limits of LP Decoding</a>, 2007.</li>
+          <li>Hanson, <a href="https://web.archive.org/web/20200629154117/https://www.nytimes.com/2018/12/05/upshot/to-reduce-privacy-risks-the-census-plans-to-report-less-accurate-data.html">To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data</a>, 2018.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Continue Reconstruction Attacks, start Intro to Differential Privacy</td>
+      <td>9/15/2022</td>
+      <td><a href="https://www.youtube.com/watch?v=gCjQ-2W9yjs">Part 1</a> <br>
+        <a href="https://www.youtube.com/watch?v=W1v_JfL6sZo">Part 2</a> <br>
+      </td>
+      <td><a href="CS860-fa2022-files/lec3.pdf">PDF</a></td>
+      <td><a href="CS860-fa2022-files/lec3-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Section 1.4-1.6 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>Sections 2, 3.1-3.2 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+        </ul>
+        Optional:
+        <ul>
+          <li>Dwork, McSherry, Nissim, and Smith, <a href="https://journalprivacyconfidentiality.org/index.php/jpc/article/view/405">Calibrating Noise to Sensitivity in Private Data Analysis</a>, 2006.</li>
+        </ul>
+      </td>
+    </tr>
+     <tr>
+      <td>4</td>
+      <td>Continue Intro to Differential Privacy</td>
+      <td>9/20/2022</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Start Intro to Differential Privacy, Part 2</td>
+      <td>9/22/2022</td>
+      <td><a href="https://www.youtube.com/watch?v=IGQe9BN1TZs">Part 1</a> <br>
+        <a href="https://www.youtube.com/watch?v=X1NWwcp0MrE">Part 2</a> <br>
+      </td>
+      <td><a href="CS860-fa2022-files/lec4.pdf">PDF</a></td>
+      <td><a href="CS860-fa2022-files/lec4-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Section 2 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>Section 3.3 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+        </ul>
+        Optional:
+        <ul>
+          <li>Dwork, McSherry, Nissim, and Smith, <a href="https://journalprivacyconfidentiality.org/index.php/jpc/article/view/405">Calibrating Noise to Sensitivity in Private Data Analysis</a>, 2006.</li>
+        </ul>
+      </td>
+  </tr>
+    <tr>
+      <td>6</td>
+      <td>Finish Intro to Differential Privacy Part 2, Start Approximate Differential Privacy</td>
+      <td>9/27/2022</td>
+      <td><a href="https://www.youtube.com/watch?v=9QvSO9S2urg">Part 1</a> <br>
+        <a href="https://www.youtube.com/watch?v=AS9lfO4trdk">Part 2</a> <br>
+      </td>
+      <td><a href="CS860-fa2022-files/lec5.pdf">PDF</a></td>
+      <td><a href="CS860-fa2022-files/lec5-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Appendix A of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+        </ul>
+        Optional:
+        <ul>
+          <li>Dwork, Kenthapadi, McSherry, Mironov, and Naor, <a href="https://www.iacr.org/archive/eurocrypt2006/40040493/40040493.pdf">Our Data, Ourselves: Privacy via Distributed Noise Generation</a>, 2006.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Continue Approximate Differential Privacy</td>
+      <td>9/29/2022</td>
+      <td> </td>
+      <td></td>
+      <td></td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Finish Approximate Differential Privacy, Start Exponential Mechanism</td>
+      <td>10/4/2022</td>
+      <td><a href="https://www.youtube.com/watch?v=J19YM6U2x4U">Part 1</a><br>
+          <a href="https://www.youtube.com/watch?v=Fcg8aUp3znk">Part 2</a><br>
+      </td>
+      <td><a href="CS860-fa2022-files/lec7.pdf">PDF</a></td>
+      <td><a href="CS860-fa2022-files/lec7-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Sections 3.4, 10.1-10.2 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+          <li>Section 8.1 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>McSherry, Talwar, <a href="http://kunaltalwar.org/papers/expmech.pdf">Mechanism Design via Differential Privacy</a>, 2007.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Finish Exponential Mechanism</td>
+      <td>10/4/2022</td>
+      <td>      </td>
+      <td></td>
+      <td></td>
+      <td>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Paper Discussions</h2>
+  <table style="width:100%">
+    <tr>
+      <th>Meeting Number</th>
+      <th>Date</th>
+      <th>Paper 1</th>
+      <th>Paper 1 Presenter</th>
+      <th>Paper 2</th>
+      <th>Paper 2 Presenter</th>
+      <th>Additional Readings</th>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>10/18/22</td>
+      <td><a href="https://cs-people.bu.edu/ads22/pubs/NRS07/NRS07-full-draft-v1.pdf">Smooth Sensitivity and Sampling in Private Data Analysis</a>, by Nissim, Raskhodnikova, and Smith.</td>
+      <td>A</td>
+      <td><a href="https://arxiv.org/abs/1012.4763">A Simple and Practical Algorithm for Differentially Private Data Release</a>, by Hardt, Ligett, and McSherry.</td>
+      <td>R</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>10/20/22</td>
+      <td><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2012/10/lsbs.pdf">On Significance of the Least Significant Bits For Differential Privacy</a>, by Mironov.</td>
+      <td>V</td>
+      <td><a href="https://arxiv.org/abs/1411.2664">Preserving Statistical Validity in Adaptive Data Analysis</a>, by Dwork, Feldman, Hardt, Pitassi, Reingold, and Roth.</td>
+      <td>A</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>10/27/22</td>
+      <td><a href="https://people.cs.umass.edu/~mcgregor/papers/15-vldbj.pdf">The matrix mechanism: optimizing linear counting queries under differential privacy</a>, by Li, Miklau, Hay, McGregor, and Rastogi.</td>
+      <td>SK</td>
+      <td><a href="https://arxiv.org/abs/1602.05629">Communication-Efficient Learning of Deep Networks from Decentralized Data</a>, by McMahan, Moore, Ramage, Hampson, and Ag&uuml;era y Arcas.</td>
+      <td>C</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>11/01/22</td>
+      <td><a href="https://arxiv.org/abs/1605.02065">Concentrated Differential Privacy: Simplifications, Extensions, and Lower Bounds</a>, by Bun and Steinke.</td>
+      <td>SK</td>
+      <td><a href="https://arxiv.org/abs/1607.00133">Deep Learning with Differential Privacy</a>, by Abadi, Chu, Goodfellow, McMahan, Mironov, Talwar, and Zhang.</td>
+      <td>R</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>11/03/22</td>
+      <td><a href="https://arxiv.org/abs/1610.05755">Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data</a>, by Papernot, Abadi, Erlingsson, Goodfellow, and Talwar.</td>
+      <td>S</td>
+      <td><a href="https://privacytools.seas.harvard.edu/files/privacytools/files/pdf_02.pdf">Exposed! A Survey of Attacks on Private Data</a>, by Dwork, Smith, Steinke, and Ullman.</td>
+      <td>V</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>11/08/22</td>
+      <td><a href="https://arxiv.org/abs/1710.00901">Prochlo: Strong Privacy for Analytics in the Crowd</a>, by Bittau, Erlingsson, Maniatis, Mironov, Raghunathan, Lie, Rudominer, Kode, Tinnes, and Seefeld.</td>
+      <td>V</td>
+      <td><a href="https://arxiv.org/abs/1806.00949">Private PAC learning implies finite Littlestone dimension</a>, by Alon, Livni, Malliaris, and Moran.</td>
+      <td>S</td>
+      <td><a href="https://programming-dp.com/ch13.html">Local Differential Privacy</a></td>
+    </tr>   
+    <tr>
+      <td>16</td>
+      <td>11/10/22</td>
+      <td><a href="https://arxiv.org/abs/1808.01394">Distributed Differential Privacy via Shuffling</a>, by Cheu, Smith, Ullman, Zeber, and Zhilyaev.</td>
+      <td>C</td>
+      <td><a href="https://arxiv.org/abs/1905.02383">Gaussian Differential Privacy</a>, by Dong, Roth, and Su.</td>
+      <td>SK</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>11/15/22</td>
+      <td><a href="https://arxiv.org/abs/2002.05839">LinkedIn's Audience Engagements API: A Privacy Preserving Data Analytics System at Scale</a>, by Rogers, Subramaniam, Peng, Durfee, Lee, Kancha, Sahay, and Ahammad.</td>
+      <td>SS</td>
+      <td><a href="https://arxiv.org/abs/2003.00563">An Equivalence Between Private Classification and Online Prediction</a>, by Bun, Livni, and Moran.</td>
+      <td>SK</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>11/17/22</td>
+      <td><a href="https://arxiv.org/abs/2006.06618">CoinPress: Practical Private Mean and Covariance Estimation</a>, by Biswas, Dong, Kamath, and Ullman.</td>
+      <td>A</td>
+      <td><a href="https://arxiv.org/abs/2006.07709">Auditing Differentially Private Machine Learning: How Private is Private SGD?</a>, by Jagielski, Ullman, and Oprea.</td>
+      <td>S</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>11/22/22</td>
+      <td><a href="https://arxiv.org/abs/2011.11660">Differentially Private Learning Needs Better Features (or Much More Data)</a>, by Tram&egrave;r and Boneh.</td>
+      <td>SS</td>
+      <td><a href="https://arxiv.org/abs/2103.00039">Practical and Private (Deep) Learning without Sampling or Shuffling</a>, by Kairouz, McMahan, Song, Thakkar, Thakurta, and Xu.</td>
+      <td>C</td>
+      <td><a href="https://ai.googleblog.com/2022/02/federated-learning-with-formal.html">Federated Learning with Formal Differential Privacy Guarantees</a></td>
+    </tr>   
+    <tr>
+      <td>20</td>
+      <td>11/24/22</td>
+      <td><a href="https://arxiv.org/abs/2110.05679">Large Language Models Can Be Strong Differentially Private Learners</a>, by Li, Tram&egrave;r, Liang, and Hashimoto.<br><a href="https://arxiv.org/abs/2110.06500">Differentially Private Fine-tuning of Language Models</a>, by Yu, Naik, Backurs, Gopi, Inan, Kamath, Kulkarni, Lee, Manoel, Wutschitz, Yekhanin, and Zhang.</td>
+      <td>C</td>
+      <td><a href="https://arxiv.org/abs/2112.03570">Membership Inference Attacks From First Principles</a>, by Carlini, Chien, Nasr, Song, Terzis, and Tram&egrave;r.</td>
+      <td>S</td>
+      <td></td>
+    </tr> 
+    <tr>
+      <td>21</td>
+      <td>11/29/22</td>
+      <td><a href="https://arxiv.org/abs/2202.05520">What Does it Mean for a Language Model to Preserve Privacy?</a>, by Brown, Lee, Mireshghallah, Shokri, and Tram&egrave;r.</td>
+      <td>R</td>
+      <td><a href="https://arxiv.org/abs/2202.13470">Attacks on Deidentification's Defenses</a>, by Cohen.</td>
+      <td>SS</td>
+      <td></td>
+    </tr> 
+    <tr>
+      <td>22</td>
+      <td>12/01/22</td>
+      <td><a href="https://arxiv.org/abs/2204.08986">The 2020 Census Disclosure Avoidance System TopDown Algorithm</a>, by Abowd, Ashmead, Cumings-Menon, Garfinkel, Heineck, Heiss, Johns, Kifer, Leclerc, Machanavajjhala, Moran, Sexton, Spence, and Zhuravlev.</td>
+      <td>V</td>
+      <td>Considerations for Differentially Private Learning with Large-Scale Public Pretraining (Forthcoming)</td>
+      <td>SS</td>
+      <td></td>
+    </tr>     
+  </table>
+
+<!--
+    <tr>
+      <td>6</td>
+      <td>Advanced Composition</td>
+      <td>9/24/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=lkZ8DaPFiNQ">Part 1</a> <br>
+        <a href="https://www.youtube.com/watch?v=sosCyU5IyhE">Part 2</a> <br>
+      </td>
+      <td><a href="CS860notes/lec6.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec6-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Smith, <a href="https://adaptivedataanalysis.files.wordpress.com/2017/11/lect13.pdf">Lecture 13: Strong Composition</a>, 2017.</li>
+        </ul>
+        Optional:
+        <ul>
+          <li>Sections 3.5.1-3.5.2 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+          <li>Dwork, Rothblum, Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/05670947.pdf">Boosting and Differential Privacy</a>, 2010.</li>
+          <li>Kairouz, Oh, Viswanath, <a href="https://arxiv.org/abs/1311.0776">The Composition Theorem for Differential Privacy</a>, 2015.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Exponential Mechanism</td>
+      <td>9/30/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=J19YM6U2x4U">Part 1</a><br>
+          <a href="https://www.youtube.com/watch?v=Fcg8aUp3znk">Part 2</a><br>
+      </td>
+      <td><a href="CS860notes/lec7.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec7-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Sections 3.4, 10.1-10.2 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+          <li>Section 8.1 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>McSherry, Talwar, <a href="http://kunaltalwar.org/papers/expmech.pdf">Mechanism Design via Differential Privacy</a>, 2007.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Private Multiplicative Weights</td>
+      <td>10/6/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=TJySDEnfMXw">Part 1</a><br>
+          <a href="https://www.youtube.com/watch?v=J71IHsVBTCk">Part 2</a><br>
+          <a href="https://www.youtube.com/watch?v=w4-mpXu3vrA">Part 3</a><br>
+      </td>
+      <td><a href="CS860notes/lec8.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec8-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Roth, <a href="https://www.cis.upenn.edu/~aaroth/courses/slides/agt20/lect05.pdf">Lecture 5 and 6</a>, 2020.</li>
+          <li>Hardt, Rothblum, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.360.1107">A Multiplicative Weights Mechanism for Privacy-Preserving Data Analysis</a>, 2010.</li>
+          <li>Hardt, Ligett, McSherry, <a href="https://arxiv.org/abs/1012.4763">A Simple and Practical Algorithm for Differentially Private Data Release</a>, 2012.</li>
+          <li>Section 4.2 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>Sections 4.2 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Sparse Vector Technique</td>
+      <td>10/9/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=PJEIN9s69qU">Part 1</a><br>
+          <a href="https://www.youtube.com/watch?v=wnW3zfM-STU">Part 2</a><br>
+      </td>
+      <td><a href="CS860notes/lec9.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec9-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Section 3.6 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Beyond Global Sensitivity</td>
+      <td>10/21/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=G2Xqe-VeGRI">Part 1</a><br>
+      </td>
+      <td><a href="CS860notes/lec10.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec10-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Section 3 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>Section 7 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+          <li>Nissim, Raskhodnikova, Smith, <a href="http://cs-people.bu.edu/ads22/pubs/NRS07/NRS07-full-draft-v1.pdf">Smooth Sensitivity and Sampling in Private Data Analysis</a>, 2007.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Packing Lower Bounds</td>
+      <td>10/23/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=w-q5LLJ7ReQ">Part 1</a><br>
+      </td>
+      <td><a href="CS860notes/lec11.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec11-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Section 5.2 of Vadhan, <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, 2017.</li>
+          <li>Section 8.2 of Dwork and Roth, <a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, 2014.</li>
+          <li>Hardt and Talwar, <a href="https://arxiv.org/abs/0907.3754">On the Geometry of Differential Privacy</a>, 2010.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>What is a Privacy Violation?</td>
+      <td>10/28/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=zP5qq141wUY">Part 1</a><br>
+      </td>
+      <td><a href="CS860notes/lec12.pdf">PDF</a></td>
+      <td>None</td>
+      <td>
+        None
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Differentially Private ERM</td>
+      <td>11/4/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=7VW1vB_x7k4">Part 1</a><br>
+          <a href="https://www.youtube.com/watch?v=xp9ISWq1STI">Part 2</a><br>
+          <a href="https://www.youtube.com/watch?v=HGXOtTmI-sQ">Part 3</a><br>
+      </td>
+      <td><a href="CS860notes/lec13.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec13-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Bassily, Smith, Thakurta, <a href="https://arxiv.org/abs/1405.7085">Differentially Private Empirical Risk Minimization: Efficient Algorithms and Tight Error Bounds</a>, 2014.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Modern Machine Learning</td>
+      <td>11/7/2020</td>
+      <td><a href="https://www.youtube.com/watch?v=xIemjUqhDsY">Part 1</a><br>
+          <a href="https://www.youtube.com/watch?v=uTiXla_pHik">Part 2</a><br>
+          <a href="https://www.youtube.com/watch?v=lgmXVCE505M">Part 3</a><br>
+      </td>
+      <td><a href="CS860notes/lec14.pdf">PDF</a></td>
+      <td><a href="CS860notes/lec14-written.pdf">PDF</a></td>
+      <td>
+        Recommended:
+        <ul>
+          <li>Abadi, Chu, Goodfellow, McMahan, Mironov, Talwar, Zhang, <a href="https://arxiv.org/abs/1607.00133">Deep Learning with Differential Privacy</a>, 2016.</li>
+          <li>Papernot, Abadi, Erlingsson, Goodfellow, Talwar, <a href="https://arxiv.org/abs/1610.05755">Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data</a>, 2017.</li>
+          <li>Bassily, Thakkar, Thakurta, <a href="https://arxiv.org/abs/1803.05101">Model-Agnostic Private Learning via Stability</a>, 2018.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+    <td>15</td>
+    <td>Private Mean Estimation</td>
+    <td>11/12/2020</td>
+    <td><a href="https://www.youtube.com/watch?v=nhEjDm-Pzk4">Part 1</a><br>
+        <a href="https://www.youtube.com/watch?v=Vh0wzhYkUUs">Part 2</a><br>
+        <a href="https://www.youtube.com/watch?v=5Qtd-9LWsFE">Part 3</a><br>
+    </td>
+    <td><a href="CS860notes/lec15.pdf">PDF</a></td>
+    <td><a href="CS860notes/lec15-written.pdf">PDF</a></td>
+    <td>
+      Recommended:
+      <ul>
+        <li>Biswas, Dong, Kamath, Ullman, <a href="https://arxiv.org/abs/2006.06618">CoinPress: Practical Private Mean and Covariance Estimation</a>, 2020.</li>
+        <li>Kamath, Singhal, Ullman, <a href="https://arxiv.org/abs/2002.09464">Private Mean Estimation of Heavy-Tailed Distributions</a>, 2020.</li>
+        <li>Karwa, Vadhan, <a href="https://arxiv.org/abs/1711.03908">Finite Sample Differentially Private Confidence Intervals</a>, 2018.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Adaptive Data Analysis</td>
+    <td>11/18/2020</td>
+    <td><a href="https://www.youtube.com/watch?v=i4MGqlBKvjI">Part 1</a><br>
+        <a href="https://www.youtube.com/watch?v=GDfXRVnLfb0">Part 2</a><br>
+    </td>
+    <td>See notes by:<br>
+      <a href="http://www.cs.toronto.edu/~anikolov/CSC2412F20/notes/adaptive.pdf">Sasho Nikolov</a><br>
+      <a href="http://people.seas.harvard.edu/~madhusudan/courses/Spring2016/notes/thomas-notes-ada.pdf">Thomas Steinke</a></td>
+    <td><a href="CS860notes/lec16-written.pdf">PDF</a></td>
+    <td>
+      Recommended:
+      <ul>
+        <li>Jung, Ligett, Neel, Roth, Sharifi-Malvajerdi, Shenfeld, <a href="https://arxiv.org/abs/1909.03577">A New Analysis of Differential Privacy's Generalization Guarantees</a>, 2020.</li>
+        <li>Bassily, Nissim, Smith, Steinke, Stemmer, Ullman, <a href="https://arxiv.org/abs/1511.02513">Algorithmic Stability for Adaptive Data Analysis</a>, 2016.</li>
+        <li>Dwork, Feldman, Hardt, Pitassi, Reingold, Roth, <a href="https://arxiv.org/abs/1411.2664">Preserving Statistical Validity in Adaptive Data Analysis</a>, 2015.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>Deployments of DP 1: Local Differential Privacy</td>
+    <td>11/24/2020</td>
+    <td><a href="https://www.youtube.com/watch?v=eP9RGfQsvtg">Part 1</a><br>
+        <a href="https://www.youtube.com/watch?v=Jn7qva2IMVc">Part 2</a><br>
+    </td>
+    <td><a href="CS860notes/lec17.pdf">PDF</a></td>
+    <td><a href="CS860notes/lec17-written.pdf">PDF</a></td>
+    <td>
+      Recommended:
+      <ul>
+        <li>Erlingsson, Pihur, Korolova, <a href="https://arxiv.org/abs/1407.6981">RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response</a>, 2014.</li>
+        <li>Differential Privacy Team, <a href="https://machinelearning.apple.com/research/learning-with-privacy-at-scale">Learning with Privacy at Scale</a>, 2017.</li>
+        <li>Ding, Kulkarni, Yekhanin, <a href="https://arxiv.org/abs/1712.01524">Collecting Telemetry Data Privately</a>, 2017.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>Deployments of DP 2</td>
+    <td>12/5/2020</td>
+    <td><a href="https://www.youtube.com/watch?v=-ly-mpB6O6s">Part 1</a><br>
+    </td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>
+      Recommended:
+      <ul>
+        <li>Bittau et al., <a href="https://arxiv.org/abs/1710.00901">Prochlo: Strong Privacy for Analytics in the Crowd</a>, 2017</li>
+        <li>Cheu, Smith, Ullman, Zeber, Zhilyaev, <a href="https://arxiv.org/abs/1808.01394">Distributed Differential Privacy via Shuffling</a>, 2018</li>
+        <li>Erlingsson, Feldman, Mironov, Raghunathan, Talwar, Thakurta, <a href="https://arxiv.org/abs/1811.12469">Amplification by Shuffling: From Local to Central Differential Privacy via Anonymity</a>, 2018</li>
+        <li>Rogers et al., <a href="https://arxiv.org/abs/2002.05839">LinkedIn's Audience Engagements API: A Privacy Preserving Data Analytics System at Scale</a>, 2020.</li>
+        <li>Rogers et al., <a href="https://arxiv.org/abs/2010.13981">A Members First Approach to Enabling LinkedIn's Labor Market Insights at Scale</a>, 2020.</li>
+        <li>Aktay et al., <a href="https://arxiv.org/abs/2004.04145">Google COVID-19 Community Mobility Reports: Anonymization Process Description</a>, 2020.</li>
+        <li>Messing et al., <a href="https://solomonmg.github.io/pdf/Facebook_DP_URLs_Dataset.pdf">Facebook Privacy-Protected Full URLs Data Set</a>, 2020.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>Differential Privacy in the 2020 US Census</td>
+    <td>11/30/2020</td>
+    <td><a href="https://www.youtube.com/watch?v=R_8riuhIw-4">Part 1</a>, by John Abowd<br>
+        <a href="https://www.youtube.com/watch?v=vZeiIl5yqdw">Part 2</a> (14:25-26:35), by Philip Leclerc<br>
+    </td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>
+      Recommended:
+      <ul>
+        <li><a href="https://www.census.gov/about/policies/privacy/statistical_safeguards/disclosure-avoidance-2020-census.html">Disclosure Avoidance and the 2020 Census</a>.</li>
+        <li><a href="https://www.census.gov/newsroom/blogs/research-matters/2018/08/protecting_the_confi.html">Protecting the Confidentiality of America’s Statistics: Adopting Modern Disclosure Avoidance Methods at the Census Bureau</a>.</li>
+        <li><a href="https://www.census.gov/programs-surveys/decennial-census/2020-census/planning-management/memo-series/2020-memo-2019_13.html">Memorandum 2019.13: Disclosure Avoidance System Design Parameters and Global Privacy-Loss Budget for the 2018 End-to-End Census Test</a>.</li>
+        <li><a href="https://www.census.gov/programs-surveys/decennial-census/2020-census/planning-management/memo-series/2020-memo-2019_12.html">Memorandum 2019.12: 2020 Disclosure Avoidance System Design Requirement – State Resident Population and the Federally Affiliated Count Overseas (FACO)</a>.</li>
+      </ul>
+    </td>
+  </tr>
+  --!>
+
+
+
+  <h2>Assignment</h2>
+    <a href="CS860-fa2022-files/ps.pdf">Problem Set</a>, due October 24, by 11:59 PM Waterloo time.
+  <!--
+  <ul>
+    <li><a href="CS860-fa2022-files/ps1.pdf">Problem Set 1</a>, due October 5 by 11:59 PM Waterloo time.</li>
+    <li><a href="CS860-fa2022-files/ps2.pdf">Problem Set 2</a>, due October 27 by 11:59 PM Waterloo time.</li>
+  </ul>
+  --!>
+  
+  <h2>Books and References</h2>
+  Don't buy a textbook for this course. But we'll be going off the following resources, and others. 
+  <ul>
+    <li><a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">The Algorithmic Foundations of Differential Privacy</a>, by Cynthia Dwork and Aaron Roth</li>
+    <li><a href="https://privacytools.seas.harvard.edu/files/privacytools/files/complexityprivacy_1.pdf">The Complexity of Differential Privacy</a>, by Salil Vadhan</li>
+  </ul>
+  Also check out the Resources page on <a href="https://differentialprivacy.org/">DifferentialPrivacy.org</a>.
+  
+  <h2>Grading</h2>
+  Grades for this course will be determined with the following breakdown:
+  <ul>
+    <li>Assignments: 25%. Will be mathematical/proof based. One large assignment. </li>
+    <li>Paper Discussion and Participation: 35%. You are expected to read and review all assigned papers, and lead discussions on some of them.</li>
+    <li>Final Project: 40%. A project may be theoretical, experimental, or a mix of the two.</li>
+  </ul>
+
+  <h2>Paper Presentation and Discussions</h2>
+  The format of these paper discussions (as well as the text below) is based on a course by Florian Kerschbaum. Logistics may change slightly as we approach the relevant portion of the course. The majority of credit for this portion will be based on presenting the paper, with the rest assigned to your reviews and participation in discussions.<br><br>
+
+  There are two or three papers assigned to each lecture, selected from the course topics. 
+  All students have to read all of the papers before the class. 
+  Each student must submit a review for each of the papers several days before class. 
+  The review must contain a short summary of the paper, its related work and context in the scientific literature, its strong points making a contribution to the advancement of knowledge and its weak points where further research work is necessary. 
+  It is good to phrase weak points as questions or hypothesis. 
+  Please give enough context to make your questions accessible to other students. <br><br>
+
+  Each student responsible for presenting a paper, must read all reviews and prepare a presentation that structures the discussion on the paper. 
+  This includes providing the necessary background and context of the paper, i.e., it may be necessary to read more than just the assigned paper when presenting. 
+  The presenter is to assume that each student has read the paper and is familiar with its content, i.e. not verbatim repeat the paper's contribution. 
+  The presenter will then structure the reviews into main contributions and questions, answer questions where the necessary background is available and lead a discussion on the remaining ones with the help of the instructor. 
+  Each paper should start with a 20 minute presentation of the reviews and last for another 20 minutes of discussion. 
+
+
+  <h2>Final Project</h2>
+  For your final project, you should do something cool related to differential privacy. As a very rough guideline, the goal should be to produce original research that would be hypothetically publishable at a reasonable conference, or at least a workshop (say, e.g., <a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP</a>) -- note that the polish of results in these workshops ranges from very preliminary to essentially conference papers). 
+  That said, publishability is not perfectly aligned with my expectations: not everything cool is publishable, and not everything publishable is cool.<br><br>
+
+  You are allowed to work in groups of up to three.<br><br>
+
+There are three deliverables for this project. Credit is only assigned for the last one, the first two are just to make sure things are going OK. All are due by email to the instructor (either his MIT or Waterloo one).
+<ul>
+<li>Project Proposal - due October 21. A paragraph or two stating what you intend to do for your final project.</li>
+<li>Project Check-in - due November 18. A paragraph or two updating on what you have done for your final project. I expect to see measurable progress done by this time.</li>
+<li>Project submission - due December 9. A report of up to 8 pages (plus unlimited pages for references and appendix).</li>
+</ul>
+
+</body>
+</html>

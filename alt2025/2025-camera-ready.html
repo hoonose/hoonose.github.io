@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Camera-ready instructions for ALT 2025</title>
+  <link rel="stylesheet" href="foo.css" />
+</head>
+<body>
+<div id="body">
+
+<h1>Camera-ready instructions for ALT 2025</h1>
+
+<p>Congratulations on your accepted ALT 2025 paper! The paper will be published in <a href="https://proceedings.mlr.press/">Proceedings of Machine Learning Research (PMLR)</a>, volume 272.</p>
+
+<p>While preparing the "camera-ready" (i.e., final) version of your paper, please take the reviews of your paper (available in <a href="https://openreview.net/group?id=algorithmiclearningtheory.org/ALT/2025/Conference">OpenReview</a>) into careful consideration. In accepting your paper, we assumed that the important remarks they contain would be addressed.</p>
+
+<p>Note that there is no page limit, although the first 13 pages (the original 12 from submission, plus one more to address reviewer comments/concerns) should contain a clear presentation of the paper's main contributions and an outline of the main arguments.</p>
+
+<p>The deadline for submitting the camera-ready version of your paper is <strong><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=ALT+2025+Camera+Ready+Deadline&iso=20250203T235959&p1=3399">February 3, 2025 11:59 pm AoE</a></strong>.</p>
+
+<p>Instructions for preparing and submitting the camera-ready version are as follows.</p>
+
+<h2>Step 1: Update style file and generate camera-ready PDF</h2>
+
+<p>The style file for the camera-ready version can be found here:</p>
+
+<blockquote>
+  <a href="http://www.gautamkamath.com/alt2025/alt2025-style-final.zip">http://www.gautamkamath.com/alt2025/alt2025-style-final.zip</a>
+</blockquote>
+
+<p>The only change from the style file from submission is the inclusion of the volume number.</p>
+
+<p>In your main TeX source file, you will need to change the options to documentclass:</p>
+
+<blockquote>
+  <code>\documentclass[final,12pt]{alt2025}</code>
+</blockquote>
+
+<p>Please do not modify any aspects of the default formatting (e.g., spacing, margins, fonts). Packages that change margins or fonts (e.g., "fullpage", "geometry") should be removed or disabled.</p>
+
+<p><strong>If you are opting to submit an extended abstract instead of a full paper</strong>, your extended abstract should be formatted in the same manner as a standard paper (including a short abstract section), be at least one page long (excluding references; see <a href="https://proceedings.mlr.press/v201/tsai23a/tsai23a.pdf">example from a previous year here</a>), and include a link to the arXiv version of the full paper in a footnote on the first page with the following text:</p>
+
+<blockquote>
+  <code>Extended abstract. Full version appears as \citep{<em style="color: red">citation of the full version</em>}.</code>
+</blockquote>
+
+<p>Recompile the PDF of your paper using this style file (and with the proper footnote if appropriate).</p>
+
+<h2>Step 2: Download and edit BibTeX file</h2>
+
+<p>Download and edit the BibTeX file corresponding to your paper.</p>
+
+<table border="1" align="center">
+  <tr>
+    <th>Title</th>
+    <th><code>&lt;key&gt;</code></th>
+  </tr>
+  <tr>
+  <td><a href="bibfiles/tseng25.bib">Online Learning of Quantum States with Logarithmic Loss via VB-FTRL</a></td>
+  <td>tseng25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/avital25.bib">Sharp bounds on aggregate expert error</a></td>
+  <td>avital25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/haddouche25.bib">A PAC-Bayesian Link Between Generalisation and Flat Minima</a></td>
+  <td>haddouche25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/raman25.bib">A Unified Theory of Supervised Online Learnability</a></td>
+  <td>raman25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/clerico25.bib">Generalisation under gradient descent via deterministic PAC-Bayes</a></td>
+  <td>clerico25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/cunha25.bib">Boosting, Voting Classifiers and Randomized Sample Compression Schemes</a></td>
+  <td>cunha25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/shen25.bib">Efficient PAC Learning of Halfspaces with Constant Malicious Noise Rate</a></td>
+  <td>shen25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/srinivasan25.bib">High-accuracy sampling from constrained spaces with the Metropolis-adjusted Preconditioned Langevin Algorithm</a></td>
+  <td>srinivasan25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/lau25.bib">Quantile Multi-Armed Bandits with 1-bit Feedback</a></td>
+  <td>lau25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/zhou25.bib">Logarithmic Regret for Unconstrained Submodular Maximization Stochastic Bandit</a></td>
+  <td>zhou25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/pabbaraju25.bib">A Characterization of List Regression</a></td>
+  <td>pabbaraju25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/hogsgaard25.bib">Efficient Optimal PAC Learning</a></td>
+  <td>hogsgaard25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/hopkins25.bib">Do PAC-Learners Learn the Marginal Distribution?</a></td>
+  <td>hopkins25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/putta25.bib">Data Dependent Regret Bounds for Online Portfolio Selection with Predicted Returns</a></td>
+  <td>putta25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/choquette-choo25.bib">Optimal Rates for O(1)-Smooth DP-SCO with a Single Epoch and Large Batches</a></td>
+  <td>choquette-choo25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/warmuth25.bib">How rotation invariant algorithms are fooled by noise on sparse targets</a></td>
+  <td>warmuth25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/asilis25a.bib">Understanding Aggregations of Proper Learners in Multiclass Classification</a></td>
+  <td>asilis25a</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/schliserman25.bib">The Dimension Strikes Back with Gradients: Generalization of Gradient Methods in Stochastic Convex Optimization</a></td>
+  <td>schliserman25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/victor25.bib">Clustering with bandit feedback: breaking down the computation/information gap</a></td>
+  <td>victor25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/mao25.bib">Enhanced $H$-Consistency Bounds</a></td>
+  <td>mao25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/wang25a.bib">Noisy Computing of the Threshold Function</a></td>
+  <td>wang25a</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/balkanski25a.bib">Strategyproof Learning with Advice</a></td>
+  <td>balkanski25a</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/balkanski25b.bib">Cost-Free Fairness in Online Correlation Clustering</a></td>
+  <td>balkanski25b</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/blum25a.bib">Nearly-tight Approximation Guarantees for the Improving Multi-Armed Bandits Problem</a></td>
+  <td>blum25a</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/blum25b.bib">A Model for Combinatorial Dictionary Learning and Inference</a></td>
+  <td>blum25b</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/bar-on25.bib">Non-stochastic Bandits With Evolving Observations</a></td>
+  <td>bar-on25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/attias25.bib">Sample Compression Scheme Reductions</a></td>
+  <td>attias25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/mitra25.bib">Fast Convergence of $\Phi$-Divergence Along the Unadjusted Langevin Algorithm and Proximal Sampler</a></td>
+  <td>mitra25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/sokolov25.bib">Self-Directed Node Classification on Graphs</a></td>
+  <td>sokolov25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/sachs25.bib">An Online Feasible Point Method for Benign Generalized Nash Equilibrium Problems.</a></td>
+  <td>sachs25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/abeles25.bib">Generalization bounds for mixing processes via delayed online-to-PAC conversions</a></td>
+  <td>abeles25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/liautaud25.bib">Minimax Adaptive Boosting for Online Nonparametric Regression</a></td>
+  <td>liautaud25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/rose25.bib">Effective Littlestone dimension</a></td>
+  <td>rose25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/hanneke25a.bib">Reliable Active Apprenticeship Learning</a></td>
+  <td>hanneke25a</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/lok25.bib">Error dynamics of mini-batch gradient descent with random reshuffling for least squares regression</a></td>
+  <td>lok25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/mazzetto25.bib">Center-Based Approximation of a Drifting Distribution</a></td>
+  <td>mazzetto25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/zurek25.bib">The Plugin Approach for Average-Reward and Discounted MDPs: Optimal Sample Complexity Analysis</a></td>
+  <td>zurek25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/hanneke25b.bib">For Universal Multiclass Online Learning, Bandit Feedback and Full Supervision are Equivalent</a></td>
+  <td>hanneke25b</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/wang25b.bib">A Complete Characterization of Learnability for Stochastic Noisy Bandits</a></td>
+  <td>wang25b</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/ashkezari25.bib">Refining the Sample Complexity of  Comparative Learning</a></td>
+  <td>ashkezari25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/lou25.bib">Computationally efficient reductions between some statistical models</a></td>
+  <td>lou25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/afzali25.bib">Agnostic Private Density Estimation for GMMs via List Global Stability</a></td>
+  <td>afzali25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/pinto25.bib">On Generalization Bounds for Neural Networks with Low Rank Layers</a></td>
+  <td>pinto25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/abeille25.bib">When and why randomised exploration works (in linear bandits)</a></td>
+  <td>abeille25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/cheu25.bib">Differentially Private Multi-Sampling from Distributions</a></td>
+  <td>cheu25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/fishelson25.bib">Full Swap Regret and Discretized Calibration</a></td>
+  <td>fishelson25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/dughmi25.bib">Is Transductive Learning Equivalent to PAC Learning?</a></td>
+  <td>dughmi25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/kizildag25.bib">Sample Complexity of Recovering Low Rank Tensors from Symmetric Rank-One Measurements</a></td>
+  <td>kizildag25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/asilis25b.bib">Proper Learnability and the Role of Unlabeled Data</a></td>
+  <td>asilis25b</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/indyk25.bib">Optimal and learned algorithms for the online list update problem with Zipfian accesses</a></td>
+  <td>indyk25</td>
+</tr>
+<tr>
+  <td><a href="bibfiles/li25.bib">On the Hardness of Learning One Hidden Layer Neural Networks</a></td>
+  <td>li25</td>
+</tr>
+</table>
+
+<p>The <code>&lt;key&gt;</code> part of the BibTeX filename (<code>&lt;key&gt;.bib</code>) is generated in accordance with the <a href="https://proceedings.mlr.press/spec.html">PMLR specifications</a> based on the last name of the paper's first author, the last two digits of the conference year, and possibly a suffix character for disambiguation. You will need to use this same <code>&lt;key&gt;</code> in later steps.</p>
+
+<p>The BibTeX entry should be formatted as follows:</p>
+
+<blockquote><pre>
+  @inproceedings{&lt;key&gt;,
+    author     = {<em style="color: red">Paper authors in "Lastname, Firstnames" format, separated by "and"</em>},
+    title      = {<em style="color: red">Paper title</em>},
+    pages      = {},
+    abstract   = {<em style="color: red">Paper abstract</em>},
+    openreview = {<em style="color: red">OpenReview identifier</em>}
+  }
+</pre></blockquote>
+
+<p>Please fix any errors in the <code>title</code> and <code>author</code> parts. They were automatically extracted them from OpenReview.</p>
+
+<p>Leave the <code>pages</code> part empty, but fill in the <code>abstract</code> part with your paper's abstract. You should explicitly expand any custom macros and citation commands. Please also heed the following rules from <a href="https://proceedings.mlr.press/spec.html">PMLR</a> for the abstract:</p>
+<ul>
+  <li>It can include maths in valid LaTeX.</li>
+  <li>Make sure there are no special characters in the abstract, such as those arising from copying and pasting ligatures from the pdf.</li>
+  <li>You can use &lt;em&gt; tags for emphasis.</li>
+  <li>You can use &lt;b&gt; for bold.</li>
+  <li>You can use &lt;ul&gt; tags for bullets.</li>
+  <li>You can use &lt;ol&gt; for numerated lists.</li>
+</ul>
+
+<h2>Step 3: Sign copyright form</h2>
+
+<p>Download and digitally sign (or print out, sign, and scan) the copyright form, which can be found here:</p>
+
+<blockquote>
+  <a href="http://proceedings.mlr.press/pmlr-license-agreement.pdf">http://proceedings.mlr.press/pmlr-license-agreement.pdf</a>
+</blockquote>
+
+<p>Only one author needs to sign. Please prepare this as a <strong>PDF file</strong> (i.e., no JPGs, GIFs, PNGs, TIFFs, etc).</p>
+
+<h2>Step 4: Rename, zip, and upload files</h2>
+
+<p>By this point, you will have the PDF of your camera-ready paper, the PDF of the signed copyright form, and the BibTeX file named <code>&lt;key&gt;.bib</code>.</p>
+
+<p>Rename the PDF files using the same <code>&lt;key&gt;</code> from the BibTeX file as follows:</p>
+
+<ul>
+  <li>Camera-ready paper PDF: <code>&lt;key&gt;.pdf</code></li>
+  <li>Signed copyright form PDF: <code>&lt;key&gt;Permission.pdf</code></li>
+</ul>
+
+<p>Create a ZIP file named <code>&lt;key&gt;.zip</code> containing
+<ul>
+  <li><code>&lt;key&gt;.bib</code>,</li>
+  <li><code>&lt;key&gt;.pdf</code>, and</li>
+  <li><code>&lt;key&gt;Permission.pdf</code>.</li>
+</ul>
+
+Navigate to your paper's page on <a href="https://openreview.net/group?id=algorithmiclearningtheory.org/ALT/2025/Conference">OpenReview</a> and upload a Camera-Ready Revision <em style="color: red">making sure to include both of the following</em> a) your camera-ready PDF as PDF, and b) the ZIP file as Camera Ready Zip.</p>
+
+<p>These requirements must be respected for the paper to be published. Please check carefully before sending. For any questions, please contact us at <a href="mailto:alt2025pc@gmail.com?subject=ALT%202025%20camera-ready">alt2025pc@gmail.com</a> with the subject line "ALT 2025 camera-ready".</p>
+
+<p>Thank you again for your contribution to ALT 2025.</p>
+
+</div>
+</body>
+</html>

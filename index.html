@@ -1,0 +1,1631 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Gautam Kamath's Homepage</title>
+<style type="text/css">
+  .selected {
+    width:100%;
+    display: block;
+  }
+  .regular {
+    width:100%;
+    display: none;
+  }
+  .workshop_papers {
+    width:100%;
+    display: none;
+  }
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35372294-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+function showAll(toggle){
+  var elem;
+  if (toggle){
+    document.getElementById('toggle').innerHTML='Selected Papers (<a href="javascript:void(0)" onclick="showAll(false)">Show all</a>):';
+  } else {
+    document.getElementById('toggle').innerHTML='Papers (<a href="javascript:void(0)" onclick="showAll(true)">Show selected</a>):';
+  }
+
+  elem=document.getElementById('last_paper');
+  for(elem; elem.previousSibling!=null; elem = elem.previousSibling){
+    if (elem.className == "regular"){
+      if (elem.style.display == "block"){
+        elem.style.display = "";
+      } else {
+        elem.style.display = "block";
+      }
+    }
+  }
+  return true;
+}
+
+function showWorkshop(workshoptoggle){
+  var elem;
+  if (workshoptoggle){
+    document.getElementById('workshoptoggle').innerHTML='Selected Workshop Papers (<a href="javascript:void(0)" onclick="showWorkshop(false)">Show</a>):';
+  } else {
+    document.getElementById('workshoptoggle').innerHTML='Selected Workshop Papers (<a href="javascript:void(0)" onclick="showWorkshop(true)">Hide</a>):';
+  }
+
+  elem=document.getElementById('workshop_papers');
+  if (elem.style.display == "block"){
+    elem.style.display = "";
+  } else {
+    elem.style.display = "block";
+  }
+  return true;
+}
+</script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="blue" alink="blue">
+
+
+<table width="55%">
+
+<tr>
+
+<td>
+<h1> Gautam Kamath</h1>
+<address>Office: TBD 60FA
+<address>Cell Phone: 657-c0mpsci (657-206-7724)</address>
+<!--<address>Office Phone: 519-888-4567 ext. 31245</address>-->
+<address>Email: g@csail.mit.edu</address>
+<p>Links to: <a href="kamath-cv.pdf">CV</a> (as of August 2026);
+<a href="https://scholar.google.com/citations?user=MK6zHkYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>;
+<a href="https://dblp.uni-trier.de/pers/hd/k/Kamath_0001:Gautam">DBLP</a>;
+<a href="http://arxiv.org/a/kamath_g_1">arXiv</a>;
+<a href="https://github.com/hoonose/">GitHub</a>;
+<a href="https://twitter.com/thegautamkamath">Twitter</a>;
+<a href="https://www.youtube.com/c/gautamkamath">Youtube</a>;
+<a href="https://kamathematics.wordpress.com/">Blog</a>.
+</p>
+<p>My group is <a href="http://thesalon.github.io/">The Salon</a>.</p>
+<p>I host office hours as part of the Learning Theory Alliance. Book a slot <a href="https://www.let-all.com/officehours.html">here</a>.</p>
+<p>Feel free to send me comments anonymously <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaGCkEdvrnEobtQuj7zlyjdkV4dKKHiNdioen2X0BhtSZL0w/viewform">here</a>. Note that, by design, I won't be able to respond -- if you need me to, it's better handled via email, or leaving some way for me to reply.</p>
+<!--<p>
+I am unable to respond to requests for internships or graduate admission applications from outside the university. 
+If you do feel compelled to contact me in this way, I am far more likely to remember you if you demonstrate that you have genuinely engaged with my work.
+Instead, I recommend that you apply for graduate studies through the standard channels.</p>-->
+</td>
+<td>
+<img src = "gautam.jpg" height="300" width="300"/>
+</td>
+</tr>
+
+
+</table>
+<hr>
+<h2>About Me</h2>
+<p>
+I am an Assistant Professor of Computer Science at the <a href="https://cims.nyu.edu/dynamic/">Courant Institute of Mathematical Sciences</a> at <a href="https://www.nyu.edu/">NYU</a>, where I am affiliated with the <a href="https://cs.nyu.edu/theory-group/">Theoretical Computer Science Group</a> and <a href="https://wp.nyu.edu/cilvr/">Computational Intelligence, Vision, and Robotics Lab (CILVR)</a>, and on leave from the University of Waterloo's <a href="https://cs.uwaterloo.ca/">Cheriton School of Computer Science</a> and the <a href="https://vectorinstitute.ai/">Vector Institute</a>.
+I run <a href="http://thesalon.github.io/">The Salon</a>. 
+I'm interested in reliable and trustworthy statistics and machine learning, including considerations such as data privacy and robustness.</p>
+
+<p>My work has been recognized with the 2026 <a href="https://www.sigact.org/prizes/g%C3%B6del/citation2026.html">G&ouml;del Prize</a>, the 2026 <a href="https://eatcs.org/index.php/component/content/article/1-news/3034-presburger-award-2026-laudatio">Presburger Award</a>, the <a href="https://cs.uwaterloo.ca/news/gautam-kamath-receives-ontario-early-researcher-award-to-further-research-on-data-privacy">Ontario Early Researcher Award</a> in 2025, the 2024 <a href="https://cs.uwaterloo.ca/news/gautam-kamath-and-colleagues-win-2024-caspar-bowden-pet">Caspar Bowden Award for Outstanding Research in Privacy Enhancing Technologies</a> (and the 2026 <a href="https://cs.uwaterloo.ca/news/gautam-kamath-colleagues-receive-runner-2026-caspar-bowden-pet-award">runner up</a>), and a <a href="https://uwaterloo.ca/computer-science/news/gautam-kamath-and-international-colleagues-win-best-paper-at-icml-2024">best paper award at ICML 2024</a>. </p>
+
+<p> I am an Editor-in-Chief of <a href="https://jmlr.org/tmlr/">Transactions on Machine Learning Research</a>. I was program co-chair of <a href="https://algorithmiclearningtheory.org/alt2025/">ALT 2025</a>. I serve as part of the governance of several conferences, including <a href="https://learningtheory.org/">COLT</a>, <a href="https://algorithmiclearningtheory.org/">ALT</a>, <a href="https://icml.cc/">ICML</a>, <a href="https://responsiblecomputing.org/steering-committee/">FORC</a>, and <a href="https://satml.org/">SaTML</a>.</p>
+
+<p>Previously, I was a <a href="https://simons.berkeley.edu/people/gautam-kamath">Microsoft Research Fellow</a> at the <a href="https://simons.berkeley.edu/">Simons Institute for the Theory of Computing</a> for the Fall 2018 semester program on <a href="https://simons.berkeley.edu/programs/datascience2018">Foundations of Data Science</a> and the Spring 2019 semester program on <a href="https://simons.berkeley.edu/programs/privacy2019">Data Privacy: Foundations and Applications</a>. 
+Before that, I completed my Ph.D. at <a href="http://www.mit.edu">MIT</a>, affiliated with the <a href="http://theory.csail.mit.edu/">Theory of Computing</a> group in <a href="http://www.csail.mit.edu/">CSAIL</a>. 
+I was very fortunate to be advised by <a href="http://people.csail.mit.edu/costis/">Costis Daskalakis</a>.
+Before MIT, I spent four wonderful years at <a href="http://www.cornell.edu/">Cornell University</a>, graduating in May 2012 with a degree in <a href="http://www.cs.cornell.edu/">Computer Science</a> and <a href=http://www.ece.cornell.edu/>Electrical and Computer Engineering</a>.
+At Cornell, I was incredibly lucky to have the opportunity to work with <a href="http://www.cs.cornell.edu/~rdk">Bobby Kleinberg</a>.
+</p>
+
+<hr>
+<h2>News</h2>
+  <ul>
+    <li>(7/31/26) I'll be a senior PC member of ALT 2027.</li>
+    <li>(7/23/26) <a href="https://arxiv.org/abs/2110.06500">Differentially Private Fine-tuning of Language Models</a> recognized as <a href="https://cs.uwaterloo.ca/news/gautam-kamath-colleagues-receive-runner-2026-caspar-bowden-pet-award">runner up for the Caspar Bowden PET Award</a>.</li>
+    <li>(7/22/26) I will be a plenary speaker at FSTTCS 2026.</li>
+    <li>(7/10/26) I am a member of the steering committee of SaTML.</li>
+    <li>(6/17/26) Recognized as a <a href="https://deltainstitutes.org/articles/rising-professors-2026">Rising Professor</a> by Delta Institute.</li>
+    <li>(6/3/26) Three new papers on arXiv: <a href="https://arxiv.org/abs/2606.01849">1</a>, <a href="https://arxiv.org/abs/2606.01527">2</a>, <a href="https://arxiv.org/abs/2606.04929">3</a>.</li>
+    <li>(6/3/26) <a href="https://arxiv.org/abs/1604.06443">Robust Estimators in High Dimensions without the Computational Intractability</a> is awarded the <a href="https://www.sigact.org/prizes/g%C3%B6del/citation2026.html">2026 G&ouml;del Prize</a>.</li>
+    <li>(6/1/26) I will be on the program committee for STOC 2027.</li>
+    <li>(5/21/26) New paper on arXiv: <a href="https://arxiv.org/abs/2605.21860">Robust Statistical Estimators with Bounded Empirical Sensitivity</a>.</li>
+    <li>(5/13/26) I am co-organizing a workshop "Workshop on Responsibly Enabling Data for Foundation Models" at COLM 2026.</li>
+    <li>(5/12/26) New paper on arXiv: <a href="https://arxiv.org/abs/2605.12183">DriftXpress: Faster Drifting Models via Projected RKHS Fields</a>.</li>
+    <li>(4/27/26) I am a recipient of the <a href="https://www.eatcs.org/index.php/component/content/article/1-news/3034-presburger-award-2026-laudatio">2026 Presburger Award</a>.</li>
+    <li>(4/24/26) Three papers at TPDP 2026, including one oral presentation.</li>
+    <li>(4/23/26) Quoted in a CACM piece on <a href="https://cacm.acm.org/news/is-it-possible-to-erase-digital-memory/">erasing digital memory</a>.</li>
+    <li>(4/11/26) I am the social media chair for SaTML 2027.</li>
+    <li>(4/1/26) I will be co-presenting a tutorial on machine unlearning at ICML 2026.</li>
+    <li>(3/23/26) I will be a Senior Area Chair for NeurIPS 2026.</li>
+    <li>(3/9/26) I am chairing the ICLR 2026 outstanding paper award committee.</li>
+    <li>(3/8/26) I will be attending a UCSD workshop on <a href="https://kbanihashem.github.io/replicability-workshop/">replicability</a>.</li>
+    <li>(2/20/26) I will be giving a talk at Waterloo's <a href="https://uwaterloo.ca/statistics-and-actuarial-science/statistics-and-biostatistics-seminar-series">Statistics and Biostatistics seminar</a> on March 3.</li>
+    <li>(2/3/26) I will be attending  Remarkable 2026 in Toronto in February, a workshop between Vector Institute and Oxford in Toronto in March (which I'm organizing), a robustness workshop at Columbia University in April, AICan in Victoria in June, a TTIC workshop on differential privacy and sublinear algorithms in July. I am also planning to attend ICML in Seoul in July.</li>
+    <li>(1/27/26) I am a reader of Haoyan Ni's Master's thesis.</li>
+    <li>(1/23/26) <a href="https://arxiv.org/abs/2601.17189">Rethinking Benchmarks for Differentially Private Image Classification</a> published in IEEE Data Engineering Bulletin.</li>
+    <li>(1/21/26) I am a reader of Raiyan Chowdhury's Master's thesis.</li>
+    <li>(1/20/26) Valentio Iverson awarded <a href="https://cs.uwaterloo.ca/news/cheriton-cs-students-receive-2026-cra-outstanding-undergraduate-researcher-awards">2026 CRA Outstanding Undergraduate Researcher Honorable Mention</a>.</li>
+</ul>
+<a href="news.html">Older News</a>
+<hr>
+
+<h2>Some Travel</h2>
+<h3>2026</h3>
+  <ul>
+    <li>January 12 - 14: Workshop on mathematical foundations of AI security, NYU London, London, UK</li>
+    <li>January 15: Imperial College London Data Science Institute Seminar, London, UK</li>
+    <li>February 20: Remarkable, Vector Institute, Toronto, Ontario, Canada</li>
+    <li>February 23 - 27: ALT 2026 and ShaiFest, Toronto, Ontario, Canada</li>
+    <li>March 12 - 13: NYU, New York, New York, USA</li>
+    <li>April 7 - 10: Foundations of Replicability and Verifiability in AI, EnCORE UCSD, San Diego, California, USA</li>
+    <li>April 16 - 17: Workshop on Robust Statistics, Columbia University, New York, New York, USA</li>
+    <li>June 16 - 18: AICan, Victoria, British Columbia, Canada</li>
+    <li>July 6 - 7: ICML, Seoul, South Korea</li>
+    <li>July 8 - 10: ICALP, London, UK</li>
+    <li>July 22 - 23: PETS, Calgary, Alberta, Canada</li>
+    <li>July 27 - 29: Workshop on Sublinear Algorithms and Differential Privacy, TTIC, Chicago, Illinois, USA</li>
+    <li>September 25: Princeton University Theory Lunch, Princeton, New Jersey, USA</li>
+    <li>October 19 - 23: Exploring Responsible AI through Security and Privacy, NII Shonan Meeting, Hayama, Kanagawa, Japan</li>
+    <li>November 4: Rutgers/DIMACS Theory of Computing Seminar, New Brunswick, New Jersey, USA</li>
+    <li>December 16 - 18: FSTTCS, New Delhi, India</li>
+</ul>
+<h3>2027</h3>
+  <ul>
+    <li>April 23: Kempner Institute at Harvard University, Cambridge, Massachusetts, USA</li>
+  </ul>
+<hr>
+
+
+<h2><a name="research">Research</a></h2>
+Most authorships are in alphabetical order, as is common in areas of computer science.
+Papers with contribution-order authorship are indicated, and equal contributions are marked with * or ^.
+Generally, these will put the students as first-author, with equal contribution amongst the senior authors.
+&#9441; is used for randomized author order.
+<h3 id="toggle">Selected Papers (<a href="javascript:void(0)" onclick="showAll(false)">Show all</a>)</h3>
+
+<ul>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2606.04929">Sequential Data Poisoning in LLM Post-Training</a>.
+    <br><a href="https://jcksanderson.com/">Jack Sanderson</a>, <a href="https://yihan-wang.com/">Yihan Wang</a>, Xiaoqian Lu, Gautam Kamath*, <a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>*. (Contribution order)
+<br>Manuscript.
+</li>
+<ul>
+  <li>Code is available <a href="https://github.com/jcksanderson/sequential-poisoning">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2606.01849">ContinuousBench: Can Differentially Private Synthetic Text Improve Capabilities?</a>.
+    <br><a href="https://peihanliu.com/">Peihan Liu</a>*, <a href="https://lucasrosenblatt.com/">Lucas Rosenblatt</a>, <a href="https://wwkong.github.io/">Weiwei Kong</a>, <a href="https://scholar.google.com/citations?user=eIdQR5oAAAAJ">Natalia Ponomareva</a>, Gautam Kamath, <a href="https://rachelcummings.com/">Rachel Cummings</a>, <a href="https://roxanageambasu.github.io/">Roxana Geambasu</a>, <a href="https://ygan397.github.io/">Yu Gan</a>, <a href="https://tslilyai.github.io/">Lillian Tsai</a>, <a href="https://alexbie98.github.io/">Alex Bie</a>*. (Contribution order)
+<br>Manuscript.
+</li>
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2026/">TPDP 2026</a>. <span style="color:red;"><b>Oral Presentation</b></span>.</li>
+  <li>Datasets are available <a href="https://huggingface.co/ContinuousBench">here</a>, code is available <a href="https://github.com/plau666/ContinuousBenchEval">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2606.01527">Near-Optimal Pure Machine Unlearning for Smooth Strongly Convex Losses</a>.
+    <br><a href="https://matt19234.github.io/">Matthew Regehr</a>, Gautam Kamath, <a href="https://sites.google.com/view/andrewlowy/home">Andrew Lowy</a>. (Contribution order)
+<br>Manuscript.
+</li>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2605.21860">Robust Statistical Estimators with Bounded Empirical Sensitivity</a>.
+   <br><a href="https://valentioiverson.github.io/">Valentio Iverson</a>, Gautam Kamath, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>, <a href="https://cs-people.bu.edu/ads22/">Adam Smith</a>.
+<br>Manuscript.
+</li>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2605.12183">DriftXpress: Faster Drifting Models via Projected RKHS Fields</a>.
+    <br><a href="https://ali-falahati.github.io/">Ali Falahati</a>, <a href="https://ecreager.github.io/">Elliot Creager</a>*, Gautam Kamath*, <a href="https://cs.uwaterloo.ca/~s3mohapa/">Shubhankar Mohapatra</a>*. (Contribution order)
+<br>Manuscript.
+</li> 
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2509.06896">Not All Samples Are Equal: Quantifying Instance-level Difficulty in Targeted Data Poisoning</a>.
+    <br><a href="https://openreview.net/profile?id=~William_Xu1">William Xu</a>*, <a href="https://yiweilu3.github.io/">Yiwei Lu</a>*, <a href="https://yihan-wang.com/">Yihan Wang<a/>, <a href="https://matthewyryang.com/">Matthew Y.R. Yang</a>, <a href="https://openreview.net/profile?id=%7EZuoqiu_Liu1">Zuoqiu Liu</a>, Gautam Kamath^, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>^. (Contribution order)
+<br>Manuscript.
+</li> 
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2508.12148">Demystifying Foreground-Background Memorization in Diffusion Models</a>.
+    <br><a href="https://uwaterloo.ca/scholar/z2di">Jimmy Z. Di</a>*, <a href="https://yiweilu3.github.io/">Yiwei Lu</a>*, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>^, <a href="http://www.gautamkamath.com/">Gautam Kamath</a>^, <a href="https://adam-dziedzic.com/">Adam Dziedzic</a>^, <a href="https://franziska-boenisch.de/">Franziska Boenisch</a>^. (Contribution order)
+<br>Proceedings of the Fortieth AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>).
+</li> 
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2601.17189">Rethinking Benchmarks for Differentially Private Image Classification</a>.
+    <br><a href="https://www.linkedin.com/in/sabrina-mokhtari/">Sabrina Mokhtari</a>*, <a href="https://www.linkedin.com/in/sarakodeiri/">Sara Kodeiri</a>*, <a href="https://cs.uwaterloo.ca/~s3mohapa/">Shubhankar Mohapatra</a>*, <a href="https://www.floriantramer.com/">Florian Tram&egrave;r</a>^, <a href="http://www.gautamkamath.com/">Gautam Kamath</a>^. (Contribution order)
+<br>IEEE Data Engineering Bulletin, 49(4), 2025.
+</li> 
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2301.13334">A Bias-Accuracy-Privacy Trilemma for Statistical Estimation</a>.
+    <br>Gautam Kamath, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>, <a href="https://matt19234.github.io/">Matthew Regehr</a>, <a href="https://www.vikrantsinghal.com/">Vikrant Singhal</a>, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>, <a href="https://jonathan-ullman.github.io/">Jonathan Ullman</a>.
+  <br><a href="https://www.tandfonline.com/journals/uasa20">Journal of the American Statistical Association</a>, 120(552), 2025. 
+</li> 
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2509.16180">Query-Efficient Locally Private Hypothesis Selection via the Scheffe Graph</a>.
+    <br>Gautam Kamath, Alireza F. Pour, <a href="https://matt19234.github.io/">Matthew Regehr</a>, <a href="https://www.cs.cmu.edu/~dwoodruf/">David P. Woodruff</a>.
+<br>Advances in Neural Information Processing Systems 38 (<a href="http://nips.cc/Conferences/2025">NeurIPS 2025</a>).
+</li> 
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2026/">TPDP 2026</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2412.21061">BridgePure: Limited Protection Leakage Can Break Black-Box Data Protection</a>.
+    <br><a href="https://yihan-wang.com/">Yihan Wang</a>*, <a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>*, <a href="http://www.mmrc.iss.ac.cn/~xgao/">Xiao-Shan Gao</a>^, <a href="http://www.gautamkamath.com/">Gautam Kamath</a>^, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>^. (Contribution order)
+<br>Advances in Neural Information Processing Systems 38 (<a href="http://nips.cc/Conferences/2025">NeurIPS 2025</a>).
+</li> 
+<br>
+</div>
+
+<div class="selected">
+<li><a href="https://arxiv.org/abs/2503.01766">Optimal Differentially Private Sampling of Unbounded Gaussians</a>.
+  <br>Valentio Iverson, Gautam Kamath, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>.
+<br>Proceedings of the 38th Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2025/">COLT 2025</a>).
+</li>
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2025/">TPDP 2025</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://www.arxiv.org/abs/2509.05137">On the Learnability of Distribution Classes with Adaptive Adversaries</a>.
+    <br><a href="https://toscalechner.github.io/">Tosca Lechner</a>, <a href="https://alexbie98.github.io/">Alex Bie</a>*, Gautam Kamath*. (Contribution order)
+<br>Proceedings of the 42nd International Conference on Machine Learning (ICML 2025).
+</li> 
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2406.17216">Machine Unlearning Fails to Remove Data Poisoning Attacks</a>.
+    <br><a href="https://sites.google.com/view/martinpawelczyk/">Martin Pawelczyk</a>*, <a href="https://uwaterloo.ca/scholar/z2di">Jimmy Z. Di</a>*, <a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>, Gautam Kamath^, <a href="https://ayush.sekhari.com/">Ayush Sekhari</a>^, <a href="https://sethneel.com/">Seth Neel</a>^. (Contribution order)
+  <br>Proceedings of the 13th International Conference on Learning Representations (<a href="https://iclr.cc/Conferences/2025">ICLR 2025</a>).
+</li> 
+<ul>
+  <li>Presented at the ICML 2024 <a href="https://genlaw.org/2024-icml.html">2nd Workshop on Generative AI and Law</a>. <span style="color:red;"><b>Oral Presentation</b></span>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2409.19798">Membership Inference Attacks Cannot Prove that a Model Was Trained On Your Data</a>.
+    <br><a href="https://zj-jayzhang.github.io/">Jie Zhang</a>, Debeshee Das, Gautam Kamath, <a href="https://www.floriantramer.com/">Florian Tram&egrave;r</a>. (Contribution order)
+<br>Proceedings of the 2025 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML 2025).
+</li> 
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2405.20769">Avoiding Pitfalls for Privacy Accounting of Subsampled Mechanisms under Composition</a>. 
+    <br><a href="https://christianlebeda.github.io/">Christian Janos Lebeda</a>*, <a href="https://matt19234.github.io/">Matthew Regehr</a>*, Gautam Kamath^, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>^. (Contribution order)
+<br>Proceedings of the 2025 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML 2025).
+</li> 
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2025/">TPDP 2025</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2303.01256">Choosing Public Datasets for Private Machine Learning via Gradient Subspace Distance</a>. 
+    <br>Xin Gu, Gautam Kamath*, <a href="https://zstevenwu.com/">Zhiwei Steven Wu</a>*. (Contribution order)
+<br>Proceedings of the 2025 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML 2025).
+</li> 
+<ul>
+  <li>Presented at the NeurIPS 2022 <a href="https://sites.google.com/view/distshift2022">Workshop on Distribution Shifts</a>.</li>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>.</li>
+</ul>
+<br>
+</div>
+
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2405.20405">Private Mean Estimation with Person-Level Differential Privacy</a>. 
+    <br><a href="https://sushaga.github.io/">Sushant Agarwal</a>, Gautam Kamath, <a href="https://www.mahbodmajid.com/">Mahbod Majid</a>, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>, <a href="https://rosesilver.github.io/">Rose Silver</a>, <a href="https://jonathan-ullman.github.io/">Jonathan Ullman</a>.
+<br>Proceedings of the 36th Annual ACM-SIAM Symposium on Discrete Algorithms (<a href="https://www.siam.org/conferences-events/siam-conferences/soda25/">SODA 2025</a>).
+</li> 
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2025/">TPDP 2025</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2110.14465">Unbiased Statistical Estimation and Valid Confidence Intervals Under Differential Privacy</a>.
+    <br><a href="https://ctcovington.github.io/">Christian Covington</a>, <a href="https://cs.uwaterloo.ca/~xihe/">Xi He</a>*, <a href="https://hona.kr/">James Honaker</a>*, Gautam Kamath*. (Contribution order)
+    <br><a href="https://www3.stat.sinica.edu.tw/statistica/">Statistica Sinica</a>, 35(Online Special Issue I), 2025. 
+</li>
+<ul>
+  <li>Presented at the ICML 2021 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2021/">TPDP 2021</a>).</li>
+</ul>
+<br>
+</div>
+
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2412.02670">The Broader Landscape of Robustness in Algorithmic Statistics</a>.
+    <br>Gautam Kamath.
+    <br><a href="https://www.itsoc.org/bits">IEEE BITS the Information Theory Magazine</a>, 4(3), 2024.
+</li> 
+<ul>
+  <li>Oddly, this paper was completed in December 2024, accepted in mid 2025, and I received the printed version in early 2026. Nonetheless, the publication date is September 2024.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2405.04034">Differentially Private Post-Processing for Fair Regression</a>. 
+  <br><a href="https://rxian.github.io/">Ruicheng Xian</a>, Qiaobo Li, Gautam Kamath, <a href="https://hanzhaoml.github.io/">Han Zhao</a> (Contribution order)
+<br>Proceedings of the 41st International Conference on Machine Learning (ICML 2024).
+</li> 
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2404.06737">Disguised Copyright Infringement of Latent Diffusion Models</a>. 
+    <br><a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>*, Matthew Y.R. Yang*, Zuoqiu Liu*, Gautam Kamath^, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>^. (Contribution order)
+<br>Proceedings of the 41st International Conference on Machine Learning (ICML 2024).
+</li> 
+<ul>
+  <li>Presented at the ICML 2024 <a href="https://genlaw.org/2024-icml.html">2nd Workshop on Generative AI and Law</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2212.06470">Position: Considerations for Differentially Private Learning with Large-Scale Public Pretraining</a>.
+    <br><a href="https://floriantramer.com/">Florian Tram&egrave;r</a>*, Gautam Kamath*, <a href="https://nicholas.carlini.com/">Nicholas Carlini</a>*. (Reverse alphabetical order)
+<br>Proceedings of the 41st International Conference on Machine Learning (ICML 2024). <span style="color:red;"><b>Oral Presentation</b></span>
+</li> 
+<ul>
+  <li><span style="color:red;"><b>ICML 2024 Best Paper Award</b></span>.</li>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2402.12626">Indiscriminate Data Poisoning Attacks on Pre-trained Feature Extractors</a>.
+    <br><a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>, Matthew Y.R. Yang, Gautam Kamath*, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>*. (Contribution order)
+<br>Proceedings of the 2024 IEEE Conference on Secure and Trustworthy Machine Learning (SaTML 2024).
+</li> 
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2304.06929">Advancing Differential Privacy: Where We Are Now and Future Directions for Real-World Deployment</a>.
+    <br><a href="https://rachelcummings.com/">Rachel Cummings</a>, <a href="https://desfontain.es/">Damien Desfontaines</a>, <a href="https://www.cs.virginia.edu/~evans/">David Evans</a>, <a href="https://roxanageambasu.github.io/">Roxana Geambasu</a>, <a href="https://jagielski.github.io/">Matthew Jagielski</a>, <a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>, <a href="https://kairouzp.github.io/">Peter Kairouz</a>, Gautam Kamath, <a href="https://homes.cs.washington.edu/~sewoong/">Sewoong Oh</a>, <a href="https://oohrimenko.github.io/">Olga Ohrimenko</a>, <a href="https://www.papernot.fr/">Nicolas Papernot</a>, <a href="https://www2.math.upenn.edu/~ryrogers/">Ryan Rogers</a>, Milan Shen, <a href="https://shs037.github.io/">Shuang Song</a>, <a href="http://stat.wharton.upenn.edu/~suw/">Weijie Su</a>, <a href="https://research.google/people/AndreasTerzis/">Andreas Terzis</a>, <a href="https://athakurta.squarespace.com/">Abhradeep Thakurta</a>, <a href="https://theory.stanford.edu/~sergei/">Sergei Vassilvitskii</a>, <a href="https://sites.cs.ucsb.edu/~yuxiangw/">Yu-Xiang Wang</a>, <a href="http://www.cs.emory.edu/~lxiong/">Li Xiong</a>, <a href="http://www.yekhanin.org/">Sergey Yekhanin</a>, <a href="https://dayu11.github.io/">Da Yu</a>, <a href="https://huanyuzhang.github.io/">Huanyu Zhang</a>, <a href="https://wanrongz.github.io/">Wanrong Zhang</a>.
+    <br><a href="https://hdsr.mitpress.mit.edu/">Harvard Data Science Review</a>, 6(1), 2024. 
+</li> 
+<br>
+</div>
+
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2402.00267">Not All Learnable Distribution Classes are Privately Learnable</a>. 
+    <br><a href="https://cs-people.bu.edu/mbun/">Mark Bun</a>, Gautam Kamath, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>, <a href="https://www.vikrantsinghal.com/">Vikrant Singhal</a>. 
+<br>Proceedings of the 35th International Conference on Algorithmic Learning Theory (<a href="http://algorithmiclearningtheory.org/alt2024/">ALT 2024</a>).
+</li> 
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2311.06477">Report of the 1st Workshop on Generative AI and Law</a>.
+    <br><a href="https://afedercooper.info/">A. Feder Cooper</a>, <a href="https://katelee168.github.io/">Katherine Lee</a>, <a href="https://james.grimmelmann.net/">James Grimmelmann</a>, <a href="https://www.seas.upenn.edu/~daphnei/me/category/about-me.html">Daphne Ippolito</a>, <a href="https://www.cis.upenn.edu/~ccb/">Christopher Callison-Burch</a>, <a href="https://www.christopherchoquette.com/">Christopher A. Choquette-Choo</a>, <a href="https://cseweb.ucsd.edu/~fmireshg/">Niloofar Mireshghallah</a>, <a href="https://www.milesbrundage.com/">Miles Brundage</a>, <a href="https://mimno.infosci.cornell.edu/">David Mimno</a>, <a href="https://www.dli.tech.cornell.edu/members/choksi">Madiha Zahrah Choksi</a>, <a href="https://law.yale.edu/jack-m-balkin">Jack M. Balkin</a>, <a href="https://nicholas.carlini.com/">Nicholas Carlini</a>, <a href="https://www.cs.cornell.edu/~cdesa/">Christopher De Sa</a>, <a href="http://www.jfrankle.com/">Jonathan Frankle</a>, <a href="https://scholar.google.com/citations?user=rG3xW3UAAAAJ">Deep Ganguli</a>, <a href="https://research.google/people/bryant-gipson/">Bryant Gipson</a>, <a href="https://profiles.sussex.ac.uk/p328331-andres-guadamuz">Andres Guadamuz</a>, <a href="https://www.luminategroup.com/our-people/swee-leng-harris">Swee Leng Harris</a>, <a href="https://azjacobs.com/">Abigail Z. Jacobs</a>, <a href="https://law.ucdavis.edu/people/elizabeth-joh">Elizabeth Joh</a>, Gautam Kamath, <a href="https://law.stanford.edu/directory/mark-a-lemley/">Mark Lemley</a>, <a href="https://www.linkedin.com/in/cass-matthews-97720612/">Cass Matthews</a>, <a href="https://christinemcleavey.com/">Christine McLeavey</a>, <a href="https://www.eff.org/about/staff/corynne-mcsherry">Corynne McSherry</a>, <a href="https://scholar.google.com/citations?user=k6-nvDAAAAAJ">Milad Nasr</a>, <a href="https://www.paulohm.com/">Paul Ohm</a>, <a href="https://research.google/people/adam-roberts/">Adam Roberts</a>, <a href="https://www.rcfp.org/thomascrubin/">Tom Rubin</a>, <a href="https://www.law.berkeley.edu/our-faculty/faculty-profiles/pamela-samuelson/">Pamela Samuelson</a>, <a href="https://scholar.google.com/citations?user=npQ1IpkAAAAJ">Ludwig Schubert</a>, <a href="https://kvaccaro.com/">Kristen Vaccaro</a>, <a href="https://lu.is/">Luis Villa</a>, <a href="https://cardozo.yu.edu/directory/felix-wu">Felix Wu</a>, <a href="https://www.elanazeide.com/">Elana Zeide</a>.
+<br>Manuscript.
+</li> 
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2406.17814">Distribution Learnability and Robustness</a>. 
+    <br><a href="https://cs.uwaterloo.ca/~shai/">Shai Ben-David</a>, <a href="https://alexbie98.github.io/">Alex Bie</a>, Gautam Kamath, <a href="https://toscalechner.github.io/">Tosca Lechner</a>. 
+<br>Advances in Neural Information Processing Systems 36 (<a href="http://nips.cc/Conferences/2023">NeurIPS 2023</a>).
+</li> 
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2308.06239">Private Distribution Learning with Public Data: The View from Sample Compression</a>. 
+    <br><a href="https://cs.uwaterloo.ca/~shai/">Shai Ben-David</a>, <a href="https://alexbie98.github.io/">Alex Bie</a>, <a href="https://ccanonne.github.io/">Cl&#233;ment L. Canonne</a>, Gautam Kamath, <a href="https://www.vikrantsinghal.com/">Vikrant Singhal</a>. 
+<br>Advances in Neural Information Processing Systems 36 (<a href="http://nips.cc/Conferences/2023">NeurIPS 2023</a>).
+</li> 
+<ul>
+  <li><span style="color:red;"><b>Selected for a Spotlight Presentation.</b></span></li>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2212.10717">Hidden Poison: Machine Unlearning Enables Camouflaged Poisoning Attacks</a>.
+    <br>Jimmy Z. Di, Jack Douglas, <a href="https://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>*, Gautam Kamath*, <a href="https://ayush.sekhari.com/">Ayush Sekhari</a>*. (Contribution order)
+<br>Advances in Neural Information Processing Systems 36 (<a href="http://nips.cc/Conferences/2023">NeurIPS 2023</a>).
+</li> 
+<ul>
+    <li>Presented at the NeurIPS 2022 <a href="https://neurips2022.mlsafety.org/">ML Safety Workshop</a>.</li>
+    <li>Presented at the NeurIPS 2022 workshop on <a href="https://tsrml2022.github.io/">Trustworthy and Socially Responsible Machine Learning</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2302.02936">Private GANs, Revisited</a>. 
+    <br><a href="https://alexbie98.github.io/">Alex Bie</a>, Gautam Kamath*, <a href="https://gordon-guojun-zhang.github.io/">Guojun Zhang</a>*. (Contribution order)
+<br>Transactions on Machine Learning Research (TMLR), 2023. Survey Certification.
+</li> 
+<ul>
+  <li>Presented at the NeurIPS 2022 <a href="https://www.syntheticdata4ml.vanderschaar-lab.com/">SyntheticData4ML Workshop</a>.</li>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2206.02617">Individual Privacy Accounting for Differentially Private Stochastic Gradient Descent</a>.
+    <br><a href="https://dayu11.github.io/">Da Yu</a>, Gautam Kamath*, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>*, <a href="https://www.microsoft.com/en-us/research/people/tyliu/">Tie-Yan Liu</a>*, <a href="https://sai.sysu.edu.cn/teacher/teacher01/1385356.htm">Jian Yin</a>*, <a href="https://www.microsoft.com/en-us/research/people/huzhang/">Huishuai Zhang</a>*. (Contribution order)
+<br>Transactions on Machine Learning Research (TMLR), 2023.
+</li> <br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2303.03592">Exploring the Limits of Model-Targeted Indiscriminate Data Poisoning Attacks</a>.
+    <br><a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>, Gautam Kamath*, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>*. (Contribution order)
+<br>Proceedings of the 40th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2023">ICML 2023</a>).
+</li> 
+<br>
+</div>
+
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2212.05015">Robustness Implies Privacy in Statistical Estimation</a>.
+    <br><a href="https://www.samuelbhopkins.com/">Samuel B. Hopkins</a>, Gautam Kamath, <a href="https://www.mahbodmajid.com/">Mahbod Majid</a>, <a href="https://sites.google.com/view/shyamnarayanan/home">Shyam Narayanan</a>.
+<br>Proceedings of the 55th ACM Symposium on Theory of Computing (<a href="http://acm-stoc.org/stoc2023/">STOC 2023</a>).
+</li> 
+<ul>
+  <li>Presented at <a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>. <span style="color:red;"><b>Oral Presentation</b></span>.</li>
+  <li>Sam gave an invited survey on this line of work at <a href="https://halg2024.ideas-ncbr.pl/">HALG 2024</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2204.09092">Indiscriminate Data Poisoning Attacks on Neural Networks</a>.
+    <br><a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>, Gautam Kamath*, <a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>*. (Contribution order)
+<br>Transactions on Machine Learning Research (TMLR), 2022.
+</li> 
+<ul>
+    <li>Presented at the NeurIPS 2022 <a href="https://neurips2022.mlsafety.org/">ML Safety Workshop</a>.</li>
+    <li>Presented at the NeurIPS 2022 workshop on <a href="https://tsrml2022.github.io/">Trustworthy and Socially Responsible Machine Learning</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2205.08532">New Lower Bounds for Private Estimation and a Generalized Fingerprinting Lemma</a>.
+    <br>Gautam Kamath, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>, <a href="https://www.vikrantsinghal.com/">Vikrant Singhal</a>.
+<br>Advances in Neural Information Processing Systems 35 (<a href="http://nips.cc/Conferences/2022">NeurIPS 2022</a>).
+</li> 
+<ul>
+  <li>Presented at the ICML 2022 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP 2022</a>).</li>
+</ul>
+<br>
+</div>
+
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2208.07984">Private Estimation with Public Data</a>.
+    <br><a href="https://alexbie98.github.io/">Alex Bie</a>, Gautam Kamath, <a href="https://www.vikrantsinghal.com/">Vikrant Singhal</a>.
+<br>Advances in Neural Information Processing Systems 35 (<a href="http://nips.cc/Conferences/2022">NeurIPS 2022</a>).
+</li>
+<ul>
+  <li>Presented at the ICML 2022 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP 2022</a>).</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2106.01336">Improved Rates for Differentially Private Stochastic Convex Optimization with Heavy-Tailed Data</a>.
+    <br>Gautam Kamath, <a href="http://www.xingtuliu.com/">Xingtu Liu</a>, <a href="https://huanyuzhang.github.io/">Huanyu Zhang</a>. 
+<br>Proceedings of the 39th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2022">ICML 2022</a>).
+</li>
+<ul>
+  <li><span style="color:red;"><b>Selected for a long presentation. (2.1% acceptance rate)</b></span>.</li>
+  <li>Presented at the ICML 2021 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2021/">TPDP 2021</a>).</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2111.05320">Robust Estimation for Random Graphs</a>.
+  <br><a href="https://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>, Ayush Jain, Gautam Kamath, <a href="http://theertha.info/">Ananda Theertha Suresh</a>, <a href="https://huanyuzhang.github.io/">Huanyu Zhang</a>.
+<br>Proceedings of the 35th Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2022/">COLT 2022</a>).
+</li> <br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2111.04609">A Private and Computationally-Efficient Estimator for Unbounded Gaussians</a>.
+    <br>Gautam Kamath, <a href="https://argymouz.github.io/">Argyris Mouzakis</a>, <a href="https://www.vikrantsinghal.com/">Vikrant Singhal</a>, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>, <a href="https://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br>Proceedings of the 35th Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2022/">COLT 2022</a>).
+</li>
+<ul>
+  <li>Presented at the ICML 2022 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP 2022</a>).</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2106.13414">The Price of Tolerance in Distribution Testing</a>.
+    <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Ayush Jain, Gautam Kamath, <a href="https://jerryzli.github.io/">Jerry Li</a>.
+<br>Proceedings of the 35th Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2022/">COLT 2022</a>).
+</li>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2201.11308">Calibration with Privacy in Peer Review</a>.
+    <br><a href=https://wenxind.github.io/">Wenxin Ding</a>, Gautam Kamath &#9441; <a href="http://www.cs.cmu.edu/~weinaw/">Weina Wang</a> &#9441; <a href="https://www.cs.cmu.edu/~nihars/">Nihar B. Shah</a>.
+<br>Proceedings of the 2022 IEEE International Symposium on Information Theory (<a href="https://www.isit2022.org/">ISIT 2022</a>).
+</li>
+<ul>
+  <li>Presented at the AAAI 2022 Workshop on Privacy-Preserving Artificial Intelligence (<a href="https://aaai-ppai22.github.io/">PPAI 2022</a>). <span style="color:red;"><b>Oral Presentation</b></span>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2111.12981">Efficient Mean Estimation with Pure Differential Privacy via a Sum-of-Squares Exponential Mechanism</a>.
+    <br><a href="https://www.samuelbhopkins.com/">Samuel B. Hopkins</a>, Gautam Kamath, <a href="https://www.mahbodmajid.com/">Mahbod Majid</a>.
+<br>Proceedings of the 54th ACM Symposium on Theory of Computing (<a href="http://acm-stoc.org/stoc2022/">STOC 2022</a>).
+</li>
+<ul>
+  <li><span style="color:red;"><b>University of Waterloo Faculty of Mathematics Graduate Research Excellence Award.</b></span></li>
+  <li>Presented at <a href="https://responsiblecomputing.org/forc-2022/">FORC 2022</a>, non-archival track.</li>
+  <li>Presented at the ICML 2022 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP 2022</a>).</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2110.06500">Differentially Private Fine-tuning of Language Models</a>.
+    <br><a href="https://dayu11.github.io/">Da Yu</a>, Saurabh Naik, <a href="https://www.mit.edu/~backurs/">Arturs Backurs</a>*, <a href="https://www.microsoft.com/en-us/research/people/sigopi/">Sivakanth Gopi</a>*, <a href="https://www.microsoft.com/en-us/research/people/huinan/">Huseyin A. Inan</a>*, Gautam Kamath*, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>*, <a href="https://yintat.com/">Yin Tat Lee</a>*, <a href="https://www.microsoft.com/en-us/research/people/amonteiroman/">Andre Manoel</a>*, Lukas Wutschitz*, <a href="http://www.yekhanin.org/">Sergey Yekhanin</a>*, <a href="https://www.microsoft.com/en-us/research/people/huzhang/">Huishuai Zhang</a>*. (Contribution order)
+  <br><a href="https://journalprivacyconfidentiality.org/">Journal of Privacy and Confidentiality</a>, 14(2), 2024. 
+  <br>Proceedings of the 10th International Conference on Learning Representations (<a href="https://iclr.cc/Conferences/2022">ICLR 2022</a>).
+</li>
+<ul>
+  <li><span style="color:red;"><b>2026 Caspar Bowden Award for Outstanding Research in Privacy Enhancing Technologies, runner-up.</b></span></li>
+  <li>Featured in: <a href="https://www.microsoft.com/en-us/research/blog/privacy-preserving-machine-learning-maintaining-confidentiality-and-preserving-trust/">Microsoft Research Blog</a>.</li>
+  <li>Presented at the ICML 2022 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP 2022</a>).</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+  <li><a href="https://arxiv.org/abs/2111.04906">The Role of Adaptive Optimizers for Honest Private Hyperparameter Selection</a>.
+    <br><a href="https://cs.uwaterloo.ca/~s3mohapa/">Shubhankar Mohapatra</a>*, <a href="https://ssasy.github.io/">Sajin Sasy</a>*, <a href="https://cs.uwaterloo.ca/~xihe/">Xi He</a>^, Gautam Kamath^, <a href="http://www.omthakkar.com/">Om Thakkar</a>^. (Contribution order)
+  <br>Proceedings of the Thirty-Sixth AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/Conferences/AAAI-22/">AAAI 2022</a>).
+</li>
+<ul>
+  <li>
+  <span style="color:red;"><b>Selected for an Oral Presentation (4.3% acceptance rate).</b></span>
+  </li>
+  <li>Presented at the ICML 2021 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2021/">TPDP 2021</a>).</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2103.03279">Remember What You Want to Forget: Algorithms for Machine Unlearning</a>.
+    <br><a href="https://www.cs.cornell.edu/~sekhari/">Ayush Sekhari</a>, <a href="https://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>*, Gautam Kamath*, <a href="http://theertha.info/">Ananda Theertha Suresh</a>*. (Contribution order)
+<br>Advances in Neural Information Processing Systems 34 (<a href="http://nips.cc/Conferences/2021">NeurIPS 2021</a>).
+</li>
+<ul>
+  <li>Presented at the ICML 2021 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2021/">TPDP 2021</a>).</li>
+  <li>Featured in: <a href="https://www.wired.com/story/machines-can-learn-can-they-unlearn/">WIRED Magazine</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li><a href="https://arxiv.org/abs/2010.09063">Enabling Fast Differentially Private SGD via Just-in-Time Compilation and Vectorization</a>.
+<br><a href="https://pranavsubramani.github.io/">Pranav Subramani</a>*, <a href="https://nicholasvadivelu.com/">Nicholas Vadivelu</a>*, Gautam Kamath. (Contribution order)
+<br>Advances in Neural Information Processing Systems 34 (<a href="http://nips.cc/Conferences/2021">NeurIPS 2021</a>).
+</li>
+<ul>
+  <li>Presented at the NeurIPS 2020 Workshop on Privacy Preserving Machine Learning (<a href="https://ppml-workshop.github.io/">PPML 2020</a>).</li>
+  <li>Presented at the ICML 2021 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2021/">TPDP 2021</a>).</li>
+  <li>Code is available <a href="https://github.com/TheSalon/fast-dpsgd">here</a>.</li>
+  <li>Inspired <a href="https://github.com/tensorflow/privacy/commit/b6413a4ea9396001fdaa794326276c6a7e99ac6e">changes</a> in TensorFlow Privacy.</li>
+  <li>Featured in: DeepMind Blog (<a href="https://deepmind.com/blog/article/using-jax-to-accelerate-our-research">Using JAX to accelerate our research</a>), Google AI Blog (<a href="https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html">Google Research: Looking Back at 2020, and Forward to 2021</a>).</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/2002.12321">PAPRIKA: Private Online False Discovery Rate Control</a>.
+<br><a href="https://wanrongz.github.io/">Wanrong Zhang</a>, Gautam Kamath*, <a href="https://pwp.gatech.edu/rachel-cummings/">Rachel Cummings</a>*. (Contribution order)
+<br>Proceedings of the 38th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2021">ICML 2021</a>).
+</li>
+<ul>
+<li>Presented at FORC 2021, non-archival track.</li>
+<li>Presented at the CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>). </li>
+<li>Code is available <a href="https://github.com/wanrongz/PAPRIKA">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/2010.09929">On the Sample Complexity of Privately Learning Unbounded High-Dimensional Gaussians</a>.
+<br><a href="https://ishaqadenali.github.io/">Ishaq Aden-Ali</a>, <a href="https://www.cas.mcmaster.ca/ashtiani/">Hassan Ashtiani</a>, Gautam Kamath.
+<br>Proceedings of the 32nd International Conference on Algorithmic Learning Theory (<a href="http://algorithmiclearningtheory.org/alt2021/">ALT 2021</a>).
+</li>
+<ul>
+  <li>Presented at the NeurIPS 2020 Workshop on Privacy Preserving Machine Learning (<a href="https://ppml-workshop.github.io/">PPML 2020</a>).</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+  <li> <a href="https://arxiv.org/abs/1911.07357">Random Restrictions of High-Dimensional Distributions and Uniformity Testing with Subcube Conditioning</a>.
+  <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, <a href="http://www.cs.columbia.edu/~xichen/Homepage/Welcome.html">Xi Chen</a>, Gautam Kamath, <a href="https://cs.uwaterloo.ca/~alevi/">Amit Levi</a>, <a href="https://sites.google.com/site/erikwaing/home">Erik Waingarten</a>.
+<br>Proceedings of the 32nd Annual ACM-SIAM Symposium on Discrete Algorithms (<a href="https://www.siam.org/conferences/cm/conference/soda21">SODA 2021</a>).
+</li>
+<ul>
+  <li><a href="https://eccc.weizmann.ac.il/report/2019/165">ECCC link</a>.</li>
+  <li>
+  Featured in: <a href="http://ptreview.sublinear.info/?p=1227">Property Testing Review</a>.
+  </li>
+  <li>Talk by Erik <a href="https://www.dropbox.com/s/r0553z9oxgom97q/wola-erik.mp4?dl=0">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+<li> <a href="https://arxiv.org/abs/2006.06618">CoinPress: Practical Private Mean and Covariance Estimation</a>.
+  <br><a href="https://sravb.github.io/">Sourav Biswas</a>, <a href="https://yihedong.me/">Yihe Dong</a>, Gautam Kamath, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br>Advances in Neural Information Processing Systems 33 (<a href="http://nips.cc/Conferences/2020">NeurIPS 2020</a>).
+</li>
+<ul>
+<li>Presented at the CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>). </li>
+<li>Video of a talk is available <a href="https://www.youtube.com/watch?v=5A6RD9NVqdI">here</a>.</li>
+<li>Code is available <a href="https://github.com/twistedcubic/coin-press">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+  <li> <a href="https://arxiv.org/abs/2004.00010">The Discrete Gaussian for Differential Privacy</a>.
+  <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>.
+<br><a href="https://journalprivacyconfidentiality.org/">Journal of Privacy and Confidentiality</a>, 12(1), 2022. 
+<br>Advances in Neural Information Processing Systems 33 (<a href="http://nips.cc/Conferences/2020">NeurIPS 2020</a>).
+</li>
+<ul>
+  <li><span style="color:red;"><b>Deployed in the <a href="https://www2.census.gov/about/training-workshops/2021/2021-04-30-das-presentation.pdf">2020 US Census</a>.</b></span></li>
+  <li><span style="color:red;"><b>2024 Caspar Bowden Award for Outstanding Research in Privacy Enhancing Technologies.</b></span></li>
+<li>Presented at the CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>). </li>
+<li>Code is available <a href="https://github.com/IBM/discrete-gaussian-differential-privacy">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/1905.11947">Private Identity Testing for High-Dimensional Distributions</a>.
+  <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath, <a href="https://audramarymcmillan.wixsite.com/mysite">Audra McMillan</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>, <a href="http://www.ccs.neu.edu/home/lydiazak/">Lydia Zakynthinou</a>.
+<br>Advances in Neural Information Processing Systems 33 (<a href="http://nips.cc/Conferences/2020">NeurIPS 2020</a>).
+</li>
+<ul>
+  <li><span style="color:red;"><b>Selected for a Spotlight Presentation.</b></span></li>
+  <li>Presented at the CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>). </li>
+  <li>Presented at the NeurIPS 2019 Workshop on Privacy in Machine Learning (<a href="https://priml-workshop.github.io/priml2019/">PriML 2019</a>). </li>
+  <li>
+  Featured in: <a href="http://ptreview.sublinear.info/?p=1126">Property Testing Review</a>.
+  </li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/2002.09463">Privately Learning Markov Random Fields</a>.
+  <br><a href="https://huanyuzhang.github.io">Huanyu Zhang</a>, Gautam Kamath*, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>*, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>*. (Contribution order)
+<br>Proceedings of the 37th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2020">ICML 2020</a>).
+</li>
+<ul>
+  <li>Presented at the CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>). </li>
+  <li>Presented at the NeurIPS 2019 Workshop on Privacy in Machine Learning (<a href="https://priml-workshop.github.io/priml2019/">PriML 2019</a>). </li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/2002.09464">Private Mean Estimation of Heavy-Tailed Distributions</a>.
+<br>Gautam Kamath, <a href="http://www.ccs.neu.edu/home/vikrantsinghal/">Vikrant Singhal</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br>Proceedings of the 33rd Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2020/">COLT 2020</a>).
+</li>
+<ul>
+<li>Presented at the CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>). </li>
+<li>COLT talk by Vikrant available <a href="https://www.colt2020.org/virtual/papers/paper_6.html">here</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/2002.09465">Locally Private Hypothesis Selection</a>.
+<br><a href="https://www.microsoft.com/en-us/research/people/sigopi/">Sivakanth Gopi</a>, Gautam Kamath, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>, <a href="http://www.cs.toronto.edu/~anikolov/">Aleksandar Nikolov</a>, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>, <a href="https://huanyuzhang.github.io">Huanyu Zhang</a>.
+<br>Proceedings of the 33rd Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2020/">COLT 2020</a>).
+</li>
+<ul>
+<li>Presented at the CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>). </li>
+<li>Featured in: <a href="https://ptreview.sublinear.info/?p=1270">Property Testing Review</a>.</li>
+<li>I gave a talk more generally on hypothesis selection with privacy constraints: <a href="https://www.youtube.com/watch?v=yt7h-sCOnkM">here</a>.</li>
+<li>COLT talk by Janardhan available <a href="https://www.colt2020.org/virtual/papers/paper_5.html">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> <a href="https://arxiv.org/abs/1909.03951">Differentially Private Algorithms for Learning Mixtures of Separated Gaussians</a>. 
+<br>Gautam Kamath, <a href="http://webdocs.cs.ualberta.ca/~osheffet/">Or Sheffet</a>, <a href="http://www.ccs.neu.edu/home/vikrantsinghal/">Vikrant Singhal</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br>Advances in Neural Information Processing Systems 32 (<a href="http://nips.cc/Conferences/2019">NeurIPS 2019</a>).
+</li>
+<br>
+</div>
+
+<div class="selected">
+<li> <a href="https://arxiv.org/abs/1905.13229">Private Hypothesis Selection</a>.
+<br><a href="https://cs-people.bu.edu/mbun/">Mark Bun</a>, Gautam Kamath, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>. 
+<br>IEEE <a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18">Transactions on Information Theory</a>, 67(3), 2021.
+<br>Advances in Neural Information Processing Systems 32 (<a href="http://nips.cc/Conferences/2019">NeurIPS 2019</a>).
+</li>
+<ul>
+  <li>Presented at the CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>). <span style="color:red;"><b>Oral Presentation</b></span>.</li>
+<li>I gave a talk more generally on hypothesis selection with privacy constraints: <a href="https://www.youtube.com/watch?v=yt7h-sCOnkM">here</a>.</li>
+  <li>Video of a talk by Mark is available <a href="https://www.birs.ca/events/2019/5-day-workshops/19w5088/videos/watch/201907111334-Bun.html">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+<li> 
+<a href="https://arxiv.org/abs/1803.02815">Sever: A Robust Meta-Algorithm for Stochastic Optimization</a>.
+<br><a href="http://www.iliasdiakonikolas.org/">Ilias Diakonikolas</a>, Gautam Kamath, <a href="https://cseweb.ucsd.edu/~dakane/">Daniel M. Kane</a>, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="https://cs.stanford.edu/~jsteinhardt/">Jacob Steinhardt</a>, <a href="http://www.alistair-stewart.com/">Alistair Stewart</a>. 
+<br>Proceedings of the 36th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2019">ICML 2019</a>).
+</li>
+<ul>
+  <li>
+    Presented at the NeurIPS 2018 Workshop on Security in Machine Learning (<a href="https://secml2018.github.io/">SECML 2018</a>). <span style="color:red;"><b>Oral Presentation</b></span>.
+  </li>
+  <li>Code is available <a href="https://github.com/hoonose/sever">here</a>.</li>
+  <li>Video of a talk by Jerry is available <a href="https://www.youtube.com/watch?v=zbhQijVlGxg">here</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="selected">
+<li> 
+<a href="https://arxiv.org/abs/1805.00216">Privately Learning High-Dimensional Distributions</a>.
+<br>Gautam Kamath, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="http://www.ccs.neu.edu/home/vikrantsinghal/">Vikrant Singhal</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br>Proceedings of the 32nd Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2019/">COLT 2019</a>).
+</li>
+<ul>
+   <li>
+   Presented at the 2018 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2018/">TPDP 2018</a>).
+   </li>
+  <li>Video of a talk by Jon is available <a href="http://www.birs.ca/events/2018/5-day-workshops/18w5189/videos/watch/201805031336-Ullman.html">here</a>.</li>
+</ul>
+<br>
+</div>
+
+
+<div class="selected">
+<li> 
+  <a href="https://arxiv.org/abs/1811.11148">The Structure of Optimal Private Tests for Simple Hypotheses</a>.
+  <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath, <a href="https://audramarymcmillan.wixsite.com/mysite">Audra McMillan</a>, <a href="http://www.cse.psu.edu/~ads22/">Adam Smith</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br>Proceedings of the 51st ACM Symposium on Theory of Computing (<a href="http://acm-stoc.org/stoc2019/">STOC 2019</a>).
+</li>
+<ul>
+  <li>Video of a talk by Audra is available <a href="https://www.youtube.com/watch?v=xrx2HKqcoV8">here</a>.</li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="https://arxiv.org/abs/1807.06168">Anaconda: A Non-Adaptive Conditional Sampling Algorithm for Distribution Testing</a>.
+<br>Gautam Kamath, <a href="http://tzamos.com/">Christos Tzamos</a>.
+<br>Proceedings of the 30th Annual ACM-SIAM Symposium on Discrete Algorithms (<a href="https://www.siam.org/conferences/CM/Main/soda19">SODA 2019</a>).
+</li>
+<ul>
+  <li>
+  <a href="https://eccc.weizmann.ac.il/report/2018/131/">ECCC link</a>.
+  </li>
+  <li>
+    Slides from my talk at SODA available <a href="talks/ANACONDA.pptx">here</a>.
+  </li>
+  <li>
+  Featured in: <a href="http://ptreview.sublinear.info/?p=1016">Property Testing Review</a>.
+  </li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="https://arxiv.org/abs/1803.00008">INSPECTRE: Privately Estimating the Unseen</a>.
+<br><a href="http://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>, Gautam Kamath, <a href="http://zitengsun.com/">Ziteng Sun</a>, <a href="https://huanyuzhang.github.io">Huanyu Zhang</a>.
+<br><a href="https://journalprivacyconfidentiality.org/">Journal of Privacy and Confidentiality</a>, 10(2), 2020. Special issue for TPDP 2018.
+<br>Proceedings of the 35th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2018">ICML 2018</a>).
+</li>
+<ul>
+    <li>
+    Presented at the CCS 2018 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2018/">TPDP 2018</a>).
+    </li>
+    <li>
+    Code is available <a href="https://github.com/HuanyuZhang/INSPECTRE">here</a>.
+    </li>
+    <li>
+    Featured in: <a href="http://ptreview.sublinear.info/?p=971">Property Testing Review</a>
+    </li>
+    <li>
+      Video of a talk by Huanyu is available <a href="https://vimeo.com/295742619">here</a>.
+    </li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="https://arxiv.org/abs/1802.07229">Actively Avoiding Nonsense in Generative Models</a>.
+<br><a href="http://www.stevehanneke.com/">Steve Hanneke</a>, <a href="https://www.microsoft.com/en-us/research/people/adum/">Adam Kalai</a>, Gautam Kamath, <a href="http://tzamos.com/">Christos Tzamos</a>.
+<br>Proceedings of the 31st Annual Conference on Learning Theory (<a href="http://www.learningtheory.org/colt2018/">COLT 2018</a>).
+</li>
+<ul>
+  <li>
+  Video of Adam's talk at COLT can be viewed <a href="https://www.youtube.com/watch?v=LtJh8unV2VQ">here</a>.
+  </li>
+</ul>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="https://arxiv.org/abs/1708.00002">Which Distribution Distances are Sublinearly Testable?</a>
+<br><a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, Gautam Kamath, <a href="http://www.mit.edu/~jswright/">John Wright</a>.
+  <br>Proceedings of the 29th Annual ACM-SIAM Symposium on Discrete Algorithms (<a href="https://www.siam.org/meetings/da18/">SODA 2018</a>).
+</li>
+<ul>
+  <li>
+  <a href="https://eccc.weizmann.ac.il/report/2018/002/">ECCC link</a>.
+  </li>
+  <li>
+  Featured in: <a href="http://ptreview.sublinear.info/?p=859">Property Testing Review</a>.
+  </li>
+</ul>
+<br>
+</div>
+
+<div class="selected">
+<li> 
+<a href="https://arxiv.org/abs/1612.03147">Testing Ising Models</a>.
+<br><a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, <a href="http://people.csail.mit.edu/nishanthd/">Nishanth Dikkala</a>, Gautam Kamath.
+  <br>IEEE <a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18">Transactions on Information Theory</a>, 65(11), 2019.
+  <br>Proceedings of the 29th Annual ACM-SIAM Symposium on Discrete Algorithms (<a href="https://www.siam.org/meetings/da18/">SODA 2018</a>).
+</li>
+<ul>
+  <li>
+  <a href="https://eccc.weizmann.ac.il/report/2017/006/">ECCC link</a>.
+  </li>
+  <li>
+  Featured in: <a href="http://ptreview.sublinear.info/?p=796">Property Testing Review</a>.
+  </li>
+</ul> 
+<br>
+</div>
+
+<div class="regular">
+  <li>
+  <a href="https://arxiv.org/abs/1704.03866">Robustly Learning a Gaussian: Getting Optimal Error, Efficiently</a>.
+  <br><a href="http://www.iliasdiakonikolas.org/">Ilias Diakonikolas</a>, Gautam Kamath, <a href="https://cseweb.ucsd.edu/~dakane/">Daniel M. Kane</a>, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="http://people.csail.mit.edu/moitra/">Ankur Moitra</a>, <a href="http://www.alistair-stewart.com/">Alistair Stewart</a>. 
+  <br>Proceedings of the 29th Annual ACM-SIAM Symposium on Discrete Algorithms (<a href="https://www.siam.org/meetings/da18/">SODA 2018</a>).
+  </li>
+  <br>
+</div>
+
+<div class="regular">
+  <li> 
+  <a href="https://arxiv.org/abs/1710.04170">Concentration of Multilinear Functions of the Ising Model with Applications to Network Data</a>.
+  <br><a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, <a href="http://people.csail.mit.edu/nishanthd/">Nishanth Dikkala</a>, Gautam Kamath.
+  <br>Advances in Neural Information Processing Systems 30 (<a href="http://nips.cc/Conferences/2017">NIPS 2017</a>).
+  </li>
+  <ul>
+    <li>
+    Code is available <a href="https://github.com/hoonose/multilinear-ising">here</a>.
+    </li>
+    <li>
+    A three-minute summary video for NIPS is available <a href="https://www.youtube.com/watch?v=HKsv2kT6wBM">here</a>.
+    </li>
+    <li>Our NIPS poster is viewable <a href="nips2017poster.pdf">here</a>.</li>
+  </ul>
+  <br>
+</div>
+
+<div class="regular">
+  <li>
+  <a href="https://arxiv.org/abs/1703.10127">Priv'IT: Private and Sample Efficient Identity Testing</a>.
+  <br>Bryan Cai, <a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, Gautam Kamath.
+  <br>Proceedings of the 34th International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2017">ICML 2017</a>).
+  </li>
+  <ul>
+    <li>
+    Presented at the ICML 2017 Workshop on Private and Secure Machine Learning 2017 (<a href="https://sites.google.com/view/psml">PSML 2017</a>). <span style="color:red;"><b>Oral Presentation</b></span>.
+    </li>
+    <li>
+    Video of my talk at ICML can be viewed <a href="https://vimeo.com/240679051">here</a>.
+    </li>
+    <li>
+    Code is available <a href="https://github.com/hoonose/privit">here</a>.
+    </li>
+    <li>
+    Featured in: <a href="http://ptreview.sublinear.info/?p=821">Property Testing Review</a>.
+    </li>
+  </ul>
+  <br>
+</div>
+
+<div class="selected">
+  <li>
+  <a href="https://arxiv.org/abs/1703.00893">Being Robust (in High Dimensions) Can Be Practical</a>.
+  <br><a href="http://www.iliasdiakonikolas.org/">Ilias Diakonikolas</a>, Gautam Kamath, <a href="https://cseweb.ucsd.edu/~dakane/">Daniel M. Kane</a>, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="http://people.csail.mit.edu/moitra/">Ankur Moitra</a>, <a href="http://www.alistair-stewart.com/">Alistair Stewart</a>. 
+  <br>Proceedings of the 34th International Conference on Machine Learning (<a href="http://icml.cc/2017/">ICML 2017</a>).
+  </li>
+  <ul>
+    <li>
+    Code is available <a href="https://github.com/hoonose/robust-filter">here</a>.
+    </li>
+    <li>
+    Video of Jerry's talk at ICML can be viewed <a href="https://vimeo.com/238266285">here</a>.
+    </li>
+  </ul>
+  <br>
+</div>
+
+
+
+<div class="selected">
+<li> 
+<a href="http://arxiv.org/abs/1604.06443">Robust Estimators in High Dimensions without the Computational Intractability</a>.
+<br><a href="http://www.iliasdiakonikolas.org/">Ilias Diakonikolas</a>, Gautam Kamath, <a href="https://cseweb.ucsd.edu/~dakane/">Daniel M. Kane</a>, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="http://people.csail.mit.edu/moitra/">Ankur Moitra</a>, <a href="http://www.alistair-stewart.com/">Alistair Stewart</a>. 
+<br><a href="https://www.siam.org/Publications/Journals/SIAM-Journal-on-Computing-SICOMP">SIAM Journal on Computing</a>, 48(2), 2019. Special Issue for FOCS 2016.
+<br>Proceedings of the 57th Annual IEEE Symposium on Foundations of Computer Science (<a href="http://dimacs.rutgers.edu/FOCS16/">FOCS 2016</a>).
+<ul>
+  <li>
+  <span style="color:red;"><b>2026 G&ouml;del Prize</b></span>.
+  </li>
+  <li>
+  <span style="color:red;"><b>Invited to the SIAM Journal on Computing Special Issue for FOCS 2016</b></span>.
+  </li>
+  <li>
+  <span style="color:red;"><b>Invited to <a href="http://2017.highlightsofalgorithms.org/">Highlights of Algorithms 2017</a></b></span>.
+  </li>
+  <li>
+  <span style="color:red;"><b>Invited to <a href="https://cacm.acm.org">Communications of the ACM, Research Highlights</a></b></span>.
+  </li>
+  <li><!--Video of Jerry's talk at FOCS can be viewed <a href="http://techtalks.tv/talks/robust-estimators-in-high-dimensions-without-the-computational-intractability/62973/">here</a>.--!>
+  Video of Jerry's talk at TCS+ can be viewed <a href="https://sites.google.com/site/plustcs/past-talks/20161207jerrylimit">here</a>.
+  Video of Ankur's talk at the Simons Institute can be viewed <a href="https://www.youtube.com/watch?v=sY6t4dRzTJE">here</a>.
+  </li>
+  <li>
+  Featured in: <a href="http://news.mit.edu/2016/finding-patterns-corrupted-data-1026">MIT News</a>, <a href="http://viterbi.usc.edu/news/news/2016/data-machine-learning.htm">USC Viterbi News</a>
+  </li>
+</ul>
+</li>
+<br>
+</div>
+
+
+<div class="selected">
+<li> <a href="http://arxiv.org/abs/1511.03641">A Size-Free CLT for Poisson Multinomials and its Applications</a>.
+<br><a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, <a href="http://www.math.ias.edu/~anindya/">Anindya De</a>, Gautam Kamath, <a href="https://tzamos.com/">Christos Tzamos</a>.
+<br>Proceedings of the 48th ACM Symposium on Theory of Computing (<a href="http://acm-stoc.org/stoc2016/">STOC 2016</a>).
+</li>
+<br>
+</div>
+
+<div class="selected">
+<li> 
+<a href="http://arxiv.org/abs/1507.05952">Optimal Testing for Properties of Distributions</a>.
+<br><a href="http://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>, <a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, Gautam Kamath.
+<br>Advances in Neural Information Processing Systems 28 (<a href="http://nips.cc/Conferences/2015">NIPS 2015</a>).
+<ul>
+  <li>
+  <span style="color:red;"><b>Selected for a Spotlight Presentation (4.5% acceptance rate).</b></span>
+  </li>
+  <li>
+  Video of a talk by Costis at UT Austin can be viewed <a href="https://www.youtube.com/watch?v=syH1sBr2HRc">here</a>. 
+  Video of the spotlight talk by Jayadev at NIPS can be viewed <a href="http://research.microsoft.com/apps/video/default.aspx?id=259621">here</a> (at 9:15).
+  </li>
+  <li>
+  Featured in: <a href="https://mittheory.wordpress.com/2015/08/09/distribution-testing-do-it-with-class/">MIT Theory of Computation Student Blog</a>, <a href="http://ptreview.sublinear.info/?p=454">Property Testing Review</a>.
+  </li>
+  <li>
+  An <a href="https://twitter.com/TinyToCS/status/708161768707592192">extremely condensed version</a> of this paper <a href="http://tinytocs.ece.utexas.edu/papers/tinytocs4_paper_acharya.pdf">appeared</a> in Volume Four of Tiny Transactions on Computer Science (<a href="http://tinytocs.ece.utexas.edu/">Tiny ToCS</a>).
+  </li>
+</ul>
+</li>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="http://arxiv.org/abs/1504.08363">On the Structure, Covering, and Learning of Poisson Multinomial Distributions</a>.
+<br><a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, Gautam Kamath, <a href="https://tzamos.com/">Christos Tzamos</a>.
+<br>Proceedings of the 56th Annual IEEE Symposium on Foundations of Computer Science (<a href="http://focs15.simons.berkeley.edu/">FOCS 2015</a>).
+<!--
+<ul>
+  <li>
+  Video of the talk by Christos at FOCS can be viewed <a href="http://techtalks.tv/talks/on-the-structure-covering-and-learning-of-poisson-multinomial-distributions/62070/">here</a>.
+  </li>
+</ul>
+--!>
+</li>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="http://arxiv.org/abs/1411.7346">A Chasm Between Identity and Equivalence Testing with Conditional Queries</a>.
+<br><a href="http://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>, <a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath.
+<br><a href="https://theoryofcomputing.org/">Theory of Computing</a>, 14(19), 2018.
+<br>Proceedings of the 19th International Workshop on Randomization and Computation (<a href="http://cui.unige.ch/tcs/random-approx/2015/index.php">RANDOM 2015</a>).
+<ul>
+  <li>
+  <a href="http://eccc.hpi-web.de/report/2014/156/">ECCC link</a>.
+  </li>
+  <li>
+    Slides from Cl&#233;ment's talk at RANDOM available <a href="http://www.cs.columbia.edu/~ccanonne/files/talks/chasmcond-2015-08-24.pdf">here</a>.
+  </li>
+  <li>
+  Featured in: <a href="http://www.wisdom.weizmann.ac.il/~oded/MC/164.html">Oded Goldreich's Choices</a>, <a href="http://ptreview.sublinear.info/?p=345">Property Testing Review</a>, <a href="http://sublinear.info/index.php?title=Open_Problems:66">Sublinear.info</a>.
+  </li>
+</ul>
+</li>
+<br>
+</div>
+
+<div class="regular">
+<li> 
+<a href="writings/isit15.pdf">Adaptive Estimation in Weighted Group Testing</a>.
+<br><a href="http://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>, <a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath.
+<br>Proceedings of the 2015 IEEE International Symposium on Information Theory (<a href="http://www.isit2015.org/">ISIT 2015</a>).
+</li>
+<br>
+</div>
+
+<div class="selected">
+<li> 
+<a href="http://arxiv.org/abs/1312.1054">Faster and Sample Near-Optimal Algorithms for Proper Learning Mixtures of Gaussians</a>.
+<br><a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, Gautam Kamath.
+<br>Proceedings of the 27th Annual Conference on Learning Theory (<a href="https://orfe.princeton.edu/conferences/colt2014/">COLT 2014</a>).
+</li>
+<ul>
+  <li>
+  Slides from the talk at COLT available <a href="talks/colt2014.pdf">here</a>.
+  Video of the talk can be viewed <a href="http://videolectures.net/colt2014_kamath_gaussians/">here</a>.
+  </li>
+</ul>
+<br>
+</div>
+
+<div class="selected" id="last_paper">
+<li> 
+<a href="http://arxiv.org/abs/1203.6346">An Analysis of One-Dimensional Schelling Segregation</a>.
+<br>Christina Brandt, <a href="http://www.immorlica.com">Nicole Immorlica</a>, Gautam Kamath, <a href="http://www.cs.cornell.edu/~rdk">Robert Kleinberg</a>.
+<br>Proceedings of the 44th ACM Symposium on Theory of Computing (<a href="http://cs.nyu.edu/~stoc2012/default.htm">STOC 2012</a>).
+<ul>
+<li>
+<span style="color:red;"><b>I was very lucky to be awarded the inaugural <a href="http://cs.nyu.edu/~stoc2012/awards.htm">STOC Best Student Presentation Award</a> by <a href="http://www.sigact.org/">SIGACT</a> for this talk.</b></span>
+</li>
+<li>
+Slides from the talk at STOC available <a href="talks/stoc2012.pptx">here</a>, adapted from slides from a <a href="http://research.microsoft.com/apps/video/dl.aspx?id=162373">talk by Nicole at MSR</a>.
+Video of the talk can be viewed <a href="https://www.youtube.com/watch?v=DQsIUOSEmUA">here</a>.</li>
+<li>
+Featured in: <a href="https://www.americanscientist.org/article/the-math-of-segregation">American Scientist</a>.
+</li>
+</ul>
+</li>
+<br>
+</div>
+</ul>
+
+<h3 id="workshoptoggle">Selected Workshop Papers (<a href="javascript:void(0)" onclick="showWorkshop(false)">Show</a>)</h3>
+<div class="workshop_papers" id="workshop_papers">
+  <ul>
+<!--
+    <li>
+      <a href="https://arxiv.org/abs/2010.09063">Enabling Fast Differentially Private SGD via Just-in-Time Compilation and Vectorization</a>.
+      <br><a href="https://pranavsubramani.github.io/">Pranav Subramani</a>, <a href="https://nicholasvadivelu.com/">Nicholas Vadivelu</a>, Gautam Kamath. (Contribution order)
+      <br>NeurIPS 2020 Workshop on Privacy Preserving Machine Learning (<a href="https://ppml-workshop.github.io/">PPML 2020</a>).
+    </li>
+    <br>
+
+    <li>
+      <a href="https://arxiv.org/abs/2010.09929">On the Sample Complexity of Privately Learning Unbounded High-Dimensional Gaussians</a>.
+      <br><a href="https://ishaqadenali.github.io/">Ishaq Aden-Ali</a>, <a href="https://www.cas.mcmaster.ca/ashtiani/">Hassan Ashtiani</a>, Gautam Kamath.
+      <br>NeurIPS 2020 Workshop on Privacy Preserving Machine Learning (<a href="https://ppml-workshop.github.io/">PPML 2020</a>).
+    </li>
+    <br>
+
+    <li>
+      <a href="https://arxiv.org/abs/2006.06618">CoinPress: Practical Private Mean and Covariance Estimation</a>.
+      <br><a href="https://sravb.github.io/">Sourav Biswas</a>, <a href="https://yihedong.me/">Yihe Dong</a>, Gautam Kamath, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+      <br>CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>).
+    </li>
+    <br>
+
+    <li>
+       <a href="https://arxiv.org/abs/2004.00010">The Discrete Gaussian for Differential Privacy</a>.
+      <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>.
+      <br>CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>).
+    </li>
+    <br>
+
+    <li>
+      <a href="https://arxiv.org/abs/2002.12321">PAPRIKA: Private Online False Discovery Rate Control</a>.
+      <br><a href="https://wanrongz.github.io/">Wanrong Zhang</a>, Gautam Kamath*, <a href="https://pwp.gatech.edu/rachel-cummings/">Rachel Cummings</a>*. (Contribution order)
+      <br>CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>).
+    </li>
+    <br>
+
+    <li>
+      <a href="https://arxiv.org/abs/2002.09465">Locally Private Hypothesis Selection</a>.
+      <br><a href="https://www.microsoft.com/en-us/research/people/sigopi/">Sivakanth Gopi</a>, Gautam Kamath, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>, <a href="http://www.cs.toronto.edu/~anikolov/">Aleksandar Nikolov</a>, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>, <a href="https://huanyuzhang.github.io">Huanyu Zhang</a>.
+      <br>CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>).
+    </li>
+    <br>
+
+    <li>
+      <a href="https://arxiv.org/abs/2002.09464">Private Mean Estimation of Heavy-Tailed Distributions</a>.
+      <br>Gautam Kamath, <a href="http://www.ccs.neu.edu/home/vikrantsinghal/">Vikrant Singhal</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+      <br>CCS 2020 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>).
+    </li>
+    <br>
+
+
+    <li>
+      <a href="https://arxiv.org/abs/2002.09463">Privately Learning Markov Random Fields</a>.
+      <br><a href="https://huanyuzhang.github.io">Huanyu Zhang</a>, Gautam Kamath*, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>*, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>*. (Contribution order)
+      <br>CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>). 
+      <br>NeurIPS 2019 Workshop on Privacy in Machine Learning (<a href="https://priml-workshop.github.io/priml2019/">PriML 2019</a>).
+    </li>
+    <br>
+
+
+
+    <li>
+      <a href="https://arxiv.org/abs/2002.09463">Privately Learning Markov Random Fields</a>.
+      <br>Gautam Kamath, <a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>, <a href="https://huanyuzhang.github.io">Huanyu Zhang</a>.
+      <br>CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>). 
+      <br>NeurIPS 2019 Workshop on Privacy in Machine Learning (<a href="https://priml-workshop.github.io/priml2019/">PriML 2019</a>).
+    </li>
+    <br>
+
+
+  <li> <a href="https://arxiv.org/abs/1905.11947">Private Identity Testing for High-Dimensional Distributions</a>.
+      <br><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, Gautam Kamath, <a href="https://audramarymcmillan.wixsite.com/mysite">Audra McMillan</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>, <a href="http://www.ccs.neu.edu/home/lydiazak/">Lydia Zakynthinou</a>.
+      <br>CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>).
+      <br>NeurIPS 2019 Workshop on Privacy in Machine Learning (<a href="https://priml-workshop.github.io/priml2019/">PriML 2019</a>). 
+  </li>
+    <br>
+
+    --!>
+
+<li><a href="https://arxiv.org/abs/2606.01849">ContinuousBench: Can Differentially Private Synthetic Text Improve Capabilities?</a>.
+<br><a href="http://sites.google.com/view/phliu/home">Peihan Liu</a>*, <a href="https://lucasrosenblatt.com/">Lucas Rosenblatt</a>, <a href="https://wwkong.github.io/">Weiwei Kong</a>, <a href="https://scholar.google.com/citations?user=eIdQR5oAAAAJ">Natalia Ponomareva</a>, Gautam Kamath, <a href="https://rachelcummings.com/">Rachel Cummings</a>, <a href="https://roxanageambasu.github.io/">Roxana Geambasu</a>, <a href="https://ygan397.github.io/">Yu Gan</a>, <a href="https://tslilyai.github.io/">Lillian Tsai</a>, <a href="https://alexbie98.github.io/">Alex Bie</a>*. (Contribution order)
+  <br>Theory and Practice of Differential Privacy 2026 (<a href="https://tpdp.journalprivacyconfidentiality.org/2026/">TPDP 2026</a>). Oral Presentation. 
+</li>
+<br>
+
+    
+<li><a href="https://arxiv.org/abs/2406.17216">Machine Unlearning Fails to Remove Data Poisoning Attacks</a>.
+  <br><a href="https://sites.google.com/view/martinpawelczyk/">Martin Pawelczyk</a>*, <a href="https://uwaterloo.ca/scholar/z2di">Jimmy Z. Di</a>*, <a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>, Gautam Kamath^, <a href="https://ayush.sekhari.com/">Ayush Sekhari</a>^, <a href="https://sethneel.com/">Seth Neel</a>^. (Contribution order)
+<br>ICML 2024 <a href="https://genlaw.org/2024-icml.html">2nd Workshop on Generative AI and Law</a>. Oral Presentation. 
+</li>
+<br>
+
+
+<li><a href="https://arxiv.org/abs/2212.05015">Robustness Implies Privacy in Statistical Estimation</a>.
+<br><a href="https://www.samuelbhopkins.com/">Samuel B. Hopkins</a>, Gautam Kamath, <a href="https://www.mahbodmajid.com/">Mahbod Majid</a>, <a href="https://sites.google.com/view/shyamnarayanan/home">Shyam Narayanan</a>.
+<br>Theory and Practice of Differential Privacy 2023 (<a href="https://tpdp.journalprivacyconfidentiality.org/2023/">TPDP 2023</a>). Oral Presentation.
+</li> 
+<br>
+
+<li><a href="https://arxiv.org/abs/2201.11308">Calibration with Privacy in Peer Review</a>.
+<br><a href=https://wenxind.github.io/">Wenxin Ding</a>, Gautam Kamath &#9441; <a href="http://www.cs.cmu.edu/~weinaw/">Weina Wang</a> &#9441; <a href="https://www.cs.cmu.edu/~nihars/">Nihar B. Shah</a>.
+<br>AAAI 2022 Workshop on Privacy-Preserving Artificial Intelligence (<a href="https://aaai-ppai22.github.io/">PPAI 2022</a>). Oral Presentation.
+</li>
+    <br>
+
+
+<li> <a href="https://arxiv.org/abs/1905.13229">Private Hypothesis Selection</a>.
+<br><a href="https://cs-people.bu.edu/mbun/">Mark Bun</a>, Gautam Kamath, <a href="http://www.thomas-steinke.net/">Thomas Steinke</a>, <a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>. 
+<br>CCS 2019 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2019/">TPDP 2019</a>). Oral Presentation.
+</li>
+    <br>
+
+<li> 
+<a href="https://arxiv.org/abs/1803.02815">Sever: A Robust Meta-Algorithm for Stochastic Optimization</a>.
+<br><a href="http://www.iliasdiakonikolas.org/">Ilias Diakonikolas</a>, Gautam Kamath, <a href="https://cseweb.ucsd.edu/~dakane/">Daniel M. Kane</a>, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="https://cs.stanford.edu/~jsteinhardt/">Jacob Steinhardt</a>, <a href="http://www.alistair-stewart.com/">Alistair Stewart</a>. 
+<br>NeurIPS 2018 Workshop on Security in Machine Learning (<a href="https://secml2018.github.io/">SECML 2018</a>). Oral Presentation.
+</li>
+    <br>
+
+    <!--
+
+<li> 
+<a href="https://arxiv.org/abs/1805.00216">Privately Learning High-Dimensional Distributions</a>.
+<br>Gautam Kamath, <a href="https://jerryzli.github.io/">Jerry Li</a>, <a href="http://www.ccs.neu.edu/home/vikrantsinghal/">Vikrant Singhal</a>, <a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>.
+<br> CCS 2018 Workshop on Theory and Practice of Differential Privacy (<a href="https://tpdp.cse.buffalo.edu/2018/">TPDP 2018</a>).
+</li>
+    <br>
+
+    --!>
+<li>
+  <a href="https://arxiv.org/abs/1703.10127">Priv'IT: Private and Sample Efficient Identity Testing</a>.
+  <br>Bryan Cai, <a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, Gautam Kamath.
+  <br>ICML 2017 Workshop on Private and Secure Machine Learning 2017 (<a href="https://sites.google.com/view/psml">PSML 2017</a>). Oral Presentation.
+</li>
+  </ul>
+</div>
+
+<h3>Theses</h3>
+<ul>
+  <li>
+    <a href="phdthesis.pdf">Modern Challenges in Distribution Testing</a>.
+    <br>Gautam Kamath.
+    <br>Ph.D. Thesis, 2018.
+  </li>
+  <li>
+    <a href="smthesis.pdf">On Learning and Covering Structured Distributions</a>.
+    <br>Gautam Kamath.
+    <br>M.Sc. Thesis, 2014.
+  </li>
+</ul>
+
+
+<hr>
+
+<h2><a name="talks">Talk Videos</a></h2>
+Here are some videos of talks I've given.
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=yt7h-sCOnkM">Hypothesis Selection with Privacy Constraints</a>.</li>
+  <li><a href="https://www.youtube.com/watch?v=5A6RD9NVqdI">CoinPress: Practical Private Mean and Covariance Estimation</a>.</li>
+  <li><a href="https://www.youtube.com/watch?v=2oLWHRNF_tM">Privately Learning High-Dimensional Distributions</a>. Presented at <a href="https://simons.berkeley.edu/privacy2019-1">Data Privacy: From Foundations to Applications</a>.</li>
+  <li><a href="https://simons.berkeley.edu/talks/statistical-inference-and-privacy-part-ii">Private Statistics: A TCS Perspective</a>. Presented as part of the mini-course on private statistics at the <a href="https://simons.berkeley.edu/workshops/schedule/6279">Data Privacy Boot Camp</a>. </li>
+  <li><a href="https://www.youtube.com/watch?v=OtaGYhbBECs">Realizing Robustness</a>. Presented at the <a href="https://simons.berkeley.edu/data-science-2018-2">Robust and High-Dimensional Statistics Workshop</a>.</li>
+  <li><a href="https://www.youtube.com/watch?v=y_8pUbhV3aQ">Modern Challenges in Distribution Testing</a>. My PhD defense talk.</li>
+  <li><a href="http://www.birs.ca/events/2018/5-day-workshops/18w5189/videos/watch/201805031455-Kamath.html">Differentially Private Hypothesis Testing and Property Estimation</a>. Presented at <a href="http://www.birs.ca/events/2018/5-day-workshops/18w5189/">Mathematical Foundations of Data Privacy</a>.</li>
+  <li><a href="http://videocrm.ca/Machine18/Machine18-20180426-4-GautamKamath.mp4">Robustness in Unsupervised and Supervised Learning</a>. Presented at <a href="http://www.crm.umontreal.ca/2018/Modern18/index_e.php">Modern Challenges of Learning Theory</a>.</li>
+  <li><a href="https://vimeo.com/242251431">Testing with Alternative Distances</a>. Presented at <a href="http://www.cs.columbia.edu/~ccanonne/workshop-focs2017/">Frontiers of Distribution Testing</a> workshop at <a href="https://focs17.simons.berkeley.edu/">FOCS 2017</a>.</li>
+  <li><a href="https://vimeo.com/240679051">Priv'IT: Private and Sample Efficient Identity Testing</a>. Presented at <a href="https://icml.cc/Conferences/2017">ICML 2017</a>.</li>
+  <li><a href="http://videolectures.net/colt2014_kamath_gaussians/">Faster and Sample Near-Optimal Algorithms for Proper Learning Mixtures of Gaussians</a>. Presented at <a href="https://orfe.princeton.edu/conferences/colt2014/">COLT 2014</a>.</li>
+  <li><a href="https://www.youtube.com/watch?v=DQsIUOSEmUA">An Analysis of One-Dimensional Schelling Segregation</a>. Presented at <a href="https://cs.nyu.edu/~stoc2012/default.htm">STOC 2012</a>.</li>
+</ul>
+
+<hr>
+
+<h2><a name="coauthors">Coauthors</a></h2>
+My (168) co-authors include: 
+<a href="http://people.ece.cornell.edu/acharya/">Jayadev Acharya</a>, 
+<a href="https://ishaqadenali.github.io/">Ishaq Aden-Ali</a>, 
+<a href="https://sushaga.github.io/">Sushant Agarwal</a>,
+<a href="https://www.cas.mcmaster.ca/ashtiani/">Hassan Ashtiani</a>, 
+<a href="https://www.mit.edu/~backurs/">Arturs Backurs</a>, 
+<a href="https://law.yale.edu/jack-m-balkin">Jack M. Balkin</a>, 
+<a href="https://cs.uwaterloo.ca/~shai/">Shai Ben-David</a>, 
+<a href="https://alexbie98.github.io/">Alex Bie</a>, 
+<a href="https://sravb.github.io/">Sourav Biswas</a>, 
+<a href="https://franziska-boenisch.de/">Franziska Boenisch</a>,
+<a href="https://www.linkedin.com/in/christie-brandt/">Christina Brandt</a>, 
+<a href="https://www.milesbrundage.com/">Miles Brundage</a>, 
+<a href="https://cs-people.bu.edu/mbun/">Mark Bun</a>, 
+Bryan Cai, 
+<a href="https://www.cis.upenn.edu/~ccb/">Christopher Callison-Burch</a>, 
+<a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment L. Canonne</a>, 
+<a href="https://nicholas.carlini.com/">Nicholas Carlini</a>, 
+<a href="https://pwp.gatech.edu/rachel-cummings/">Rachel Cummings</a>, 
+<a href="http://www.cs.columbia.edu/~xichen/Homepage/Welcome.html">Xi Chen</a>, 
+<a href="https://www.dli.tech.cornell.edu/members/choksi">Madiha Zahrah Choksi</a>, 
+<a href="https://www.christopherchoquette.com/">Christopher A. Choquette-Choo</a>, 
+<a href="https://afedercooper.info/">A. Feder Cooper</a>, 
+<a href="https://ctcovington.github.io/">Christian Covington</a>, 
+<a href="https://ecreager.github.io/">Elliot Creager</a>, 
+Debeshee Das,
+<a href="http://people.csail.mit.edu/costis/">Constantinos Daskalakis</a>, 
+<a href="http://users.eecs.northwestern.edu/~anindya/">Anindya De</a>, 
+<a href="https://www.cs.cornell.edu/~cdesa/">Christopher De Sa</a>, 
+<a href="https://desfontain.es/">Damien Desfontaines</a>, 
+Jimmy Z. Di, 
+<a href="http://www.iliasdiakonikolas.org/">Ilias Diakonikolas</a>, 
+<a href="http://people.csail.mit.edu/nishanthd/">Nishanth Dikkala</a>, 
+<a href="https://wenxind.github.io/">Wenxin Ding</a>, 
+<a href="https://yihedong.me/">Yihe Dong</a>, 
+Jack Douglas, 
+<a href="https://adam-dziedzic.com/">Adam Dziedzic</a>,
+<a href="https://www.cs.virginia.edu/~evans/">David Evans</a>, 
+<a href="https://ali-falahati.github.io/">Ali Falahati</a>, 
+<a href="http://www.jfrankle.com/">Jonathan Frankle</a>, 
+<a href="https://ygan397.github.io/">Yu Gan</a>, 
+<a href="https://scholar.google.com/citations?user=rG3xW3UAAAAJ">Deep Ganguli</a>, 
+<a href="http://www.mmrc.iss.ac.cn/~xgao/">Xiao-Shan Gao</a>,
+<a href="https://roxanageambasu.github.io/">Roxana Geambasu</a>, 
+<a href="https://research.google/people/bryant-gipson/">Bryant Gipson</a>, 
+<a href="https://www.microsoft.com/en-us/research/people/sigopi/">Sivakanth Gopi</a>, 
+<a href="https://james.grimmelmann.net/">James Grimmelmann</a>, 
+Xin Gu, 
+<a href="https://profiles.sussex.ac.uk/p328331-andres-guadamuz">Andres Guadamuz</a>, 
+<a href="http://www.stevehanneke.com/">Steve Hanneke</a>, 
+<a href="https://www.luminategroup.com/our-people/swee-leng-harris">Swee Leng Harris</a>, 
+<a href="https://cs.uwaterloo.ca/~xihe/">Xi He</a>, 
+<a href="https://hona.kr/">James Honaker</a>, 
+<a href="https://www.samuelbhopkins.com/">Samuel B. Hopkins</a>, 
+<a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>, 
+<a href="http://www.immorlica.com/">Nicole Immorlica</a>, 
+Huseyin A. Inan, 
+<a href="https://www.seas.upenn.edu/~daphnei/me/category/about-me.html">Daphne Ippolito</a>, 
+Valentio Iverson, 
+<a href="https://azjacobs.com/">Abigail Z. Jacobs</a>, 
+<a href="https://jagielski.github.io/">Matthew Jagielski</a>, 
+Ayush Jain, 
+<a href="https://law.ucdavis.edu/people/elizabeth-joh">Elizabeth Joh</a>, 
+<a href="https://kairouzp.github.io/">Peter Kairouz</a>, 
+<a href="https://www.microsoft.com/en-us/research/people/adum/">Adam Kalai</a>, 
+<a href="https://cseweb.ucsd.edu/~dakane/">Daniel M. Kane</a>, 
+Sara Kodeiri,
+<a href="http://www.cs.cornell.edu/~rdk/">Robert Kleinberg</a>, 
+<a href="https://wwkong.github.io/">Weiwei Kong</a>,
+<a href="https://www.microsoft.com/en-us/research/people/jakul/">Janardhan Kulkarni</a>, 
+<a href="https://christianlebeda.github.io/">Christian Janos Lebeda</a>,
+<a href="https://toscalechner.github.io/">Tosca Lechner</a>, 
+<a href="https://katelee168.github.io/">Katherine Lee</a>, 
+<a href="https://yintat.com/">Yin Tat Lee</a>, 
+<a href="https://law.stanford.edu/directory/mark-a-lemley/">Mark Lemley</a>, 
+<a href="https://cs.uwaterloo.ca/~alevi/">Amit Levi</a>, 
+<a href="https://jerryzli.github.io/">Jerry Li</a>, 
+Qiaobo Li, 
+<a href="https://peihanliu.com/">Peihan Liu</a>,
+<a href="https://www.microsoft.com/en-us/research/people/tyliu/">Tie-Yan Liu</a>, 
+<a href="http://www.xingtuliu.com/">Xingtu Liu</a>, 
+Zuoqiu Liu,
+<a href="https://sites.google.com/view/andrewlowy/home">Andrew Lowy</a>,
+Xiaoqian Lu,
+<a href="https://cs.uwaterloo.ca/~y485lu/">Yiwei Lu</a>, 
+<a href="https://www.mahbodmajid.com/">Mahbod Majid</a>, 
+<a href="https://www.microsoft.com/en-us/research/people/amonteiroman/">Andre Manoel</a>, 
+<a href="https://www.linkedin.com/in/cass-matthews-97720612/">Cass Matthews</a>, 
+<a href="https://christinemcleavey.com/">Christine McLeavey</a>, 
+<a href="https://www.eff.org/about/staff/corynne-mcsherry">Corynne McSherry</a>, 
+<a href="https://mimno.infosci.cornell.edu/">David Mimno</a>, 
+<a href="https://cs.uwaterloo.ca/~s3mohapa/">Shubhankar Mohapatra</a>, 
+<a href="http://people.csail.mit.edu/moitra/">Ankur Moitra</a>, 
+Sabrina Mokhtari, 
+<a href="https://argymouz.github.io/">Argyris Mouzakis</a>, 
+<a href="https://audramarymcmillan.wixsite.com/mysite">Audra McMillan</a>, 
+<a href="https://cseweb.ucsd.edu/~fmireshg/">Niloofar Mireshghallah</a>, 
+Saurabh Naik, 
+<a href="https://sites.google.com/view/shyamnarayanan/home">Shyam Narayanan</a>, 
+<a href="https://scholar.google.com/citations?user=k6-nvDAAAAAJ">Milad Nasr</a>, 
+<a href="https://sethneel.com/">Seth Neel</a>,
+<a href="http://www.cs.toronto.edu/~anikolov/">Aleksandar Nikolov</a>, 
+<a href="https://homes.cs.washington.edu/~sewoong/">Sewoong Oh</a>, 
+<a href="https://www.paulohm.com/">Paul Ohm</a>, 
+<a href="https://oohrimenko.github.io/">Olga Ohrimenko</a>, 
+<a href="https://www.papernot.fr/">Nicolas Papernot</a>, 
+<a href="https://sites.google.com/view/martinpawelczyk/">Martin Pawelczyk</a>,
+Natalia Ponomareva,
+Alireza F. Pour, 
+<a href="https://matt19234.github.io/">Matthew Regehr</a>, 
+<a href="https://research.google/people/adam-roberts/">Adam Roberts</a>, 
+<a href="https://www2.math.upenn.edu/~ryrogers/">Ryan Rogers</a>, 
+<a href="https://lucasrosenblatt.com/">Lucas Rosenblatt</a>,
+<a href="https://www.rcfp.org/thomascrubin/">Tom Rubin</a>, 
+<a href="https://www.law.berkeley.edu/our-faculty/faculty-profiles/pamela-samuelson/">Pamela Samuelson</a>, 
+<a href="https://jcksanderson.com/">Jack Sanderson</a>,
+<a href="https://ssasy.github.io/">Sajin Sasy</a>, 
+<a href="https://scholar.google.com/citations?user=npQ1IpkAAAAJ">Ludwig Schubert</a>, 
+<a href="https://www.cs.cornell.edu/~sekhari/">Ayush Sekhari</a>, 
+<a href="https://www.cs.cmu.edu/~nihars/">Nihar B. Shah</a>, 
+<a href="http://webdocs.cs.ualberta.ca/~osheffet/">Or Sheffet</a>, 
+Milan Shen, 
+<a href="https://rosesilver.github.io/">Rose Silver</a>,
+<a href="http://www.ccs.neu.edu/home/vikrantsinghal/">Vikrant Singhal</a>, 
+<a href="http://www.cse.psu.edu/~ads22/">Adam Smith</a>, 
+<a href="https://shs037.github.io/">Shuang Song</a>, 
+<a href="https://cs.stanford.edu/~jsteinhardt/">Jacob Steinhardt</a>, 
+<a href="http://www.thomas-steinke.net/">Thomas Steinke</a>, 
+<a href="http://www.alistair-stewart.com/">Alistair Stewart</a>, 
+<a href="http://stat.wharton.upenn.edu/~suw/">Weijie Su</a>, 
+<a href="https://pranavsubramani.github.io/">Pranav Subramani</a>, 
+<a href="http://zitengsun.com/">Ziteng Sun</a>, 
+<a href="http://theertha.info/">Ananda Theertha Suresh</a>, 
+<a href="https://research.google/people/AndreasTerzis/">Andreas Terzis</a>, 
+<a href="http://www.omthakkar.com/">Om Thakkar</a>, 
+<a href="https://athakurta.squarespace.com/">Abhradeep Thakurta</a>, 
+<a href="https://floriantramer.com/">Florian Tram&egrave;r</a>, 
+<a href="https://tslilyai.github.io/">Lillian Tsai</a>,
+<a href="https://tzamos.com/">Christos Tzamos</a>, 
+<a href="https://www.microsoft.com/en-us/research/people/luwutsch/">Lukas Wutschitz</a>, 
+<a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a>, 
+<a href="https://kvaccaro.com/">Kristen Vaccaro</a>, 
+<a href="https://nicholasvadivelu.com/">Nicholas Vadivelu</a>, 
+<a href="https://theory.stanford.edu/~sergei/">Sergei Vassilvitskii</a>, 
+<a href="https://lu.is/">Luis Villa</a>, 
+<a href="https://sites.google.com/site/erikwaing/home">Erik Waingarten</a>, 
+<a href="https://yihan-wang.com/">Yihan Wang</a>,
+<a href="http://www.cs.cmu.edu/~weinaw/">Weina Wang</a>, 
+<a href="https://sites.cs.ucsb.edu/~yuxiangw/">Yu-Xiang Wang</a>, 
+<a href="https://www.cs.cmu.edu/~dwoodruf/">David P. Woodruff</a>,
+<a href="http://www.mit.edu/~jswright/">John Wright</a>, 
+<a href="https://cardozo.yu.edu/directory/felix-wu">Felix Wu</a>, 
+<a href="https://www-users.cs.umn.edu/~zsw/">Zhiwei Steven Wu</a>, 
+<a href="https://rxian.github.io/">Ruicheng Xian</a>, 
+<a href="http://www.cs.emory.edu/~lxiong/">Li Xiong</a>, 
+<a href="https://openreview.net/profile?id=~William_Xu1">William Xu</a>,
+<a href="https://matthewyryang.com/">Matthew Y.R. Yang</a>,
+<a href="http://www.yekhanin.org/">Sergey Yekhanin</a>, 
+<a href="https://sai.sysu.edu.cn/teacher/teacher01/1385356.htm">Jian Yin</a>, 
+<a href="https://dayu11.github.io/">Da Yu</a>, 
+<a href="https://cs.uwaterloo.ca/~y328yu/">Yaoliang Yu</a>, 
+<a href="http://www.ccs.neu.edu/home/lydiazak/">Lydia Zakynthinou</a>, 
+<a href="https://www.elanazeide.com/">Elana Zeide</a>, 
+<a href="https://gordon-guojun-zhang.github.io/">Guojun Zhang</a>, 
+<a href="https://huanyuzhang.github.io">Huanyu Zhang</a>, 
+<a href="https://www.microsoft.com/en-us/research/people/huzhang/">Huishuai Zhang</a>, 
+<a href="https://zj-jayzhang.github.io/">Jie Zhang</a>
+<a href="https://wanrongz.github.io/">Wanrong Zhang</a>,
+<a href="https://hanzhaoml.github.io/">Han Zhao</a>.
+
+<br>
+<br>
+They originate from a number of countries, including Argentina, Australia, Austria, Brazil, Bulgaria, Canada, China, France, Germany, Greece, India, Indonesia, Iran, Israel, Latvia, Lebanon, New Zealand, Romania, Russia, South Korea, Switzerland, Turkey, United Kingdom, United States of America.
+<hr>
+
+
+<h2><a name="otherwritings">Other Writings</a></h2> <ul>
+  <li> We wrote a <a href="https://docs.google.com/document/d/1nzyvfdsXLzqYXxxdjw1y_OHAYwGolHCZUkRVmlxG9BE/">"Behind the Screens" look at STOC 2020</a>, a document which may be useful to other virtual conference organizers. With <a href="https://konstantin.makarychev.net/">Konstantin Makarychev</a>, <a href="https://ttic.uchicago.edu/~yury/">Yury Makarychev</a>, <a href="https://ttic.uchicago.edu/~madhurt/">Madhur Tulsiani</a>, and input from <a href="https://ttic.uchicago.edu/~cjulia/">Julia Chuzhoy</a>.</li>
+  <li><a href="http://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a> and I wrote a brief survey of differentially private statistics: <a href="https://arxiv.org/abs/2005.00010">A Primer on Private Statistics</a>.</li>
+  <li> For <a href="http://courses.csail.mit.edu/6.854/">Advanced Algorithms</a> (6.854), I wrote a <a href="writings/matroidsec.pdf">survey of matroid secretary problem algorithms</a> as a final project.
+  </li>
+ <li> Some <a href="writings/gaussian_max.pdf"> bounds on the expectation of the maximum of samples from a Gaussian</a>. I thought this was a fairly natural problem, but when I wrote it, I was unable to find anyone else who had computed the explicit lower bound here.</li>
+</ul>
+
+<hr>
+<h2><a name="random">Service</a></h2><ul>
+  <li>I am an Editor-in-Chief of <a href="https://jmlr.org/tmlr/">TMLR</a>.</li>
+  <li>I'm part of the Executive Committee of the <a href="https://www.let-all.com/index.html">Learning Theory Alliance</a>.</li>
+  <li>I am a board or steering committee member for: International Conference on Machine Learning (ICML), Association for Computational Learning (COLT), Association for Algorithmic Learning Theory (ALT), Theory and Practice of Differential Privacy (TPDP).</li>
+  <li>I have been (or will be) program committee chair for the following conference: ALT 2025.</li>
+  <li>I have been (or will be) a general chair for the following conferences: <a href="http://acm-stoc.org/stoc2020/">STOC 2020</a>.</li>
+  <li>I have been (or will be) program chair/organizer for the following workshops: <a href="https://tpdp.journalprivacyconfidentiality.org/2021/">TPDP 2021</a>, <a href="https://tpdp.journalprivacyconfidentiality.org/2022/">TPDP 2022</a>, <a href="https://upml2022.github.io/">UpML 2022</a>, Workshop on Responsibly Enabling Data for Foundation Models (catchy name TBD).</li>
+  <li>I have been (or will be) on the core program committee or an area chair for the following conferences: <a href="https://www.siam.org/conferences/CM/Main/soda20">SODA 2020</a>, <a href="https://icml.cc/Conferences/2020">ICML 2020</a>, <a href="http://econcs.pku.edu.cn/icalp2020/">ICALP 2020</a>, <a href="https://randomconference.com/">Random 2020</a>, <a href="https://iclr.cc/Conferences/2021">ICLR 2021</a>, <a href="https://responsiblecomputing.org/">FORC 2021</a>, <a href="http://learningtheory.org/colt2021/">COLT 2021</a>, <a href="https://www.sigsac.org/ccs/CCS2021/">CCS 2021</a>, <a href="http://algo2021.tecnico.ulisboa.pt/ESA2021/">ESA 2021</a>, <a href="https://neurips.cc/Conferences/2021">NeurIPS 2021</a>, <a href="https://www.siam.org/conferences/cm/conference/soda22">SODA 2022</a>, <a href="https://iclr.cc/Conferences/2022">ICLR 2022</a>, AAAI 2022, COLT 2022, NeurIPS 2022, SaTML 2023, FOCS 2023, ICLR 2023, ALT 2023, USENIX Security 2023, COLT 2023, FAccT 2023, ICML 2023, NeurIPS 2023, COLT 2024, NeurIPS 2024, STOC 2025, COLT 2025, ICML 2025 (Position Paper Track), SODA 2026, SaTML 2026, ALT 2026, COLT 2026, STOC 2027.</li>
+  <li>I have been (or will be) on the program committee (i.e., a reviewer) of the following machine learning conferences: <a href="https://nips.cc/Conferences/2016">NIPS 2016</a>, <a href="https://icml.cc/Conferences/2018">ICML 2018</a>, <a href="https://neurips.cc/Conferences/2018">NeurIPS 2018</a>, <a href="https://www.aistats.org/aistats2019/">AISTATS 2019</a>, <a href="https://icml.cc/Conferences/2019">ICML 2019</a>, <a href="https://neurips.cc/Conferences/2019">NeurIPS 2019</a>, <a href="https://aaai.org/Conferences/AAAI-20/">AAAI 2020</a>, <a href="http://www.aistats.org/">AISTATS 2020</a>, <a href="https://facctconference.org/2021/index.html">FAccT 2021</a>, <a href="http://alt2021.algorithmiclearningtheory.org/">ALT 2021</a>, ALT 2022, UAI 2022, CANAI 2024.</li>
+  <li>For completeness, conferences I have reviewed for include: AAAI, AISTATS, ALT, COLT, FAccT, FOCS, ICALP, ICML, ISAAC, ISIT, ITCS, NeurIPS, RANDOM, SODA, STACS, STOC.</li>
+  <li>I have (or will be) on the program committee of the following workshops: <a href="https://tpdp.cse.buffalo.edu/2019">TPDP 2019</a>, <a href="https://priml-workshop.github.io/priml2019/">PriML 2019</a>, <a href="https://tpdp.journalprivacyconfidentiality.org/2020/">TPDP 2020</a>, PPML 2020, PriML 2021, ICBINB 2021, ICBINB 2022, ICBINB 2023, Regulatable ML 2023, PPAI 2024, TPDP 2024, TPDP 2025.</li>
+  <li>I mentor when I can. Some examples include at workshops for Women in Machine Learning, the Learning Theory Alliance, and junior-senior lunches at STOC/FOCS (which I sometimes organize). I also view my <a href="https://twitter.com/thegautamkamath">Twitter presence</a> as a type of mentorship.</li>
+  <li>I am a maintainer of the <a href="http://cstheory-feed.org/">CS Theory Blog Aggregator</a>, along with <a href="https://nimaanari.com/">Nima Anari</a> and <a href="https://www.comp.nus.edu.sg/~arnab/">Arnab Bhattacharyya</a>.</li>
+  <li><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment Canonne</a> and I organized a workshop called "<a href="http://www.cs.columbia.edu/~ccanonne/workshop-focs2019/">A TCS Quiver</a>" at FOCS 2019.</li>
+  <li><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment Canonne</a> and I organized a <a href="http://www.cs.columbia.edu/~ccanonne/workshop-focs2017/">workshop on distribution testing</a> at FOCS 2017.</li>
+  <li><a href="http://www.cs.columbia.edu/~ccanonne/">Cl&#233;ment Canonne</a> and I organized a <a href="http://www.cs.columbia.edu/~ccanonne/workshop-focs2016/">workshop on orthogonal polynomials</a> at FOCS 2016.</li>
+  <li>I was previously an editor for the <a href="http://mittheory.wordpress.com">MIT Theory of Computation Student Blog</a> and <a href="http://ptreview.sublinear.info/">Property Testing Review</a>.</li>
+  <li>I'm one of the organizers of <a href="https://sites.google.com/site/plustcs/">TCS+</a>, an online seminar series in theoretical computer science, accessible to the widest possible audience, and ensuring a carbon-free dissemination of ideas across the globe.</li>
+  <li>I organized the second <a href="http://www.gautamkamath.com/sublinearday/">Sublinear Day</a>, which was on April 10, 2015 at MIT.</li>
+  <li>I was the head organizer for the Second Annual Danny Lewin MIT Theory Student Retreat, which took place in October 2013.
+    Aloni and Themis wrote a bit about this retreat <a href="http://mittheory.wordpress.com/2013/11/30/mit-theory-retreat-2013/">here</a>.</li>
+  <li> From Fall 2012 to Fall 2013, I was in charge of the Theory Group lunch, which was the current incarnation of <a href="gitcs/">Great Ideas in Theoretical Computer Science</a> at CSAIL.
+    The website for the current offering is <a href="https://sites.google.com/site/csailtheorylunch/">here</a>.</li>
+</ul>
+<hr>
+<h2><a name="projects">Other Undergrad Projects</a></h2><ul>
+  <li> As a final project for a <a href="http://people.ece.cornell.edu/land/courses/ece4760/">microcontrollers class</a>, my partner <a href="http://www.linkedin.com/pub/dominick-grochowina/38/631/68">Dominick Grochowina</a> and I made <a href="http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2011/dsg88_gck43/dsg88_gck43/index.html">an automated vocalist for the game Rock Band</a>. This was featured on the website <a href="http://hackaday.com/2011/05/11/automating-rock-band-vocals/">Hack A Day</a>. Videos of the bot in action can be seen <a href="http://www.youtube.com/watch?v=1o2Jr0fR4wM">here</a> and <a href="http://www.youtube.com/watch?v=wc-qScQR5uY">here</a>.</li>
+<li> I worked on a project called <a href="http://sohanjain.com/portfolio/plannit/">Plannit</a>, which won second place at <a href="https://www.facebook.com/events/189468707749233/">Cornell Facebook Hackathon</a>. Partners on this project were <a href="http://www.jasdeephundal.com/">Jasdeep Hundal</a>, <a href="http://sohanjain.com/">Sohan Jain</a>, and <a href="http://harryterkelsen.com/">Harry Terkelsen</a>.</li>
+</ul>
+
+<hr>
+<h2><a name="teaching">Teaching</a></h2>
+<h3>New York University</h3>
+<ul>
+<li>CSCI-GA 3033 - Honors Machine Learning: Fall 2026</li>
+</ul>
+
+<h3>University of Waterloo</h3>
+<ul>
+<li>CS 480/680 - Introduction to Machine Learning: <a href="courses/CS480-wi2021.html">Winter 2021</a>, <a href="courses/CS480-sp2021.html">Spring 2021</a>, <a href="courses/CS480-sp2022.html">Spring 2022</a>, <a href="http://www.gautamkamath.com/courses/CS480-fa2023.html">Fall 2023</a>, <a href="http://www.gautamkamath.com/courses/CS480-fa2025.html">Fall 2025</a></li>
+  <li>CS 860 - Algorithms for Private Data Analysis: <a href="CS860-fa2020.html">Fall 2020</a>, <a href="courses/CS860-fa2022.html">Fall 2022</a>, <a href="courses/CS860-wi2026.html">Winter 2026</a></li>
+  <li>CS 240 - Data Structures and Data Management: <a href="https://www.student.cs.uwaterloo.ca/~cs240/s20/">Spring 2020</a></li>
+  <li>CS 761 - Randomized Algorithms: <a href="CS761-fa2019.html">Fall 2019</a></li>
+</ul>
+
+<hr>
+<h2><a name="advising">Advising</a></h2>
+I'm very lucky to work with a number of great students -- check out their profiles on my group's <a href="http://thesalon.github.io/people/">People</a> page.
+
+<hr>
+<h2><a name="resources">Resources</a></h2>
+Here is a collection of collections of talk videos.
+<ul>
+  <li><a href="https://sites.google.com/site/plustcs/past-talks"</a>TCS+</a>: An series of online seminars in theoretical computer science.</li>
+  <li><a href="https://www.youtube.com/user/SimonsInstitute">Simons Institute Videos</a>: Videos from workshops hosted at the Simons Institute for the Theory of Computing.</li>
+  <li><a href="http://www.birs.ca/videos/">BIRS Videos</a>: Videos from workshops hosted at the Banff International Research Station.</li>
+  <li><a href="https://video.ias.edu/">Institute for Advanced Studies Videos</a>: Videos from the IAS. Note that many are related to other fields besides computer science.</li>
+  <li><a href="https://www.microsoft.com/en-us/research/videos/microsoft-research-talks/">Microsoft Research Talks</a>: Talks at Microsoft Research, including a variety of topics beyond theory.</li>
+  <li><a href="http://eceweb1.rutgers.edu/~csi/Shannon.html">Shannon Channel</a>: A series of online seminars in information theory.</li>
+  <li><a href="http://theory.cs.princeton.edu/videos.html">Princeton TCS Videos</a>: Videos from theory lunch and workshops within Princeton's theory group.</li>
+  <li><a href="http://videolectures.net/">Videolectures.net</a>: Lecture videos from a number of conferences and workshops, seems to be primarily focused on machine learning events.</li>
+</ul>
+
+
+<hr>
+<h2><a name="other">Other</a></h2>
+<ul>
+  <li>I used to go by the name "G", though I now prefer Gautam. Also, my name is not Guatam Kamath, though it is commonly misspelled as such. </li>
+  <li>My friends <a href="https://scholar.google.com/citations?user=_fFmB3oAAAAJ&hl=en">Aviv Adler</a>, <a href="http://i.gregbodwin.com/p/resea.html">Greg Bodwin</a>, and primarily <a href="https://sites.google.com/site/jenntangerine/about-me">Jennifer Tang</a>, made a small puzzle hunt for my graduation. You can check out the puzzles here: <a href="puzzle/1.pdf">1</a>, <a href="puzzle/2.pdf">2</a>, <a href="puzzle/3.pdf">3</a>, <a href="puzzle/4.pdf">4</a>, <a href="puzzle/5.pdf">5</a>, <a href="puzzle/6.pdf">6</a>. Warning that they can be incredibly unfair if you are not me, but oh well. Try them out! </li>
+</ul>
+
+</body></html>

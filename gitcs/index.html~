@@ -1,0 +1,80 @@
+<html>
+
+<head>   
+<title>Great Ideas in Theoretical Computer Science</title>      
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35372294-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<style>
+body{margin:10px 10px 10px 10px;font-family:sans-serif;background-color:#FFFFFb; max-width: 55em; } 
+</style>
+
+<h1>Great Ideas in Theoretical Computer Science</h1>
+<h2>Theory Lunch Edition!</h2>
+
+If you are not on the mailing list, sign up <a href = "https://lists.csail.mit.edu/mailman/listinfo/gitcs">here</a>.
+
+<br> Where: G5 Lounge
+<br> When: Wednesdays at 12:45 PM
+
+<p>
+Theoretical Computer Science is full of great ideas, so once a week, the MIT Theory group gets together to socialize and share some knowledge.
+We'll briefly share some interesting ideas, and discuss a superset of these ideas over lunch.
+If you have any suggestions for future discussions, please contact g@csail.mit.edu.
+</p>
+
+<h2>This page is for historical purposes - for the current Theory Lunch website, please go <a href="http://www.mit.edu/~pritish/theory_lunch/">here</a>.
+<h3>Fall 2013 Discussions</h3>
+<ul>
+  <li>October 9, Some Problems on Shared Memory, presented by <a href="http://web.mit.edu/gelash/www/">Rati Gelashvili</a></li>
+  <li>October 2, Alternative Models of Quantum Computation, presented by <a href="http://people.csail.mit.edu/adam/">Adam Bouland</a></li>
+  <li>September 25, the Facility Location Problem, presented by <a href="http://www.mit.edu/~tzamos/">Christos Tzamos</a></li>
+  <li>September 16, Diverse Nearest Neighbor, presented by Sepideh Mahabadi</li>
+  <li>September 10, SNARKs for C: Verifying Program Executions Succinctly and in Zero Knowledge, presented by <a href="http://madars.org">Madars Virza</a></li>
+</ul>
+
+<h3>Summer 2013 Discussions</h3>
+<ul>
+  <li>July 16, Local Graph Algorithms, presented by Themis Gouleakis</li>
+  <li>July 2, Oriented Percolation on Grids, presented by <a href="http://math.berkeley.edu/~erb/">Emily Berger</a></li>
+  <li>June 25, Testing properties of distributions: comparing query models, presented by <a href="http://www.cs.columbia.edu/~ccanonne/">Cl&eacute;ment Canonne</a></li>
+  <li>June 18, Parity and Simple Stochastic Games, presented by Andrey Grinshpun</li>
+</ul>
+<h3>Spring 2013 Discussions</h3>
+<ul>
+  <li>May 21, Permutation Groups and the Schreier-Sims algorithm, presented by <a href="http://zacharyabel.com/">Zachary Abel</a></li>
+  <li>May 14, finding disease clusters using Euclidean MSTs, presented by Sean Simmons</li>
+  <li>May 7, Online Learning Frameworks: Mistake Bound, KWIK, and their mixture, presented by <a href="http://people.csail.mit.edu/morteza/">Morteza Zadimoghaddam</a></li>
+  <li>April 30, how to solve Max Flow using numerical analysis, presented by Yin Tat Lee</li>
+  <li>April 23, the firing squad problem, presented by Justin Kopinsky</li>
+  <li>April 16, sampling from max entropy distributions, presented by <a href="http://people.csail.mit.edu/avladu/">Adrian Vladu</a></li>
+  <li>April 9, fun time with entropy, presented by <a href="http://www.mit.edu/~hyuen/">Henry Yuen</a></li>
+  <li>March 12, matrix completions, presented by <a href="http://mit.edu/levin/www/">Alex Levin</a></li>
+  <li>March 5, short lists for shorter programs in short time, presented by <a href="http://www.mit.edu/~miforbes/">Michael Forbes</a></li>
+  <li>February 26, the Constrained Earth Mover Distance model and applications to Compressive Sensing, presented by <a href = "http://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></li>
+  <li>February 19, connection between 1-query static membership data structures and RIP-matrices, presented by <a href="http://www.ilyaraz.org/">Ilya Razenshteyn</a></li>
+</ul>
+<h3>Fall 2012 Discussions</h3>
+<ul>
+  <li>December 11, variants of Hilbert's Tenth Problem, presented by Shalev Ben-David</li>
+  <li>December 4, affine-invariant codes, presented by <a href="http://people.csail.mit.edu/aguo/">Alan Guo</a></li>
+  <li>November 27, some problems on the boolean hypercube, presented by Mohammad Bavarian</li>
+  <li>November 20, a connection between online ski rental and vertex cover via bipartite matching, presented by Sam Wong</li>
+  <li>November 13, STOC submission summaries, presented by <a href="http://mit.edu/eboyle/www/">Elette Boyle</a>, Elad Haramaty, <a href="http://www.mit.edu/~ecprice/">Eric Price</a>, and Aaron Sidford</li>
+  <li>November 6, Renaming in distributed computing, presented by <a href="http://people.csail.mit.edu/alistarh/">Dan Alistarh</a></li>
+  <li>October 23, an interesting property of a classic identity, presented by <a href="..">Gautam Kamath</a></li>
+  <li>October 16, the Tree Augmentation Problem, presented by Elyot Grant</li>
+</ul>
+
+</html>

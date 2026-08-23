@@ -1,0 +1,372 @@
+\documentclass[10pt,letter,notitlepage]{article}
+%Mise en page
+\usepackage[left=2cm, right=2cm, lines=45, top=0.8in, bottom=0.7in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{pdfpages} 
+\renewcommand{\headrulewidth}{1.5pt}
+\renewcommand{\footrulewidth}{1.5pt}
+\pagestyle{fancy}
+\newcommand\Loadedframemethod{TikZ}
+\usepackage[framemethod=\Loadedframemethod]{mdframed}
+\usepackage{tikz}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\usepackage{url}
+\usepackage{dsfont}
+\usepackage{amssymb,amsmath}
+\usepackage{xspace}
+
+\lhead{
+\textbf{University of Waterloo}
+}
+\rhead{\textbf{2025 Fall}
+}
+\chead{\textbf{
+CS480/680
+ }}
+
+\newcommand{\RR}{\mathds{R}}
+\newcommand{\sign}{\mathop{\mathrm{sign}}}
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+\newcommand{\zero}{\mathbf{0}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\bv}{\mathbf{b}}
+\newcommand{\wv}{\mathbf{w}}
+\newcommand{\xv}{\mathbf{x}}
+\newcommand{\yv}{\mathbf{y}}
+\newcommand{\rv}{\mathbf{r}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\magenta}[1]{{\color{magenta}#1}}
+
+
+\newcommand{\ea}{{et al.}\xspace}
+\newcommand{\eg}{{e.g.}\xspace}
+\newcommand{\ie}{{i.e.}\xspace}
+\newcommand{\iid}{{i.i.d.}\xspace}
+\newcommand{\cf}{{cf.}\xspace}
+\newcommand{\wrt}{{w.r.t.}\xspace}
+\newcommand{\aka}{{a.k.a.}\xspace}
+\newcommand{\etc}{{etc.}\xspace}
+\newcommand{\Dc}{\mathcal{D}}
+
+\newcommand{\ans}[1]{{\color{orange}\textsf{Ans}: #1}}
+
+
+\lfoot{}
+\cfoot{\textbf{Gautam Kamath (gckamath@uwaterloo.ca) \textcopyright 2025}}
+
+%================================
+%================================
+
+\setlength{\parskip}{1cm}
+\setlength{\parindent}{1cm}
+\tikzstyle{titregris} =
+[draw=gray,fill=white, shading = exersicetitle, %
+text=gray, rectangle, rounded corners, right,minimum height=.3cm]
+\pgfdeclarehorizontalshading{exersicebackground}{100bp}
+{color(0bp)=(green!40); color(100bp)=(black!5)}
+\pgfdeclarehorizontalshading{exersicetitle}{100bp}
+{color(0bp)=(red!40);color(100bp)=(black!5)}
+\newcounter{exercise}
+\renewcommand*\theexercise{exercice \textbf{Exercice}~n\arabic{exercise}}
+\makeatletter
+\def\mdf@@exercisepoints{}%new mdframed key:
+\define@key{mdf}{exercisepoints}{%
+\def\mdf@@exercisepoints{#1}
+}
+
+\mdfdefinestyle{exercisestyle}{%
+outerlinewidth=1em,outerlinecolor=white,%
+leftmargin=-1em,rightmargin=-1em,%
+middlelinewidth=0.5pt,roundcorner=3pt,linecolor=black,
+apptotikzsetting={\tikzset{mdfbackground/.append style ={%
+shading = exersicebackground}}},
+innertopmargin=0.1\baselineskip,
+skipabove={\dimexpr0.1\baselineskip+0\topskip\relax},
+skipbelow={-0.1em},
+needspace=0.5\baselineskip,
+frametitlefont=\sffamily\bfseries,
+settings={\global\stepcounter{exercise}},
+singleextra={%
+\node[titregris,xshift=0.5cm] at (P-|O) %
+{~\mdf@frametitlefont{\theexercise}~};
+\ifdefempty{\mdf@@exercisepoints}%
+{}%
+{\node[titregris,left,xshift=-1cm] at (P)%
+{~\mdf@frametitlefont{\mdf@@exercisepoints points}~};}%
+},
+firstextra={%
+\node[titregris,xshift=1cm] at (P-|O) %
+{~\mdf@frametitlefont{\theexercise}~};
+\ifdefempty{\mdf@@exercisepoints}%
+{}%
+{\node[titregris,left,xshift=-1cm] at (P)%
+{~\mdf@frametitlefont{\mdf@@exercisepoints points}~};}%
+},
+}
+\makeatother
+
+
+%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+outerlinewidth=0.01em,linecolor=black,middlelinewidth=0.5pt,%
+frametitlerule=true,roundcorner=2pt,%
+apptotikzsetting={\tikzset{mfframetitlebackground/.append style={%
+shade,left color=white, right color=blue!20}}},
+frametitlerulecolor=black,innertopmargin=1\baselineskip,%green!60,
+innerbottommargin=0.5\baselineskip,
+frametitlerulewidth=0.1pt,
+innertopmargin=0.7\topskip,skipabove={\dimexpr0.2\baselineskip+0.1\topskip\relax},
+frametitleaboveskip=1pt,
+frametitlebelowskip=1pt
+}
+\setlength{\parskip}{0mm}
+\setlength{\parindent}{10mm}
+\mdtheorem[style=theoremstyle]{exercise}{\textbf{Exercise}}
+
+%================Liste definition--numList-and alphList=============
+\newcounter{alphListCounter}
+\newenvironment
+{alphList}
+{\begin{list}
+{\alph{alphListCounter})}
+{\usecounter{alphListCounter}
+\setlength{\rightmargin}{0cm}
+\setlength{\leftmargin}{0.5cm}
+\setlength{\itemsep}{0.2cm}
+\setlength{\partopsep}{0cm}
+\setlength{\parsep}{0cm}}
+}
+{\end{list}}
+\newcounter{numListCounter}
+\newenvironment
+{numList}
+{\begin{list}
+{\arabic{numListCounter})}
+{\usecounter{numListCounter}
+\setlength{\rightmargin}{0cm}
+\setlength{\leftmargin}{0.5cm}
+\setlength{\itemsep}{0cm}
+\setlength{\partopsep}{0cm}
+\setlength{\parsep}{0cm}}
+}
+{\end{list}}
+
+\usepackage[breaklinks=true,letterpaper=true,linkcolor=magenta,urlcolor=magenta,citecolor=black]{hyperref}
+
+\usepackage{cleveref}
+
+
+%===========================================================
+\begin{document}
+
+\begin{center}
+  \large{\textbf{CS480/680: Introduction to Machine Learning} \\ Homework 1\\ Due: 11:59 pm, October 3, 2025, submit on LEARN (code) and Crowdmark (written).} \\
+
+Include your name and student number!
+
+\end{center}
+
+\begin{center}
+Submit your writeup in pdf and all source code in a zip file (with proper documentation). Write a script for each programming exercise so that the TAs can easily run and verify your results. Make sure your code runs!
+
+[Text in square brackets are hints that can be ignored.]
+\end{center}
+
+
+
+\begin{exercise}[Perceptron Questions (5 pts)]
+  \begin{enumerate}
+    \item (3 pts) The perceptron algorithm makes an update every time it witnesses a mistake.
+      What if it makes an update on every point, regardless of whether or not that point is correctly classified? 
+      For simplicity, consider a setting where where $b$ is fixed to $0$.
+      Give an example of an infinite sequence of points $(x_i, y_i)$ with the following properties:
+    \begin{itemize}
+      \item The sequence is strictly linearly separable with $b = 0$ (i.e., the margin is some constant $\gamma > 0$),
+      \item The sequence has $\max \|x_i\|_2 \leq 1$,
+      \item The modified perceptron algorithm makes an infinite number of mistakes on this sequence. 
+    \end{itemize}
+    Prove that it has these properties.
+      Note that the perceptron convergence theorem and the first two conditions imply that, at some point, the unmodified perceptron algorithm would only make a finite number of mistakes.
+
+\ans{}
+
+  \item (1 pt) Give examples of where the perceptron algorithm (the original algorithm studied in class, not the one from the previous part) converges to an arbitrarily-small margin halfspace, and a separate example where it converges to a maximum margin halfspace. 
+    To word the former more precisely: for any $0 < \varepsilon < 1/2$, give a dataset (with margin at least 1) and a order in which to process the points such that the perceptron algorithm halts providing a halfspace with margin $\leq \varepsilon$.
+
+\ans{} 
+  \item (1 pt) Suppose that in each iteration of the perceptron algorithm (the original algorithm studied in class), a point is chosen uniformly at random from the dataset.
+    Show how the perceptron algorithm can be viewed as an instantiation of stochastic gradient descent (SGD). 
+      In particular, you must provide a loss function and a learning rate such that SGD with these parameters and perceptron are identical. 
+
+      \ans{} 
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Regression Implementation (8 pts)]
+Recall that ridge regression refers to
+\begin{align}
+  \min_{\wv\in \RR^d, b\in \RR} ~ \overbrace{\underbrace{\tfrac{1}{2n} \|X \wv+ b\one - \yv\|_2^2}_{\mbox{error}} + \lambda \|\wv\|_2^2}^{\mbox{loss}}, \label{eq:regression}
+\end{align}
+where $X \in \RR^{n \times d}$ and $\yv \in \RR^n$ are the given dataset and $\lambda \geq 0$ is the regularization hyperparameter.
+If $\lambda = 0$, then this is the standard linear regression problem.
+  Observe the distinction between the error (which does not include the regularization term) and the loss (which does).
+
+\begin{enumerate}
+  \item (1 pt) Show that ridge regression can be rewritten as a non-regularized linear regression problem.
+  That is, prove \ref{eq:regression} is equivalent to 
+\begin{align}
+  \min_{\wv\in \RR^d, b\in \RR} ~ \tfrac{1}{2n} \left\|\begin{bmatrix}
+X & \one_n \\
+    \sqrt{2\lambda n}I_d & \zero_d
+    \end{bmatrix} \begin{bmatrix} \wv  \\ b\end{bmatrix}  - \begin{bmatrix}\yv \\ \zero_d\end{bmatrix}\right\|_2^2 , 
+\end{align}
+where $I_d$ is the $d$-dimensional identity matrix, and $\zero_k$ and $\one_k$ are zero and one column vectors in $k$ dimensions.
+
+    \ans{}
+
+\item (1 pt) Show that the derivatives of \ref{eq:regression} are
+\begin{align}
+\frac{\partial}{\partial\wv} &=  \tfrac1n X^\top (X\wv + b\one - \yv) + 2 \lambda \wv\\
+\label{eq:b}
+\frac{\partial}{\partial b} &= \tfrac1n \one^\top (X\wv + b\one - \yv).
+\end{align}
+
+    \ans{} 
+
+  \item (2 pts) Implement ridge regression using the closed form solution for linear regression as derived in lecture. 
+    You may find the function \texttt{numpy.linalg.solve} useful.
+
+    \ans{}
+\item (2 pts) Implement the gradient descent algorithm for solving ridge regression. The following incomplete pseudo-code may of help.
+    Your training loss should monotonically decrease during iteration; if not try to tune your step size $\eta$, \eg make it smaller.
+
+    \ans{}
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+	\KwIn{$X\in\RR^{n\times d}$, $\yv\in \RR^n$, $\wv_0=\zero_d$, $b_0=0$, $\mathsf{max\_pass} \in \mathds{N}$, $\eta > 0$, $\mathsf{tol} > 0$}
+
+	\KwOut{$\wv, b$}
+
+	\For{$t=1, 2, \ldots, \mathsf{max\_pass}$ }{
+		$\wv_t \gets  $
+
+		$b_t \gets $
+
+		\If(\tcp*[f]{can use other stopping criteria}){$\|\wv_{t} - \wv_{t-1}\|  \leq \mathsf{tol}$}{
+			\textbf{break}
+		}
+	}
+
+	$\wv \gets \wv_t, ~ b \gets b_t$
+	\caption{Gradient descent for ridge regression.}
+	\label{alg:rr}
+\end{algorithm}
+
+    \ans{}
+
+  \item (3 pts) Test your two implementations on the Boston \href{http://lib.stat.cmu.edu/datasets/boston}{\textsf{\magenta{housing}}} dataset (to predict the median house price, \ie, $y$). 
+    Use the train and test splits provided on course website. 
+    Try $\lambda \in \{0, 10\}$ and report your training error, training loss and test error for each.
+    You may have trouble getting gradient descent to work if you don't \href{https://scikit-learn.org/stable/modules/preprocessing.html}{standardize} your data (you may not use sklearn to standardize your data, do it yourself).
+    Note that you would have to standardize both your training and test features.
+    (Try gradient descent both without and with standardizing the data and see how it differs.)
+    For the gradient descent algorithm, plot the training loss over iterations. 
+    Compare the running time of the two approaches, which is faster?
+    Overall, which approach do you think is better? Explain why.
+
+    \ans{}
+
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Playing with Regression (3 pts)]
+
+  \red{You may use the Python package scikit-learn for this exercise (and only for this exercise).}
+
+Train (unregularized) linear regression, ridge regression, and lasso on the mystery datasets A, B, and C on the course website (using X\_train and Y\_train for each dataset).
+For ridge regression and lasso, use k-fold cross validation to determine appropriate choices of the hyperparameters (you may NOT use functions like RidgeCV and LassoCV, you must implement it yourself). 
+Report the average mean squared error on the test set for each method, as well as the selected regularization parameters.
+Which approach performs best in each case?
+For each dataset (A, B, C), do the following:
+Create a histogram where the x-axis is divided into bins corresponding to the values of coordinates of the parameter vector, and the y-axis is the number of coordinates of the parameter vector which fall into each bin. 
+Plot the three parameter vectors (one for unregularized, one for ridge, one for lasso) on the same histogram, so they're all visible at once (change the opacity setting for the bars if necessary).
+  [There should be three total histograms, each with three parameter vectors overlayed.]
+
+  \ans{}
+\end{exercise}
+
+\begin{exercise}[Nearest Neighbour Regression (7 pts)]
+  \begin{enumerate}
+    \item (3 pts) Implement $k$-nearest neighbour regression, for a dataset of $n$ $X, y$ pairs where $X \in \mathbb{R}^d$ and $y \in \mathbb{R}$. 
+      This is similar to $k$-nearest neighbour classification, but instead of aggregating labels by taking the majority, we average the $y$ values of the $k$ nearest neighbours.
+      Use $\ell_2$ distance as the distance metric, that is, the distance between points $X_1$ and $X_2$ is $\|X_1 - X_2\|_2$.
+      Ensure that your implementation is $O(nd)$ time for all values of $k$, and argue that this is the case.
+
+    \ans{}
+    \item (2 pts) For the training sets of the $d=1$ mystery datasets D and E on the course website, compute a) the (unregularized) least squares linear regression solution and b) the $k$-nearest neighbour regression solution with each integer $k$ from $1$ to $9$.
+      For each dataset, on one plot with the $x$ and $y$ axes corresponding to the $x$ and $y$ values, display the least squares solution, the $1$-nearest neighbour solution, and the $9$-nearest neighbour solution. 
+      Be sure to plot these solutions for all points between the minimum and maximum $x$ values, not just for the points in the dataset.
+      On another plot, with $k$ on the $x$ axis and test mean-squared error on the $y$ axis, display the error of the $k$-NN solution for each value of $k$. 
+      On the same plot, include the test error of the least squares solution as a horizontal line.
+      When does each approach perform better, and why? 
+
+    \ans{}
+    \item (2 pts) For the training set of the $d = 20$ mystery dataset F on the course website, compute a) the (unregularized) least squares linear regression solution and b) the $k$-nearest neighbour regression solution with each integer $k$ from $1$ to $9$.
+      Plot, with $k$ on the $x$ axis and test mean-squared error on the $y$ axis, display the error of the $k$-NN solution for each value of $k$. 
+      On the same plot, include the test error of the least squares solution as a horizontal line.
+      Which approach performs better, and why? 
+      Hint: consider inspecting distances between the test points and their $k$ nearest neighbours in the training set.
+
+    \ans{}
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Poisson Regression (4 pts)]
+Recall that in logistic regression we assumed the \emph{binary} label $Y_i \in \{0,1\}$ follows the Bernoulli distribution: $\Pr(Y_i = 1 | X_i) = p_i$, where $p_i$ also happens to be the mean. Under the independence assumption we derived the log-likelihood function:
+\begin{align}
+\sum_{i=1}^n (1-y_i) \log(1-p_i) + y_i \log(p_i).
+\end{align}
+Then, we parameterized the mean parameter $p_i$ through the logit transform:
+\begin{align}
+\log\frac{p_i}{1-p_i} = \wv^\top \xv_i + b, \quad \mbox{ or equivalently } \quad p_i = \frac{1}{1+\exp(-\wv^\top \xv_i - b)}.
+\end{align}
+Lastly, we found the weight vector $\wv$ and $b$ by maximizing the log-likelihood function.
+
+In the following we generalize the above idea to the case where $Y_i \in \mathds{N}$, i.e., $Y_i$ can take any natural number (for instance, when we are interested in predicting the number of customers or network packages).
+
+\begin{enumerate}
+\item (1 pt) Naturally, we assume $Y_i \in \mathds{N}$ follows the Poisson distribution (with mean $\mu_i \geq 0$):
+	\begin{align}
+	\Pr(Y_i = k | X_i) = \frac{\mu_i^k}{k!} \exp(-\mu_i), ~~ k = 0, 1, 2, \ldots.
+	\end{align}
+	Given a dataset $\Dc = \{\xv_i, y_i\}_{i=1}^n$, what is the log-likelihood function (of $\mu_i$'s) given $\Dc$?
+
+\ans{}
+
+\item (1 pt) Can you give some justification of the parameterization below?
+	\begin{align}
+	\log\mu_i = \wv^\top \xv_i + b.
+	\end{align}
+
+\ans{}
+
+\item (1 pt) Based on the above, write down the objective function for Poisson regression. Please specify the optimization variables and whether you are maximizing or minimizing. [Constants can be dropped.]
+
+\ans{}
+
+\item (1 pt) Compute the gradient of your objective function above and formulate a gradient algorithm for finding the weight vector $\wv$ and $b$.
+
+\ans{}
+
+\end{enumerate}
+\end{exercise}
+
+
+\end{document}
+              
