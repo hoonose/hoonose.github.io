@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perceptron · ML demos</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<script src="perceptron.js" defer></script>
+</head>
+<body>
+<main>
+<a class="back" href="../">← ML demos</a>
+<header><p class="eyebrow">A LINEAR CLASSIFIER</p><h1>The perceptron</h1><p class="intro">Can a straight line separate your points? Build a dataset, then teach a classifier one example at a time.</p></header>
+<div class="workspace">
+<section class="plot-panel" aria-label="Interactive dataset">
+<div class="plot-toolbar"><fieldset><legend>Add points</legend><label><input type="radio" name="label" value="1" checked> <span class="positive">● Positive (+1)</span></label><label><input type="radio" name="label" value="-1"> <span class="negative">■ Negative (−1)</span></label></fieldset><span class="hint">Click the plot to add a point</span><div class="view-options"><label><input id="show-weight" type="checkbox" checked> Weight direction</label><label><input id="show-update" type="checkbox" checked> Show last update</label></div></div>
+<svg id="plot" viewBox="0 0 600 600" role="img" aria-label="Training points and perceptron decision boundary" tabindex="0"><title>Perceptron decision boundary</title></svg>
+<div class="plot-footer"><span>Axes: x₁ and x₂, from −1 to +1.</span><span>Ring = most recently visited point</span></div>
+<p id="geometry-note" class="geometry-note small"></p><details><summary>Add a point with the keyboard</summary><form id="add-form"><label>x₁ <input id="input-x" type="number" min="-1" max="1" step="any" value="0.5" required></label><label>x₂ <input id="input-y" type="number" min="-1" max="1" step="any" value="0.5" required></label><button>Add selected class</button></form></details>
+
+
+<section class="calculations" aria-label="Step calculations"><h2>This step, worked out</h2><p id="calculation-intro" class="small"></p><pre id="calculation" class="formula">Press Step one point to begin.</pre><p class="small">Calculations use the weights before this step. The plot and model values show the result after this step. Displayed decimals are rounded.</p></section>
+</section>
+<aside>
+<section class="card"><h2>1. Choose your data</h2><div class="buttons"><button id="margin-example">Large gap, small margin</button><button id="worked">Simple worked example</button><button id="separable">Separable example</button><button id="xor">XOR example</button><button id="shuffle">Shuffle order &amp; restart</button><button id="clear" class="quiet">Clear points</button></div><p class="small">The simple example has three numbered points and starts with η = 1. Use Step one point to work through it, or Run for a slow walkthrough. XOR cannot be separated by a single straight line. Try it and see why training keeps going.</p></section>
+<section class="card"><h2>2. Train the model</h2><label class="rate" for="rate">Learning rate η <output id="rate-value">1</output></label><input id="rate" type="range" min="0.1" max="2" step="0.1" value="1"><div class="buttons"><button id="step">Step one point</button><button id="run" class="primary">Run</button><button id="reset" class="quiet">Reset weights</button></div><p id="order" class="small"></p><p id="previous-result" class="small" hidden></p><p id="status" role="status" aria-live="polite"></p><div class="metrics"><div><span>Pass</span><strong id="pass">0</strong></div><div><span>Updates</span><strong id="updates">0</strong></div><div><span>Correct*</span><strong id="accuracy">—</strong></div></div><p class="small">*Positive signed margin: y(w · x + b) &gt; 0. Points exactly on the line trigger an update.</p></section>
+<section class="card"><h2>Move the boundary yourself</h2><p class="small">Change the weights to turn the line; change b to slide it. Training continues from your chosen values. Adjusting a control pauses training and restarts the pass count.</p>
+<div class="manual-controls">
+<label for="manual-w1">w₁ <output id="manual-w1-value">0</output></label><input id="manual-w1" type="range" min="-3" max="3" step="0.01" value="0">
+<label for="manual-w2">w₂ <output id="manual-w2-value">0</output></label><input id="manual-w2" type="range" min="-3" max="3" step="0.01" value="0">
+<label for="manual-b">b <output id="manual-b-value">0</output></label><input id="manual-b" type="range" min="-3" max="3" step="0.01" value="0">
+</div><p class="small">The green arrow shows the direction of w toward increasing scores. Its display length is fixed; it does not show ‖w‖.</p></section>
+<section class="card"><h2>Inside the model</h2><div id="weights" class="formula"></div><p class="small">Score = w₁x₁ + w₂x₂ + b. Blue shading means a positive score; orange means negative. The line has score zero.</p><div class="rule">If y(w · x + b) ≤ 0:<br><b>w ← w + ηyx</b><br><b>b ← b + ηy</b></div><p id="last" class="small">Press Step to inspect the first example.</p></section>
+</aside>
+</div>
+<footer>Points are visited in the displayed order; point labels stay fixed when shuffled. Training stops after a full pass with no updates, or pauses after 100 passes. Editing the dataset or learning rate resets training.</footer>
+</main>
+</body>
+</html>
